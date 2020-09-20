@@ -1,0 +1,432 @@
+/* Variables */
+
+:root {
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #3D546F;
+  --basic-greylight: #C5C5C5;
+  --basic-backgound: #F1F5F7;
+  --white: #FFF;
+  --special-yellow: #FFBF47;
+  --special-yellowlight: #FFD180;
+  --special-yellowdelivery: #FFC047;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --success: #5FBB2D;
+  --warning: #FFBF47;
+  --error: #BA2732;
+  --lightgray: #EAEAEA;
+  --navigation: #32425C;
+  --header-background: #293449;
+  --text-color-black: #000;
+  --text-color-grey: #A9A9A9;
+  --text-light-grey: #F3F7F9;
+
+}
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--text-color-black);
+  background-color:var(--white);
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/********************Блок ШАПКА  START ******************************/
+.main-header-background-logo{
+width:1200px;
+height:42px;
+background-color: var(--header-background);
+}
+.main-header-logo{
+  margin-top: 20px;
+width:220px;
+height:47px;
+background: var(--basic-red);
+box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+.header-block{
+margin-top: 170px;
+}
+.main-header-list{
+list-style: none;
+}
+.main-header-item a{
+list-style: none;
+}
+.main-header-list li:nth-child(3){
+background-color: var(--basic-green);
+width:150px;
+height:42px;
+text-align: center;
+}
+.main-header-item a{
+/*color: var(--white); пока отключен*/
+list-style: none;
+}
+.main-header-list:nth-child(3){
+  width:150px;
+ height:42px;
+}
+.site-navigation,
+.header-bookmarks,
+.header-cart,
+.header-order
+{
+list-style:none;
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-size: 18px;
+line-height: 24px;
+color: var(--text-color-black);
+}
+.header-about{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: italic;
+font-weight: normal;
+font-size: 16px;
+line-height: 23px;
+color: var(--basic-red);
+margin-top: 85px;
+}
+.contacts-phone{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 21px;
+line-height: 30px;
+color: var(--basic-red);
+}
+.header-contact-address{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 24px;
+}
+.login-link,
+.registration-link{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 21px;
+line-height: 21px;
+color: var(--text-color-black);
+}
+/********************Блок ШАПКА  END ******************************/
+/**********************Блок Наша Продукция  START **********/
+.our-production-title{
+  display: none;
+}
+.our-production-info{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+}
+.our-production .our-production-block{
+width:135px;
+height:38px;
+background-color: rgba(255,255,255,0.3);
+text-align: center;
+mix-blend-mode: normal;
+}
+.our-production-materials,
+.our-production-instruments,
+.our-production-technics,
+.our-production-discounts,
+.our-production-delivery{
+width:300px;
+height:123px;
+color: var(--white);
+}
+.our-production-materials{
+background-color: var(--special-yellow);
+}
+.our-production-instruments{
+background-color: var(--special-blue);
+}
+.our-production-technics{
+background-color: var(--special-lilac);
+}
+.our-production-discounts{
+background-color: var(--special-greenlight);
+}
+.our-production-delivery{
+background-color: var(--special-yellowdelivery);
+}
+.our-production-item a{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+text-transform: uppercase;
+width:192px;
+height:38px;
+color:var(--white);
+}
+.slider-open,
+.popular-goods-all,
+.popular-manufacturers-all,
+.contacts-moredetails,
+.contacts-gotlost{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+text-transform: uppercase;
+width:192px;
+height:38px;
+background-color: var(--basic-red);
+color: var(--white);
+}
+
+/********************** СЛАЙДЕР  СТАРТ **********/
+.slider .our-production-punchers{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 36px;
+align-items: center;
+text-transform: uppercase;
+color:var(--white);
+margin-top: -250px;
+}
+.slider-info{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+color:var(--white);
+}
+.slider-open{
+position: absolute;
+text-transform: uppercase;
+width:192px;
+height:38px;
+background-color: var(--basic-red);
+}
+.slider-open a{
+color:var(--white);
+}
+
+
+/********************** СЛАЙДЕР  END **********/
+/**********************Блок Наша Продукция  END **********/
+
+
+/**********************Блок Популярные товары  START **********/
+.popular-goods{
+margin-top: 200px;
+}
+.popular-goods-title,
+.popular-manufacturers-title{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 30px;
+color:var(--navigation);
+text-transform: uppercase;
+}
+.popular-goods-all-link{
+color: var(--white);
+}
+.popular-goods-modal-buy-BFG9000,
+.popular-goods-modal-InBookmarks-BFG9000,
+.popular-goods-modal-buy-BFG6000,
+.popular-goods-modal-InBookmarks-BFG6000,
+.popular-goods-modal-buy-BFG3000,
+.popular-goods-modal-InBookmarks-BFG3000,
+.popular-goods-modal-buy-BFG2000,
+.popular-goods-modal-InBookmarks-BFG2000
+{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+text-transform: uppercase;
+}
+.punchers-Bosch{
+font-family: "PT Sans Narrow", Arial, sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 20px;
+color:var(--text-color-black);
+}
+.popular-goods-price{
+font-family: "PT Sans Narrow", Arial, sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 17px;
+line-height: 18px;
+text-decoration-line: line-through;
+text-transform: uppercase;
+color: var(--text-color-grey);
+}
+.popular-goods-discount_price{
+font-family: "PT Sans Narrow", Arial, sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 17px;
+line-height: 18px;
+text-transform: uppercase;
+color: var(--text-color-black);
+}
+
+/**********************Блок Популярные товары  END **********/
+
+/**********************Блок Популярные производители  START **********/
+.popular-manufacturers-link{
+color: var(--white);
+}
+/**********************Блок Популярные производители  END **********/
+
+ /************************Блок СЕРВИСЫ  START ************************** */
+.services-titles,
+.services-delivery,
+.contacts-titles{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 30px;
+text-transform: uppercase;
+color:var(--text-color-black);
+}
+.services-delivery{
+color:var(--navigation);
+}
+
+.services-delivery-item{
+width: 240px;
+height: 61px;
+background-color: color: var(--white);
+box-shadow: 0px 1px 0px #FFFFFF;
+list-style: none;
+}
+.services-delivery-link{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 21px;
+line-height: 30px;
+color:var(--navigation);
+}
+.services-guarantee-item,
+.services-credit-item{
+width: 240px;
+height: 61px;
+background-color:var(--navigation);
+box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+list-style: none;
+}
+.services-guarantee-link,
+.services-credit-link{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 21px;
+line-height: 30px;
+color: var(--white);
+}
+/************************Блок СЕРВИСЫ  END ************************** */
+
+/******************Блок Компания Техномарт-Контакты  START ***********/
+.contacts-gotlost{
+width: 300px;
+height: 38px;
+background-color:var(--basic-red);
+}
+.contacts-moredetails-link,
+.contacts-gotlost-link{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+text-transform: uppercase;
+color: var(--white);
+}
+
+.contacts-item{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+color:var(--text-color-black);
+}
+/******************Блок Компания Техномарт-Контакты  END ***********/
+
+
+/************************Блок ПОДВАЛ  START ************************ */
+.footer-site-navigation-item a{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+color:black /*var(--basic-backgound); будет потом такой цвет*/
+}
+.footer-contacts-address,
+.footer-contacts-phone{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+color:black /*var(--text-light-grey} будет потом такой цвет*/
+}
+.footer-our-production-item a{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+color:var(--special-yellowlight);
+}
+.footer-license-info,
+.footer-feedback-info,
+.footer-feedback a,
+.footer-developed-info,
+.footer-developed a{
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 18px;
+color:black /*var(--white) будет потом такой цвет*/
+}
+.footer-feedback a,
+.footer-developed a{
+color:var(--special-yellowlight);
+}
+/************************Блок ПОДВАЛ  END ************************ */
+
+
+
+
+
+
+

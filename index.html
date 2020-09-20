@@ -3,23 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" href="css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&amp;subset=latin,cyrillic;display=swap">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
 <!-- *******************Блок ШАПКА  START ***************************** -->
     <header class="main-header">
-      <div>
-        <a href="" class="main-header-logo"><img src="img/logo-technomart.svg" width="108" height="18"alt="Техномарт"></a>
+      <div class="main-header-background-logo">
+        <div class="main-header-logo">
+          <a href=""><img src="img/logo-technomart.svg" width="108" height="18"alt="Техномарт"></a>
+        </div>
         Поиск:
-        <ul>
-          <li><a href="" class="header-bookmarks">Закладки: 0</a></li>
-          <li><a href="" class="header-cart">Корзина: 0</a></li>
-          <li><a href="" class="header-order">Оформить заказ</a></li>
+        <ul class="main-header-list">
+          <li class="main-header-item">
+            <a href="" class="header-bookmarks">Закладки: 0</a></li>
+          <li class="main-header-item">
+            <a href="" class="header-cart">Корзина: 0</a></li>
+          <li class="main-header-item">
+            <a href="" class="header-order">Оформить заказ</a></li>
         </ul>
       </div>
-      <div>
-        <p class="header-about">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+      <div class="header-block">
+        <p class="header-about">Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</p>
         <div>
           <a class="contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="header-contact-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -48,26 +55,46 @@
       <section class="our-production container">
         <h1 class="our-production-title">Наша продукция</h1>
         <ul class="our-production-list">
-          <li class="our-production-item">
-            <p class="our-production-info">Материалы</p>
-            <a href="">На любой вкус</a>
-          </li>
-          <li class="our-production-item">
-            <p class="our-production-info">Инструмент</p>
-            <a href="">На все случаи</a>
-          </li>
-          <li class="our-production-item">
-            <p class="our-production-info">Техника</p>
-            <a href="">Для стройки</a>
-          </li>
-          <li class="our-production-item">
-            <p class="our-production-info">Скидки 50%</p>
-            <a href="">На 350 товаров</a>
-          </li>
-          <li class="our-production-item">
-            <p class="our-production-info">Доставка</p>
-            <a href="">Бесплатно</a>
-          </li>
+          <div class="our-production-materials">
+            <li class="our-production-item">
+              <p class="our-production-info">Материалы</p>
+              <div class="our-production-block">
+                <a href="">На любой вкус</a>
+              </div>
+            </li>
+          </div>
+          <div class="our-production-instruments">
+            <li class="our-production-item">
+              <p class="our-production-info">Инструмент</p>
+              <div class="our-production-block">
+                <a href="">На все случаи</a>
+              </div>
+            </li>
+          </div>
+          <div class="our-production-technics">
+            <li class="our-production-item">
+              <p class="our-production-info">Техника</p>
+              <div class="our-production-block">
+                <a href="">Для стройки</a>
+              </div>
+            </li>
+          </div>
+          <div class="our-production-discounts">
+            <li class="our-production-item">
+              <p class="our-production-info">Скидки 50%</p>
+              <div class="our-production-block">
+                <a href="">На 350 товаров</a>
+              </div>
+            </li>
+          </div>
+          <div class="our-production-delivery">
+            <li class="our-production-item">
+              <p class="our-production-info">Доставка</p>
+              <div class="our-production-block">
+                <a href="">Бесплатно</a>
+              </div>
+            </li>
+          </div>
         </ul>
       </section>
       <section class="slider">
@@ -76,7 +103,9 @@
           <h2 class="our-production-punchers">Перфораторы</h2>
           <p class="slider-info">Настоящие мужские игрушки</p>
         </div>
-        <a href="catalog.html">открыть каталог</a>
+        <div class="slider-open">
+          <a href="catalog.html">открыть каталог</a>
+        </div>
       </section>
 <!-- ***********************Блок Наша Продукция  END *********************** -->
 
@@ -84,29 +113,31 @@
  <!-- *******************Блок Популярные Товары  START ****************** -->
       <section class="popular-goods container">
         <h2 class="popular-goods-title">Популярные товары:</h2>
-        <a href="">Все популярные товары</a>
+        <div class="popular-goods-all">
+          <a class="popular-goods-all-link" href="">Все популярные товары</a>
+        </div>
         <ul class="popular-goods-list">
           <li class="popular-goods-item">
             <figure class="popular-goods-content">
               <img src="img/BFG9000.png" width="184" height="164" alt="Перфоратор Bosch BFG 9000">
             </figure>
-            <div>
-              <a href="">Купить</a>
-              <a href="">В закладки</a>
+            <div class="popular-goods-modal">
+              <a class="popular-goods-modal-buy-BFG9000" href="">Купить</a>
+              <a class="popular-goods-modal-InBookmarks-BFG9000" href="">В закладки</a>
             </div>
-            <a href="">Перфоратор Bosch BFG 9000</a>
-            <p class="popular-goods-price">32 500 Р.</p>  discount price
+            <a class="punchers-Bosch" href="">Перфоратор BOSCH<br>BFG 9000</a>
+            <p class="popular-goods-price">32 500 Р.</p>
             <p class="popular-goods-discount_price">25 500 Р.</p>
           </li>
           <li class="popular-goods-item">
             <figure class="popular-goods-content">
               <img src="img/BFG3000.png" width="127" height="112" alt="Перфоратор Bosch BFG 3000">
             </figure>
-            <div>
-              <a href="">Купить</a>
-              <a href="">В закладки</a>
+            <div class="popular-goods-modal">
+              <a class="popular-goods-modal-buy-BFG3000" href="">Купить</a>
+              <a class="popular-goods-modal-InBookmarks-BFG3000" href="">В закладки</a>
             </div>
-            <a href="">Перфоратор Bosch BFG 3000</a>
+            <a class="punchers-Bosch" href="">Перфоратор BOSCH<br>BFG 3000</a>
             <p class="popular-goods-price">22 500 Р.</p>
             <p class="popular-goods-discount_price">15 500 Р.</p>
           </li>
@@ -114,11 +145,11 @@
             <figure class="popular-goods-content">
               <img src="img/BFG6000.png" width="144" height="128" alt="Перфоратор Bosch BFG 6000">
             </figure>
-            <div>
-              <a href="">Купить</a>
-              <a href="">В закладки</a>
+            <div class="popular-goods-modal">
+              <a class="popular-goods-modal-buy-BFG6000" href="">Купить</a>
+              <a class="popular-goods-modal-InBookmarks-BFG6000" href="">В закладки</a>
             </div>
-            <a href="">Перфоратор Bosch BFG 6000</a>
+            <a class="punchers-Bosch" href="">Перфоратор BOSCH<br>BFG 6000</a>
             <p class="popular-goods-price">30 500 Р.</p>
             <p class="popular-goods-discount_price">25 500 Р.</p>
           </li>
@@ -126,12 +157,12 @@
             <figure class="popular-goods-content">
               <img src="img/BFG2000.png" width="127" height="112" alt="Перфоратор Bosch BFG 2000">
             </figure>
-            <div>
-              <a href="">Купить</a>
-              <a href="">В закладки</a>
+            <div class="popular-goods-modal">
+              <a class="popular-goods-modal-buy-BFG2000" href="">Купить</a>
+              <a class="popular-goods-modal-InBookmarks-BFG2000" href="">В закладки</a>
             </div>
-            <a href="">Перфоратор Bosch BFG 2000</a>
-            <p class="popular-goods-price">12 500 Р.</p>
+            <a class="punchers-Bosch" href="">Перфоратор BOSCH<br>BFG 2000</a>
+            <p class="popular-goods-discount_price">12 500 Р.</p>
           </li>
         </ul>
       </section>
@@ -140,7 +171,9 @@
 <!-- *******************Блок Популярные Производители  START ************ -->
       <section class="popular-manufacturers container">
         <h2 class="popular-manufacturers-title">Популярные производители:</h2>
-        <a href="">Все производители</a>
+        <div class="popular-manufacturers-all">
+          <a class="popular-manufacturers-link" href="">Все производители</a>
+        </div>
         <ul class="popular-manufacturers-list">
           <li class="popular-manufacturers-item">
             <a href="">
@@ -195,19 +228,19 @@
         </div>
         <div>
           <ul class="services-list">
-            <li class="services-item">
-              <a href="">Доставка</a>
+            <li class="services-delivery-item">
+              <a class="services-delivery-link" href="">Доставка</a>
             </li>
-            <li class="services-item">
-              <a href="">Гарантия</a>
+            <li class="services-guarantee-item">
+              <a class="services-guarantee-link" href="">Гарантия</a>
             </li>
-            <li class="services-item">
-              <a href="">Кредит</a>
+            <li class="services-credit-item">
+              <a class="services-credit-link" href="">Кредит</a>
             </li>
           </ul>
         </div>
         <div>
-          <h2 class="services-titles">Доставка</h2>
+          <h2 class="services-delivery">Доставка</h2>
           <p class="services-info">Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
           <img src="img/Truck.png" width="468" height="261" alt="Грузовичок">
         </div>
@@ -225,7 +258,9 @@
             <li class="contacts-item">Автотрейдинг</li>
             <li class="contacts-item">ЖелДорЭкспедиция</li>
           </ul>
-          <a href="">Подробнее о компании</a>
+          <div class="contacts-moredetails">
+            <a class="contacts-moredetails-link" href="">Подробнее о компании</a>
+          </div>
         </div>
         <div>
           <h2 class="contacts-titles">Контакты</h2>
@@ -233,7 +268,9 @@
           <a href="">
             <img src="img/Map.png" width="300" height="158" alt="Карта кампании">
           </a>
-          <a href="">Заблудились? Напишите нам!</a>
+          <div class="contacts-gotlost">
+            <a class="contacts-gotlost-link" href="">Заблудились? Напишите нам!</a>
+          </div>
         </div>
       </section>
 
@@ -242,6 +279,7 @@
 
 <!-- ***********************Блок ПОДВАЛ  START ************************ -->
     <footer class="page-footer main-footer">
+      <!-- <div class="main-footer-background-logo"> -->
       <div class="footer-site-navigation">
         <a href=""><img src="img/logo-technomart.svg" width="108" height="18"alt="Техномарт"></a>
         <ul class="footer-site-navigation-list">
@@ -265,7 +303,7 @@
       <div>
         <div class="footer-contacts">
           <p class="footer-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <a class="footer-contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <p class="footer-contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</p>
         </div>
         <ul class="footer-our-production-list">
           <li class="footer-our-production-item">
@@ -284,8 +322,8 @@
       </div>
       <div>
         <div class="footer-license">
-          <p class="footer-license-info">© 2010-2019 Компания «Техномарт»</p>
-          <p class="footer-license-info">Все права защищены</p>
+          <p class="footer-license-info">© 2010-2019 Компания «Техномарт»<br>
+           Все права защищены</p>
         </div>
         <ul class="footer-social-icons-list">
           <li class="footer-social-icons-item"><a href="">ВКонтакте</a></li>
@@ -298,7 +336,7 @@
         </div>
         <div class="footer-developed">
           <p class="footer-developed-info">Разработано -</p>
-          <a href="">https://htmlacademy.ru/intensive/htmlcss</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </div>
       </div>
     </footer>
