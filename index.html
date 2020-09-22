@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&amp;subset=latin,cyrillic;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400italic&amp;subset=latin,cyrillic;display=swap">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -12,11 +12,14 @@
 <!-- *******************Блок ШАПКА  START ***************************** -->
     <header class="main-header">
       <div class="main-header-background-logo">
-        <div class="main-header-logo">
-          <a href=""><img src="img/logo-technomart.svg" width="108" height="18"alt="Техномарт"></a>
-        </div>
-        Поиск:
+        <a href="" class="main-header-logo"><img src="img/logo-technomart.svg" width="108" height="18"alt="Техномарт"></a>
         <ul class="main-header-list">
+          <li class="main-header-item">
+            <form action="/search" method="post" class="main-header-form">
+              <input class="main-header-input" type="search" name="search" id="search" placeholder="Поиск:" required>
+              <label for="search"></label>
+            </form>
+          </li>
           <li class="main-header-item">
             <a href="" class="header-bookmarks">Закладки: 0</a></li>
           <li class="main-header-item">
@@ -103,9 +106,7 @@
           <h2 class="our-production-punchers">Перфораторы</h2>
           <p class="slider-info">Настоящие мужские игрушки</p>
         </div>
-        <div class="slider-open">
-          <a href="catalog.html">открыть каталог</a>
-        </div>
+        <a href="catalog.html" class="slider-open">открыть каталог</a>
       </section>
 <!-- ***********************Блок Наша Продукция  END *********************** -->
 
@@ -113,9 +114,8 @@
  <!-- *******************Блок Популярные Товары  START ****************** -->
       <section class="popular-goods container">
         <h2 class="popular-goods-title">Популярные товары:</h2>
-        <div class="popular-goods-all">
-          <a class="popular-goods-all-link" href="">Все популярные товары</a>
-        </div>
+        <!-- <div class="popular-goods-all"> -->
+        <a class="popular-goods-all" href="">Все популярные товары</a>
         <ul class="popular-goods-list">
           <li class="popular-goods-item">
             <figure class="popular-goods-content">
@@ -171,9 +171,9 @@
 <!-- *******************Блок Популярные Производители  START ************ -->
       <section class="popular-manufacturers container">
         <h2 class="popular-manufacturers-title">Популярные производители:</h2>
-        <div class="popular-manufacturers-all">
-          <a class="popular-manufacturers-link" href="">Все производители</a>
-        </div>
+        <!-- <div class="popular-manufacturers-all"> -->
+        <a class="popular-manufacturers-all" href="">Все производители</a>
+        <!-- </div> -->
         <ul class="popular-manufacturers-list">
           <li class="popular-manufacturers-item">
             <a href="">
@@ -258,9 +258,9 @@
             <li class="contacts-item">Автотрейдинг</li>
             <li class="contacts-item">ЖелДорЭкспедиция</li>
           </ul>
-          <div class="contacts-moredetails">
-            <a class="contacts-moredetails-link" href="">Подробнее о компании</a>
-          </div>
+          <!-- <div class="contacts-moredetails"> -->
+          <a class="contacts-moredetails" href="">Подробнее о компании</a>
+          <!-- </div> -->
         </div>
         <div>
           <h2 class="contacts-titles">Контакты</h2>
@@ -268,9 +268,7 @@
           <a href="">
             <img src="img/Map.png" width="300" height="158" alt="Карта кампании">
           </a>
-          <div class="contacts-gotlost">
-            <a class="contacts-gotlost-link" href="">Заблудились? Напишите нам!</a>
-          </div>
+          <a class="contacts-gotlost-link" href="">Заблудились? Напишите нам!</a>
         </div>
       </section>
 
@@ -281,7 +279,7 @@
     <footer class="page-footer main-footer">
       <!-- <div class="main-footer-background-logo"> -->
       <div class="footer-site-navigation">
-        <a href=""><img src="img/logo-technomart.svg" width="108" height="18"alt="Техномарт"></a>
+        <a href="" class="page-footer-logo"><img src="img/logo-technomart.svg" width="108" height="18"alt="Техномарт"></a>
         <ul class="footer-site-navigation-list">
           <li class="footer-site-navigation-item">
             <a href="">Компания</a>

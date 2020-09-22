@@ -25,7 +25,7 @@
 
 }
 
-body {
+.page-body {  /**********BODY***********/
   min-width: 1200px;
   margin: 0;
   padding: 0;
@@ -45,210 +45,233 @@ img {
   height: auto;
 }
 /********************Блок ШАПКА  START ******************************/
-.main-header-background-logo{
-width:1200px;
-height:42px;
-background-color: var(--header-background);
+.main-header {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
-.main-header-logo{
+
+.main-header-background-logo {
+  width:1200px;
+  height:42px;
+  background-color: var(--header-background);
+}
+
+.main-header-logo {
+  display:block;
   margin-top: 20px;
-width:220px;
-height:47px;
-background: var(--basic-red);
-box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  width:220px;
+  height:47px;
+  background: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
-.header-block{
-margin-top: 170px;
+
+.header-block {
+  margin-top: 170px;
 }
-.main-header-list{
-list-style: none;
+
+.main-header-list {
+  list-style: none;
 }
-.main-header-item a{
-list-style: none;
-}
-.main-header-list li:nth-child(3){
-background-color: var(--basic-green);
-width:150px;
-height:42px;
-text-align: center;
-}
-.main-header-item a{
-/*color: var(--white); пока отключен*/
-list-style: none;
-}
-.main-header-list:nth-child(3){
+
+/*.main-header-list li:nth-child(3) {*/
+.header-order{
+  display: block;
+  background-color: var(--basic-green);
   width:150px;
- height:42px;
+  height:42px;
+  text-align: center;
 }
+
+.main-header-list:nth-child(3) {
+  width:150px;
+  height:42px;
+}
+
 .site-navigation,
 .header-bookmarks,
 .header-cart,
-.header-order
-{
-list-style:none;
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-size: 18px;
-line-height: 24px;
-color: var(--text-color-black);
+.header-order,
+.main-header-input {
+  list-style:none;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--text-color-black);
 }
-.header-about{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: italic;
-font-weight: normal;
-font-size: 16px;
-line-height: 23px;
-color: var(--basic-red);
-margin-top: 85px;
+
+.header-about {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+  margin-top: 85px;
 }
-.contacts-phone{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 21px;
-line-height: 30px;
-color: var(--basic-red);
+
+.contacts-phone {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
 }
-.header-contact-address{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 24px;
+
+.header-contact-address {
+  font-size: 14px;
+  line-height: 24px;
 }
+
 .login-link,
-.registration-link{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 21px;
-line-height: 21px;
-color: var(--text-color-black);
+.registration-link {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--text-color-black);
 }
+
 /********************Блок ШАПКА  END ******************************/
 /**********************Блок Наша Продукция  START **********/
-.our-production-title{
+.our-production {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.our-production-title {
   display: none;
 }
-.our-production-info{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 30px;
+
+.our-production-info {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
 }
-.our-production .our-production-block{
-width:135px;
-height:38px;
-background-color: rgba(255,255,255,0.3);
-text-align: center;
-mix-blend-mode: normal;
+
+.our-production .our-production-block {
+  width:135px;
+  height:38px;
+  background-color: rgba(255,255,255,0.3);
+  text-align: center;
+  mix-blend-mode: normal;
 }
+
 .our-production-materials,
 .our-production-instruments,
 .our-production-technics,
 .our-production-discounts,
-.our-production-delivery{
-width:300px;
-height:123px;
-color: var(--white);
+.our-production-delivery {
+  width:300px;
+  height:123px;
+  color: var(--white);
 }
-.our-production-materials{
-background-color: var(--special-yellow);
+
+.our-production-materials {
+  background-color: var(--special-yellow);
 }
-.our-production-instruments{
-background-color: var(--special-blue);
+
+.our-production-instruments {
+  background-color: var(--special-blue);
 }
-.our-production-technics{
-background-color: var(--special-lilac);
+
+.our-production-technics {
+  background-color: var(--special-lilac);
 }
-.our-production-discounts{
-background-color: var(--special-greenlight);
+
+.our-production-discounts {
+  background-color: var(--special-greenlight);
 }
-.our-production-delivery{
-background-color: var(--special-yellowdelivery);
+
+.our-production-delivery {
+  background-color: var(--special-yellowdelivery);
 }
-.our-production-item a{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 18px;
-text-transform: uppercase;
-width:192px;
-height:38px;
-color:var(--white);
+
+.our-production-item a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  width:192px;
+  height:38px;
+  color:var(--white);
 }
+
 .slider-open,
 .popular-goods-all,
 .popular-manufacturers-all,
 .contacts-moredetails,
-.contacts-gotlost{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 18px;
-text-transform: uppercase;
-width:192px;
-height:38px;
-background-color: var(--basic-red);
-color: var(--white);
+.contacts-gotlost {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  width:192px;
+  height:38px;
+  background-color: var(--basic-red);
+  color: var(--white);
 }
 
 /********************** СЛАЙДЕР  СТАРТ **********/
-.slider .our-production-punchers{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 36px;
-line-height: 36px;
-align-items: center;
-text-transform: uppercase;
-color:var(--white);
-margin-top: -250px;
-}
-.slider-info{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 24px;
-color:var(--white);
-}
-.slider-open{
-position: absolute;
-text-transform: uppercase;
-width:192px;
-height:38px;
-background-color: var(--basic-red);
-}
-.slider-open a{
-color:var(--white);
+.slider {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
 
+.slider .our-production-punchers {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  align-items: center;
+  text-transform: uppercase;
+  color:var(--white);
+  margin-top: -250px;
+}
 
+.slider-info {
+  font-size: 18px;
+  line-height: 24px;
+  color:var(--white);
+}
+
+.slider-open {
+  position: absolute;
+  text-transform: uppercase;
+  width:192px;
+  height:38px;
+  background-color: var(--basic-red);
+}
+
+.slider-open a {
+  color:var(--white);
+}
 /********************** СЛАЙДЕР  END **********/
 /**********************Блок Наша Продукция  END **********/
 
 
 /**********************Блок Популярные товары  START **********/
-.popular-goods{
-margin-top: 200px;
+.popular-goods {
+  margin-top: 200px;
+  font-style: normal;
+  font-weight: normal;
 }
+
+.popular-goods-list,
+.popular-manufacturers-list,
+.footer-site-navigation-list,
+.footer-our-production-list,
+.footer-social-icons-list {
+  list-style: none;
+}
+
 .popular-goods-title,
-.popular-manufacturers-title{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 30px;
-color:var(--navigation);
-text-transform: uppercase;
+.popular-manufacturers-title {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  color:var(--navigation);
+  text-transform: uppercase;
 }
-.popular-goods-all-link{
-color: var(--white);
+
+.popular-goods-all-link {
+  color: var(--white);
 }
+
 .popular-goods-modal-buy-BFG9000,
 .popular-goods-modal-InBookmarks-BFG9000,
 .popular-goods-modal-buy-BFG6000,
@@ -256,172 +279,187 @@ color: var(--white);
 .popular-goods-modal-buy-BFG3000,
 .popular-goods-modal-InBookmarks-BFG3000,
 .popular-goods-modal-buy-BFG2000,
-.popular-goods-modal-InBookmarks-BFG2000
-{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 18px;
-text-align: center;
-text-transform: uppercase;
+.popular-goods-modal-InBookmarks-BFG2000 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
 }
-.punchers-Bosch{
-font-family: "PT Sans Narrow", Arial, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 20px;
-color:var(--text-color-black);
+
+.popular-goods-list {
+  font-family: "PT Sans Narrow", Arial, sans-serif;
 }
-.popular-goods-price{
-font-family: "PT Sans Narrow", Arial, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 17px;
-line-height: 18px;
-text-decoration-line: line-through;
-text-transform: uppercase;
-color: var(--text-color-grey);
+
+.punchers-Bosch {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color:var(--text-color-black);
 }
-.popular-goods-discount_price{
-font-family: "PT Sans Narrow", Arial, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 17px;
-line-height: 18px;
-text-transform: uppercase;
-color: var(--text-color-black);
+
+.popular-goods-price {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+  color: var(--text-color-grey);
+}
+
+.popular-goods-discount_price {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--text-color-black);
 }
 
 /**********************Блок Популярные товары  END **********/
 
 /**********************Блок Популярные производители  START **********/
-.popular-manufacturers-link{
+/*.popular-manufacturers-link{
 color: var(--white);
-}
+}*/
 /**********************Блок Популярные производители  END **********/
 
  /************************Блок СЕРВИСЫ  START ************************** */
-.services-titles,
-.services-delivery,
-.contacts-titles{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 30px;
-text-transform: uppercase;
-color:var(--text-color-black);
-}
-.services-delivery{
-color:var(--navigation);
+.services {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
 }
 
-.services-delivery-item{
-width: 240px;
-height: 61px;
-background-color: color: var(--white);
-box-shadow: 0px 1px 0px #FFFFFF;
-list-style: none;
+.services-titles,
+.services-delivery,
+.contacts-titles {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color:var(--text-color-black);
 }
-.services-delivery-link{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 21px;
-line-height: 30px;
-color:var(--navigation);
+
+.services-delivery {
+  color:var(--navigation);
 }
+
+.services-delivery-item {
+  width: 240px;
+  height: 61px;
+  background-color: color: var(--white);
+  box-shadow: 0px 1px 0px #FFFFFF;
+  list-style: none;
+}
+
+.services-delivery-link {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color:var(--navigation);
+}
+
 .services-guarantee-item,
-.services-credit-item{
-width: 240px;
-height: 61px;
-background-color:var(--navigation);
-box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
-list-style: none;
+.services-credit-item {
+  width: 240px;
+  height: 61px;
+  background-color:var(--navigation);
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  list-style: none;
 }
+
 .services-guarantee-link,
-.services-credit-link{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 21px;
-line-height: 30px;
-color: var(--white);
+.services-credit-link {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--white);
 }
 /************************Блок СЕРВИСЫ  END ************************** */
 
 /******************Блок Компания Техномарт-Контакты  START ***********/
-.contacts-gotlost{
-width: 300px;
-height: 38px;
-background-color:var(--basic-red);
-}
-.contacts-moredetails-link,
-.contacts-gotlost-link{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 18px;
-text-transform: uppercase;
-color: var(--white);
+.contacts {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
 
-.contacts-item{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 24px;
-color:var(--text-color-black);
+.contacts-moredetails-link,
+.contacts-gotlost-link {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color:var(--basic-red);
+  height: 38px;
+}
+
+.contacts-moredetails-link {
+  width: 220px;
+}
+
+.contacts-gotlost-link {
+  width: 300px;
+}
+
+.contacts-item {
+  font-size: 18px;
+  line-height: 24px;
+  color:var(--text-color-black);
 }
 /******************Блок Компания Техномарт-Контакты  END ***********/
 
 
 /************************Блок ПОДВАЛ  START ************************ */
-.footer-site-navigation-item a{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 24px;
-color:black /*var(--basic-backgound); будет потом такой цвет*/
+.page-footer {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
+
+.page-footer-logo {
+  display:block;
+  margin-top: 20px;
+  width:220px;
+  height:68px;
+  background: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.footer-site-navigation-item a {
+  font-size: 18px;
+  line-height: 24px;
+  color:black /*var(--basic-backgound); будет потом такой цвет*/
+}
+
 .footer-contacts-address,
-.footer-contacts-phone{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 24px;
-color:black /*var(--text-light-grey} будет потом такой цвет*/
+.footer-contacts-phone {
+  font-size: 18px;
+  line-height: 24px;
+  color:black /*var(--text-light-grey} будет потом такой цвет*/
 }
-.footer-our-production-item a{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 24px;
-color:var(--special-yellowlight);
+
+.footer-our-production-item a {
+  font-size: 18px;
+  line-height: 24px;
+  color:var(--special-yellowlight);
 }
+
 .footer-license-info,
 .footer-feedback-info,
 .footer-feedback a,
 .footer-developed-info,
-.footer-developed a{
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 18px;
-color:black /*var(--white) будет потом такой цвет*/
+.footer-developed a {
+  font-size: 16px;
+  line-height: 18px;
+  color:black /*var(--white) будет потом такой цвет*/
 }
+
 .footer-feedback a,
-.footer-developed a{
-color:var(--special-yellowlight);
+.footer-developed a {
+  color:var(--special-yellowlight);
 }
+
 /************************Блок ПОДВАЛ  END ************************ */
 
 
