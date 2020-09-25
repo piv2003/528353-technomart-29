@@ -45,11 +45,31 @@ img {
   height: auto;
 }
 /********************Блок ШАПКА  START ******************************/
-.main-header {
+.main-header,
+.Ravshan-title,
+.main-header-my-orders,
+.main-header-personal-area,
+.couple-of-words-title,
+.catalog-punchers-title {
   font-family: "Cuprum", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
+  /*width:1200px;
+  height:320px;
+  background: rgba(0, 0, 0, 0.01);*/
 }
+
+.Ravshan-title {
+  color: var(--text-color-black);
+}
+
+.main-header-my-orders,
+.main-header-personal-area{
+  color: var(--navigation);
+  font-size: 16px;
+  line-height: 18px;
+}
+
 
 .main-header-background-logo {
   width:1200px;
@@ -70,11 +90,6 @@ img {
   margin-top: 170px;
 }
 
-.main-header-list {
-  list-style: none;
-}
-
-/*.main-header-list li:nth-child(3) {*/
 .header-order{
   display: block;
   background-color: var(--basic-green);
@@ -88,15 +103,33 @@ img {
   height:42px;
 }
 
+.Ravshan-title{
+  font-size: 21px;
+  line-height: 21px;
+}
+
 .site-navigation,
 .header-bookmarks,
 .header-cart,
 .header-order,
-.main-header-input {
+.main-header-input,
+.header-cart-catalog {
   list-style:none;
   font-size: 18px;
   line-height: 24px;
-  color: var(--text-color-black);
+  color: var(--text-color-black); /*Цвет потом поменять на --white*/
+}
+
+.header-order {
+  color: var(--white); /*Потом этот блок убрать*/
+}
+
+.header-cart-catalog {
+  display: block;
+  background-color: var(--basic-red);
+  width:136px;
+  height:42px;
+  color: var(--white);
 }
 
 .header-about {
@@ -130,8 +163,6 @@ img {
 /**********************Блок Наша Продукция  START **********/
 .our-production {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
 }
 
 .our-production-title {
@@ -255,7 +286,15 @@ img {
 .popular-manufacturers-list,
 .footer-site-navigation-list,
 .footer-our-production-list,
-.footer-social-icons-list {
+.footer-social-icons-list,
+.main-header-list,
+.catalog-punchers-menu-list,
+.catalog-manufacturers-list,
+.catalog-power-list,
+.sorting-list,
+.product-cards-list,
+.page-selection-list
+ {
   list-style: none;
 }
 
@@ -287,9 +326,9 @@ img {
   text-transform: uppercase;
 }
 
-.popular-goods-list {
+/*.popular-goods-list {
   font-family: "PT Sans Narrow", Arial, sans-serif;
-}
+}*/
 
 .punchers-Bosch {
   font-weight: bold;
@@ -298,7 +337,7 @@ img {
   color:var(--text-color-black);
 }
 
-.popular-goods-price {
+.price {
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -307,7 +346,7 @@ img {
   color: var(--text-color-grey);
 }
 
-.popular-goods-discount_price {
+.discount_price {
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -461,6 +500,103 @@ color: var(--white);
 }
 
 /************************Блок ПОДВАЛ  END ************************ */
+
+/************************Блок Перфораторы-Каталог  START ************************ */
+.catalog-punchers-menu-link,
+.catalog-punchers-menu-title,
+.catalog-filter,
+.btn-filter,
+.page-selection-number,
+.page-selection-next {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.catalog-punchers-menu-link {
+  color:var(--text-color-black)
+}
+
+.catalog-filter,
+.btn-filter,
+.page-selection-number,
+.page-selection-next {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.catalog-filter,
+.btn-filter,
+.catalog-punchers-menu-link,
+.catalog-punchers-menu-title,
+.page-selection-next,
+.product-cards-modal-buy-BFG6000-1,
+.product-cards-modal-buy-BFG6000-2,
+.product-cards-modal-buy-BFG6000-3,
+.product-cards-modal-buy-BFG6000-4,
+.product-cards-modal-buy-BFG6000-5,
+.product-cards-modal-buy-BFG3000-1,
+.product-cards-modal-buy-BFG3000-2,
+.product-cards-modal-buy-BFG2000-1,
+.product-cards-modal-buy-BFG2000-2,
+.product-cards-modal-InBookmarks-BFG6000-1,
+.product-cards-modal-InBookmarks-BFG6000-2,
+.product-cards-modal-InBookmarks-BFG6000-3,
+.product-cards-modal-InBookmarks-BFG6000-4,
+.product-cards-modal-InBookmarks-BFG6000-5,
+.product-cards-modal-InBookmarks-BFG3000-1,
+.product-cards-modal-InBookmarks-BFG3000-2,
+.product-cards-modal-InBookmarks-BFG2000-1,
+.product-cards-modal-InBookmarks-BFG2000-2
+ {
+  text-transform: uppercase;
+}
+
+.catalog-manufacturers-link,
+.catalog-power-link {
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color:var(--text-color-black)
+}
+
+.couple-of-words-title,
+.catalog-punchers-title {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.catalog-punchers-title {
+  color: var(--navigation);
+}
+
+.catalog-cost-title,
+.catalog-manufacturers-title,
+.catalog-power-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.page-selection-item p,
+.page-selection-item a {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+}
+
+.page-selection-item p {
+  background-color: var(--basic-red);
+  color: var(--white);
+}
+
+.page-selection-item a {
+color: var(--text-color-black);
+}
+/************************Блок Перфораторы-Каталог  END ************************ */
+
 
 
 
