@@ -72,6 +72,7 @@ img {
 
 
 .main-header-background-logo {
+  /*display: flex;*/
   width:1200px;
   height:42px;
   background-color: var(--header-background);
@@ -79,7 +80,7 @@ img {
 
 .main-header-logo {
   display:block;
-  margin-top: 20px;
+/*  margin-top: 20px;*/
   width:220px;
   height:47px;
   background: var(--basic-red);
@@ -101,6 +102,12 @@ img {
 .main-header-list:nth-child(3) {
   width:150px;
   height:42px;
+}
+
+.main-header-list {
+  /*display: flex;*/
+  margin: 0;
+  padding: 0;
 }
 
 .Ravshan-title{
@@ -137,7 +144,7 @@ img {
   font-size: 16px;
   line-height: 23px;
   color: var(--basic-red);
-  margin-top: 85px;
+  /*margin-top: 85px;*/
 }
 
 .contacts-phone {
@@ -458,7 +465,7 @@ color: var(--white);
 
 .page-footer-logo {
   display:block;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   width:220px;
   height:68px;
   background: var(--basic-red);
@@ -551,8 +558,8 @@ color: var(--white);
   text-transform: uppercase;
 }
 
-.catalog-manufacturers-link,
-.catalog-power-link {
+.catalog-manufacturers-label,
+.catalog-power-label {
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
@@ -597,6 +604,26 @@ color: var(--text-color-black);
 }
 /************************Блок Перфораторы-Каталог  END ************************ */
 
+/************************Блок Фигуры  START ************************ */
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 13px solid var(--basic-red);
+}
+
+.triangle-down {
+  display: block;
+  margin-top: 20px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 13px solid var(--basic-greylight);
+}
+
+/************************Блок Фигуры  END ************************ */
 
 
 
