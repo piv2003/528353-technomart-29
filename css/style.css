@@ -1,28 +1,30 @@
 /* Variables */
 
 :root {
-  --basic-red: #EE3643;
   --basic-green: #63A63E;
-  --basic-grey: #3D546F;
-  --basic-greylight: #C5C5C5;
-  --basic-backgound: #F1F5F7;
-  --white: #FFF;
-  --special-yellow: #FFBF47;
-  --special-yellowlight: #FFD180;
-  --special-yellowdelivery: #FFC047;
-  --special-blue: #3BBCE3;
-  --special-lilac: #DC91D8;
-  --special-greenlight: #8ED78F;
   --success: #5FBB2D;
-  --warning: #FFBF47;
-  --error: #BA2732;
-  --lightgray: #EAEAEA;
+  --box-shadow: #367315;
+  --special-greenlight: #8ED78F;
+  --basic-grey: #3D546F;
+  --credit: #405069;
   --navigation: #32425C;
   --header-background: #293449;
-  --text-color-black: #000;
+  --basic-greylight: #C5C5C5;
   --text-color-grey: #A9A9A9;
+  --white: #FFF;
+  --basic-backgound: #F1F5F7;
+  --lightgray: #EAEAEA;
   --text-light-grey: #F3F7F9;
-
+  --border-button:#E5E5E5;
+  --special-yellowlight: #FFD180;
+  --special-yellow: #FFBF47;
+  --special-yellowdelivery: #FFC047;
+  --warning: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --error: #BA2732;
+  --basic-red: #EE3643;
+  --text-color-black: #000;
 }
 
 .page-body {  /**********BODY***********/
@@ -72,15 +74,29 @@ img {
 
 
 .main-header-background-logo {
-  /*display: flex;*/
   width:1200px;
   height:42px;
   background-color: var(--header-background);
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-navigation {
+  display: flex;
+  justify-content: space-between;
+  width:940px;
+  height:60px;
+  left: 130px;
+  background-color: var(--navigation);
+  box-shadow: inset 0px -5px 0px var(--header-background);
+}
+
+.site-navigation li a {
+  color: var(--white);
 }
 
 .main-header-logo {
   display:block;
-/*  margin-top: 20px;*/
   width:220px;
   height:47px;
   background: var(--basic-red);
@@ -105,9 +121,15 @@ img {
 }
 
 .main-header-list {
-  /*display: flex;*/
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header-list a {
+  color: var(--white);
+  margin-left: 30px;
 }
 
 .Ravshan-title{
@@ -144,7 +166,6 @@ img {
   font-size: 16px;
   line-height: 23px;
   color: var(--basic-red);
-  /*margin-top: 85px;*/
 }
 
 .contacts-phone {
@@ -361,13 +382,69 @@ img {
   color: var(--text-color-black);
 }
 
+.popular-goods-modal-buy-BFG9000,
+.popular-goods-modal-InBookmarks-BFG9000,
+.popular-goods-modal-buy-BFG3000,
+.popular-goods-modal-InBookmarks-BFG3000,
+.popular-goods-modal-buy-BFG6000,
+.popular-goods-modal-InBookmarks-BFG6000,
+.popular-goods-modal-buy-BFG2000,
+.popular-goods-modal-InBookmarks-BFG2000 {
+  display: block;
+  width: 135px;
+  height: 38px;
+  border-radius: 2px;
+}
+
+.popular-goods-modal-buy-BFG9000,
+.popular-goods-modal-buy-BFG6000,
+.popular-goods-modal-buy-BFG3000,
+.popular-goods-modal-buy-BFG2000 {
+  background: var(--basic-green);
+  box-shadow: inset 0px -3px 0px var(--box-shadow)/*#367315*/;
+  color: var(--white);
+ /* padding-top: 10px;
+  padding-bottom: 20px;*/
+}
+
+.popular-goods-modal-InBookmarks-BFG9000,
+.popular-goods-modal-InBookmarks-BFG6000,
+.popular-goods-modal-InBookmarks-BFG3000,
+.popular-goods-modal-InBookmarks-BFG2000 {
+  border: 3px solid var(--basic-green);
+  box-sizing: border-box;
+  color: var(--navigation);
+}
+
 /**********************Блок Популярные товары  END **********/
 
-/**********************Блок Популярные производители  START **********/
-/*.popular-manufacturers-link{
-color: var(--white);
-}*/
-/**********************Блок Популярные производители  END **********/
+/**********************Блок СОРТИРОВКА  START **********/
+.page-selection-next,
+.page-selection-number {
+  display: block;
+  border: 1px solid var(--border-button);
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.page-selection-number {
+  width: 38px;
+  height: 38px;
+}
+
+li span/* .page-selection-number*/ {
+  background-color:var(--basic-red);
+  color: var(--white);
+  border: 0px !important;
+}
+
+.page-selection-next {
+  width: 140px !important;
+  height: 38px;
+}
+
+/**********************Блок СОРТИРОВКА  END **********/
 
  /************************Блок СЕРВИСЫ  START ************************** */
 .services {
@@ -393,7 +470,7 @@ color: var(--white);
   width: 240px;
   height: 61px;
   background-color: color: var(--white);
-  box-shadow: 0px 1px 0px #FFFFFF;
+  box-shadow: 0px 1px 0px var(--white);
   list-style: none;
 }
 
@@ -409,7 +486,7 @@ color: var(--white);
   width: 240px;
   height: 61px;
   background-color:var(--navigation);
-  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  box-shadow: 0px 1px 0px var(--header-background), inset 0px 1px 0px var(--credit);
   list-style: none;
 }
 
@@ -529,6 +606,14 @@ color: var(--white);
 .page-selection-next {
   font-style: normal;
   font-weight: normal;
+}
+
+.btn-filter {
+  width: 220px;
+  height: 38px;
+  background: var(--white);
+  border: 1px solid var(--border-button);
+  box-sizing: border-box;
 }
 
 .catalog-filter,
