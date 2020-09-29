@@ -26,12 +26,19 @@
   --basic-red: #EE3643;
   --text-color-black: #000;
 }
+.page {
+  width: 100%
+}
 
 .page-body {  /**********BODY***********/
-  min-width: 1200px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  max-width: 1200px;
+  min-height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -47,13 +54,23 @@ img {
   height: auto;
 }
 /********************Блок ШАПКА  START ******************************/
+
+.main-header {
+/*outline: 5px solid rgba(150,155,155,0.9);
+outline-offset: -5px;*/
+background: rgba(0, 0, 0,.05);
+/* display:grid;
+grid-template-rows:1fr 1fr 1fr;
+align-items:center;*/
+}
+
 .main-header,
 .Ravshan-title,
 .main-header-my-orders,
 .main-header-personal-area,
 .couple-of-words-title,
 .catalog-punchers-title {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", sans-serif;
   font-style: normal;
   font-weight: normal;
   /*width:1200px;
@@ -74,21 +91,52 @@ img {
 
 
 .main-header-background-logo {
-  width:1200px;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  justify-items:center;
   height:42px;
   background-color: var(--header-background);
-  display: flex;
-  justify-content: space-between;
+  /*outline: 5px solid rgba(255,0,0,1);
+  outline-offset: -5px;*/
+  /*display: flex;
+  justify-content: space-between;*/
+}
+
+.main-header-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: min-content 1fr 1fr 1fr;
+  justify-items:end;
+
+  /*display: flex;
+  justify-content: space-between;*/
 }
 
 .site-navigation {
-  display: flex;
-  justify-content: space-between;
+  /*display: flex;
+  justify-content: space-between;*/
   width:940px;
   height:60px;
   left: 130px;
   background-color: var(--navigation);
   box-shadow: inset 0px -5px 0px var(--header-background);
+}
+
+.main-navigation {
+/*  outline: 5px solid rgba(0,0,255,1);
+  outline-offset: -5px;*/
+  margin-left: 130px;
+}
+
+.site-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  color: var(--white);
+}
+
+.site-navigation-item {
+  padding-top: 18px;
 }
 
 .site-navigation li a {
@@ -101,31 +149,42 @@ img {
   height:47px;
   background: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  margin-left: 130px;
+}
+
+.img-logo-technomart{
+margin-left: 56px;
+padding-top: 13px;
 }
 
 .header-block {
-  margin-top: 170px;
-}
-
-.header-order{
-  display: block;
-  background-color: var(--basic-green);
-  width:150px;
-  height:42px;
-  text-align: center;
-}
-
-.main-header-list:nth-child(3) {
-  width:150px;
-  height:42px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /*outline: 5px solid rgba(0,255,0,1);
+  outline-offset: -5px;*/
+  margin-top: 40px;
 }
 
 .main-header-list {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 10px;
 }
+
+.header-order{
+  margin:-10px;
+  padding-top: 10px;
+  padding-bottom: -10px;
+  display: block;
+  background-color: var(--basic-green);
+  width:150px;
+  height:32px;
+  text-align: center;
+  color: var(--white);
+}
+
+/*.main-header-list:nth-child(3) {
+  width:150px;
+  height:42px;
+}*/
 
 .main-header-list a {
   color: var(--white);
@@ -137,6 +196,10 @@ img {
   line-height: 21px;
 }
 
+/*.header-cart {
+
+}*/
+
 .site-navigation,
 .header-bookmarks,
 .header-cart,
@@ -147,10 +210,6 @@ img {
   font-size: 18px;
   line-height: 24px;
   color: var(--text-color-black); /*Цвет потом поменять на --white*/
-}
-
-.header-order {
-  color: var(--white); /*Потом этот блок убрать*/
 }
 
 .header-cart-catalog {
@@ -166,18 +225,32 @@ img {
   font-size: 16px;
   line-height: 23px;
   color: var(--basic-red);
+  margin-left: 160px;
 }
 
 .contacts-phone {
+  display: block;
+  width: 270px;
+  height: 45px;
+  background: #F3F7F9;
+  border: 3px solid #FFFFFF;
+  box-sizing: border-box;
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
   color: var(--basic-red);
+  text-align: center;
+  margin-left: 55px;
+  /*margin-top: 88px;*/
 }
 
 .header-contact-address {
+  margin: 0;
+  padding: 0;
   font-size: 14px;
   line-height: 24px;
+  color:var(--navigation);
+  text-align: center;
 }
 
 .login-link,
@@ -187,10 +260,50 @@ img {
   color: var(--text-color-black);
 }
 
+.block-header-in {
+  /*outline: 5px solid rgba(250,5,15);
+  outline-offset: -5px;*/
+  /*width: 200px;
+  height: 150px;*/
+  display: grid;
+  grid-template-columns: : min-content min-content;
+}
+
+.login-link {
+  /*width: 121px;
+  height: 45px;*/
+  background-color: var(--white);
+  padding: 10px 15px;
+  padding-left: 50px;
+  margin-right: 10px;
+
+}
+
+.registration-link {
+  background-color: var(--white);
+  padding: 10px 15px;
+  padding-left: 20px;
+  /*width: 150px;
+  height: 45px;*/
+}
+
 /********************Блок ШАПКА  END ******************************/
 /**********************Блок Наша Продукция  START **********/
+
+.our-production-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /*grid-template-rows: 1fr 1fr 1fr;*/
+  margin-left: 130px;
+  justify-items: stretch;
+  align-items: stretch;*/
+}
+
+
 .our-production {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", sans-serif;
 }
 
 .our-production-title {
@@ -221,24 +334,50 @@ img {
   color: var(--white);
 }
 
+/*.order3 {
+  order:3;
+}
+
+.order2 {
+  order:2;
+}
+
+.order1 {
+  order:1;
+}*/
+
 .our-production-materials {
   background-color: var(--special-yellow);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .our-production-instruments {
   background-color: var(--special-blue);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .our-production-technics {
   background-color: var(--special-lilac);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .our-production-discounts {
   background-color: var(--special-greenlight);
+  order: 2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .our-production-delivery {
   background-color: var(--special-yellowdelivery);
+  order: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .our-production-item a {
@@ -267,9 +406,15 @@ img {
 
 /********************** СЛАЙДЕР  СТАРТ **********/
 .slider {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", sans-serif;
   font-style: normal;
   font-weight: normal;
+  order:1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  margin-top: 20px;
 }
 
 .slider .our-production-punchers {
@@ -328,7 +473,7 @@ img {
 
 .popular-goods-title,
 .popular-manufacturers-title {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", sans-serif;
   font-size: 30px;
   line-height: 30px;
   color:var(--navigation);
@@ -347,16 +492,12 @@ img {
 .popular-goods-modal-InBookmarks-BFG3000,
 .popular-goods-modal-buy-BFG2000,
 .popular-goods-modal-InBookmarks-BFG2000 {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
 }
-
-/*.popular-goods-list {
-  font-family: "PT Sans Narrow", Arial, sans-serif;
-}*/
 
 .punchers-Bosch {
   font-weight: bold;
@@ -448,7 +589,7 @@ li span/* .page-selection-number*/ {
 
  /************************Блок СЕРВИСЫ  START ************************** */
 .services {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", sans-serif;
   font-style: normal;
 }
 
@@ -501,7 +642,7 @@ li span/* .page-selection-number*/ {
 
 /******************Блок Компания Техномарт-Контакты  START ***********/
 .contacts {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", sans-serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -534,8 +675,14 @@ li span/* .page-selection-number*/ {
 
 
 /************************Блок ПОДВАЛ  START ************************ */
+.main-footer {
+/*outline: 5px solid rgba(255,0,0,0.7);
+outline-offset: -5px;*/
+}
+}
+
 .page-footer {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", sans-serif;
   font-style: normal;
   font-weight: normal;
 }
