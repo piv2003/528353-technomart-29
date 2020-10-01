@@ -13,6 +13,7 @@
   --text-color-grey: #A9A9A9;
   --white: #FFF;
   --basic-backgound: #F1F5F7;
+  --popular-goods:#F9F5F0;
   --lightgray: #EAEAEA;
   --text-light-grey: #F3F7F9;
   --border-button:#E5E5E5;
@@ -32,9 +33,9 @@
 
 .page-body {  /**********BODY***********/
   display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: min-content min-content min-content;
   align-content: start;
-  max-width: 1200px;
+  /*min-*/width: 1200px;
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -56,12 +57,17 @@ img {
 /********************Блок ШАПКА  START ******************************/
 
 .main-header {
-/*outline: 5px solid rgba(150,155,155,0.9);
-outline-offset: -5px;*/
-background: rgba(0, 0, 0,.05);
-/* display:grid;
-grid-template-rows:1fr 1fr 1fr;
-align-items:center;*/
+  /*outline: 5px solid rgba(150,155,155,0.9);
+  outline-offset: -5px;*/
+  background: rgba(0, 0, 0,.05);
+  /* display:grid;
+  grid-template-rows:1fr 1fr 1fr;
+  align-items:center;*/
+}
+
+.container {
+  width: 940px;
+  margin: auto;
 }
 
 .main-header,
@@ -94,6 +100,7 @@ align-items:center;*/
   display: grid;
   grid-template-columns: min-content 1fr;
   justify-items:center;
+  /*width: 1200px;*/
   height:42px;
   background-color: var(--header-background);
   /*outline: 5px solid rgba(255,0,0,1);
@@ -102,31 +109,20 @@ align-items:center;*/
   justify-content: space-between;*/
 }
 
-.main-header-list {
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: min-content 1fr 1fr 1fr;
-  justify-items:end;
-
-  /*display: flex;
-  justify-content: space-between;*/
-}
-
 .site-navigation {
   /*display: flex;
   justify-content: space-between;*/
-  width:940px;
+  /*width:940px;*/
   height:60px;
-  left: 130px;
+  /*left: 130px;*/
   background-color: var(--navigation);
   box-shadow: inset 0px -5px 0px var(--header-background);
 }
 
 .main-navigation {
-/*  outline: 5px solid rgba(0,0,255,1);
+ /* outline: 5px solid rgba(0,0,255,1);
   outline-offset: -5px;*/
-  margin-left: 130px;
+  /*margin-left: 130px;*/
 }
 
 .site-navigation {
@@ -153,20 +149,29 @@ align-items:center;*/
 }
 
 .img-logo-technomart{
-margin-left: 56px;
-padding-top: 13px;
+  margin-left: 56px;
+  padding-top: 13px;
 }
 
 .header-block {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr max-content;
   /*outline: 5px solid rgba(0,255,0,1);
   outline-offset: -5px;*/
   margin-top: 40px;
+  justify-items:stretch;
 }
 
 .main-header-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  /*justify-content:space-between;*/
   margin-top: 10px;
+  /*display: flex;
+  justify-content: space-between;*/
+}
 }
 
 .header-order{
@@ -180,11 +185,6 @@ padding-top: 13px;
   text-align: center;
   color: var(--white);
 }
-
-/*.main-header-list:nth-child(3) {
-  width:150px;
-  height:42px;
-}*/
 
 .main-header-list a {
   color: var(--white);
@@ -225,7 +225,7 @@ padding-top: 13px;
   font-size: 16px;
   line-height: 23px;
   color: var(--basic-red);
-  margin-left: 160px;
+  margin-left: 30px;
 }
 
 .contacts-phone {
@@ -240,8 +240,8 @@ padding-top: 13px;
   line-height: 30px;
   color: var(--basic-red);
   text-align: center;
-  margin-left: 55px;
-  /*margin-top: 88px;*/
+  margin-left: 25px;
+  margin-top: 15px;
 }
 
 .header-contact-address {
@@ -263,15 +263,16 @@ padding-top: 13px;
 .block-header-in {
   /*outline: 5px solid rgba(250,5,15);
   outline-offset: -5px;*/
-  /*width: 200px;
-  height: 150px;*/
-  display: grid;
+  display: block;
   grid-template-columns: : min-content min-content;
+  margin-top: 30px;
 }
 
 .login-link {
   /*width: 121px;
   height: 45px;*/
+  /*outline: 5px solid rgba(250,5,15);
+  outline-offset: -5px;*/
   background-color: var(--white);
   padding: 10px 15px;
   padding-left: 50px;
@@ -280,6 +281,8 @@ padding-top: 13px;
 }
 
 .registration-link {
+  /*outline: 5px solid rgba(150,25,125);
+  outline-offset: -5px;*/
   background-color: var(--white);
   padding: 10px 15px;
   padding-left: 20px;
@@ -289,21 +292,27 @@ padding-top: 13px;
 
 /********************Блок ШАПКА  END ******************************/
 /**********************Блок Наша Продукция  START **********/
+.our-production {
+  font-family: "Cuprum", sans-serif;
+}
+
+.our-production-block {
+  width:135px;
+  height:38px;
+  background-color: rgba(255,255,255,0.3);
+  text-align: center;
+  mix-blend-mode: normal;
+}
 
 .our-production-list {
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /*grid-template-rows: 1fr 1fr 1fr;*/
-  margin-left: 130px;
-  justify-items: stretch;
-  align-items: stretch;*/
-}
-
-
-.our-production {
-  font-family: "Cuprum", sans-serif;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: space-between;
+  /*outline: 5px solid rgba(150,225,25);
+  outline-offset: -5px;*/
 }
 
 .our-production-title {
@@ -314,14 +323,6 @@ padding-top: 13px;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
-}
-
-.our-production .our-production-block {
-  width:135px;
-  height:38px;
-  background-color: rgba(255,255,255,0.3);
-  text-align: center;
-  mix-blend-mode: normal;
 }
 
 .our-production-materials,
@@ -367,7 +368,7 @@ padding-top: 13px;
 .our-production-discounts {
   background-color: var(--special-greenlight);
   order: 2;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -424,7 +425,7 @@ padding-top: 13px;
   align-items: center;
   text-transform: uppercase;
   color:var(--white);
-  margin-top: -250px;
+  margin-top: -150px;
 }
 
 .slider-info {
@@ -450,9 +451,41 @@ padding-top: 13px;
 
 /**********************Блок Популярные товары  START **********/
 .popular-goods {
-  margin-top: 200px;
+  display: grid;
+  grid-template-rows:1fr;
   font-style: normal;
   font-weight: normal;
+  justify-content: space-between;
+  margin-top: 59px;
+ /* outline: 5px solid rgba(150,225,25);
+  outline-offset: -5px;*/
+}
+
+.popular-goods-block {
+  margin:0;
+  padding: 0;
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  background: var(--popular-goods);
+  height: 89px;
+ /* outline: 5px solid rgba(50,125,125);
+  outline-offset: -5px;*/
+}
+
+.popular-goods-list {
+  margin:0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*outline: 5px solid rgba(250,125,125);
+  outline-offset: -5px;*/
+}
+
+.popular-goods-item {
+  margin:0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .popular-goods-list,
@@ -478,6 +511,10 @@ padding-top: 13px;
   line-height: 30px;
   color:var(--navigation);
   text-transform: uppercase;
+}
+
+.popular-goods-title {
+
 }
 
 .popular-goods-all-link {
@@ -557,7 +594,53 @@ padding-top: 13px;
   color: var(--navigation);
 }
 
+.popular-goods-modal {
+  display: none;
+}
+
+
+
 /**********************Блок Популярные товары  END **********/
+
+/********************Блок Популярные Производители  START *************/
+.popular-manufacturers {
+  display: grid;
+  grid-template-rows:1fr;
+  font-style: normal;
+  font-weight: normal;
+  /*outline: 5px solid rgba(150,225,25);
+  outline-offset: -5px;*/
+}
+
+.popular-manufacturers-block {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  background: var(--popular-goods);
+  height: 89px;
+  /*outline: 5px solid rgba(50,25,225);
+  outline-offset: -5px;*/
+}
+
+.popular-manufacturers-list {
+  margin:0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*outline: 5px solid rgba(250,125,125);
+  outline-offset: -5px;*/
+}
+
+.popular-manufacturers-item {
+  width: 220px;
+  height: 145px;
+  background: var(--white);
+  border: 1px solid var(--lightgray);
+  box-sizing: border-box;
+}
+/********************Блок Популярные Производители  END *************/
+
 
 /**********************Блок СОРТИРОВКА  START **********/
 .page-selection-next,
@@ -588,9 +671,35 @@ li span/* .page-selection-number*/ {
 /**********************Блок СОРТИРОВКА  END **********/
 
  /************************Блок СЕРВИСЫ  START ************************** */
+.section-services {
+  margin: 0;
+  padding: 0;
+  width: 1200px;
+  height: 522px;
+  background-color: var(--basic-backgound);
+}
+
 .services {
   font-family: "Cuprum", sans-serif;
   font-style: normal;
+  display: grid;
+  grid-template-columns: :1fr 1fr 1fr;
+  grid-template-rows:1fr ;
+  /*outline: 5px solid rgba(250,125,125);
+  outline-offset: -5px;*/
+  padding-top: 64px;
+}
+
+.services-block {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin-left: 10px;
+}
+
+.delivery-block {
+margin-left: 20px;
 }
 
 .services-titles,
@@ -622,6 +731,13 @@ li span/* .page-selection-number*/ {
   color:var(--navigation);
 }
 
+.services-delivery-item {
+  width: 240px;
+  height: 61px;
+  background-color:var(--white);
+  box-shadow: 0px 1px 0px var(--white);
+}
+
 .services-guarantee-item,
 .services-credit-item {
   width: 240px;
@@ -645,6 +761,10 @@ li span/* .page-selection-number*/ {
   font-family: "Cuprum", sans-serif;
   font-style: normal;
   font-weight: normal;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: end;
+  margin-bottom: 70px;
 }
 
 .contacts-moredetails-link,
@@ -675,38 +795,93 @@ li span/* .page-selection-number*/ {
 
 
 /************************Блок ПОДВАЛ  START ************************ */
-.main-footer {
-/*outline: 5px solid rgba(255,0,0,0.7);
-outline-offset: -5px;*/
-}
-}
-
 .page-footer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   font-family: "Cuprum", sans-serif;
   font-style: normal;
   font-weight: normal;
+  /*outline: 5px solid rgba(255,0,0,0.7);
+  outline-offset: -5px;*/
+}
+
+.footer-top {
+  height: 193px;
+  background: var(--navigation);
+  /*outline: 5px solid rgba(255,110,01,1);
+  outline-offset: -5px;*/
+}
+
+.footer-site-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items:center;
+}
+
+.footer-site-navigation-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-left: -100px;
+}
+
+.footer-site-navigation-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer-our-production-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: -70px;
+}
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 107px;
+  background: var(--header-background);
+ /* outline: 5px solid rgba(155,20,51);
+  outline-offset: -5px;*/
+}
+
+.footer-social-icons-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .page-footer-logo {
-  display:block;
-  /*margin-top: 20px;*/
+  /*display:block;*/
+  margin-left: -65px;
   width:220px;
   height:68px;
   background: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
+.footer-site-navigation-item {
+  margin-right: 58px;
+  color:var(--basic-backgound);
+}
+
 .footer-site-navigation-item a {
   font-size: 18px;
   line-height: 24px;
-  color:black /*var(--basic-backgound); будет потом такой цвет*/
+  color:var(--basic-backgound);
+}
+
+.footer-contacts {
+  margin-left: 133px;
+}
+
+.footer-license {
+ margin-left: 131px;
 }
 
 .footer-contacts-address,
 .footer-contacts-phone {
   font-size: 18px;
   line-height: 24px;
-  color:black /*var(--text-light-grey} будет потом такой цвет*/
+  color:var(--text-light-grey)
 }
 
 .footer-our-production-item a {
@@ -722,7 +897,7 @@ outline-offset: -5px;*/
 .footer-developed a {
   font-size: 16px;
   line-height: 18px;
-  color:black /*var(--white) будет потом такой цвет*/
+  color:var(--white)
 }
 
 .footer-feedback a,
@@ -832,7 +1007,7 @@ outline-offset: -5px;*/
 }
 
 .page-selection-item a {
-color: var(--text-color-black);
+  color: var(--text-color-black);
 }
 /************************Блок Перфораторы-Каталог  END ************************ */
 
