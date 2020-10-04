@@ -295,7 +295,6 @@ content: "";
   opacity: 0.9;
 }
 
-
 .header-bookmarks::before {
   content: "";
   width: 14px;
@@ -425,8 +424,9 @@ content: "";
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: min-content min-content min-content;
-  grid-template-rows: min-content min-content min-content;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  /*grid-template-rows: min-content min-content min-content;*/
   justify-content: space-between;
   grid-gap: 20px;
  /* outline: 5px solid rgba(150,225,25);
@@ -462,38 +462,30 @@ content: "";
   width:300px;
   height:123px;
   color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .our-production-materials {
   background-color: var(--special-yellow);
-  display: grid;
-  grid-template-columns: min-content min-content;
 }
 
 .our-production-instruments {
   background-color: var(--special-blue);
-  display: grid;
-  grid-template-columns: min-content min-content;
 }
 
 .our-production-technics {
   background-color: var(--special-lilac);
-  display: grid;
-  grid-template-columns: min-content min-content;
 }
 
 .our-production-discounts {
   background-color: var(--special-greenlight);
   order: 2;
-  display: grid;
-  grid-template-columns: min-content min-content;
 }
 
 .our-production-delivery {
   background-color: var(--special-yellowdelivery);
   order: 3;
-  display: grid;
-  grid-template-columns: min-content min-content;
 }
 
 .our-production-item a {
