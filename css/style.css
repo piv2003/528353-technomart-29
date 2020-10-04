@@ -54,6 +54,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  max-height: 100%;
 }
 /********************Блок ШАПКА  START ******************************/
 
@@ -418,6 +419,8 @@ content: "";
   background-color: rgba(255,255,255,0.3);
   text-align: center;
   mix-blend-mode: normal;
+  margin-top: 14px;
+  margin-left: 23px;
 }
 
 .our-production-list {
@@ -452,6 +455,8 @@ content: "";
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+  margin-top: 20px;
+  margin-left: 23px;
 }
 
 .our-production-materials,
@@ -463,7 +468,32 @@ content: "";
   height:123px;
   color: var(--white);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.materials-svg {
+  margin-left: 55px;
+  margin-top: 30px;
+}
+
+.instrument-svg {
+  margin-left: 45px;
+  margin-top: 35px;
+}
+
+.technics-svg {
+  margin-left: 35px;
+  margin-top: 40px;
+}
+
+.discounts-svg {
+  margin-left: 35px;
+  margin-top: 25px;
+}
+
+.delivery-svg {
+  margin-left: 35px;
+  margin-top: 30px;
 }
 
 .our-production-materials {
@@ -755,6 +785,21 @@ content: "";
   border: 1px solid var(--lightgray);
   box-sizing: border-box;
 }
+
+.bosch-png,
+.makita-png,
+.DeWALT-png,
+.Interskol-png,
+.Hitachi-png,
+.LG-png,
+.AEG-png,
+.Metabo-png {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 /********************Блок Популярные Производители  END *************/
 
 
