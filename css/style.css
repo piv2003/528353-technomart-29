@@ -35,7 +35,6 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans Narrow", sans-serif;
@@ -63,9 +62,9 @@ img {
   margin: 0 auto;
 }
 
-.container1200 {
-  width: 1200px;
-  margin: 0 auto;
+.main-header {
+  background: rgba(0, 0, 0,.05);
+  height:320px;
 }
 
 .main-header,
@@ -80,13 +79,51 @@ img {
 }
 
 .Ravshan-title {
+  display:block;
+  position: relative;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin-left: 45px;
+  width: 299px;
+  height: 23px;
+  background-color:var(--white);
   color: var(--text-color-black);
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.Ravshan-title::before {
+  content: "";
+  width: 20px;
+  height: 18px;
+  position: absolute;
+  top: 11px;
+  left: 25px;
+  background-image: url("../img/icon-user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.9;
+}
+
+.Ravshan-title::after {
+  content: "";
+  width: 20px;
+  height: 17px;
+  position: absolute;
+  top: 13px;
+  left: 260px;
+  background-image: url("../img/icon-login-quit.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.9;
 }
 
 .Ravshan-aside {
   display: grid;
-  grid-template-rows: min-content min-content;
+  grid-template-rows: 1fr 1fr;
   justify-items:center;
+  margin-top: 15px;
 }
 
 .main-header-my-orders,
@@ -96,41 +133,34 @@ img {
   line-height: 18px;
 }
 
-.main-header {
-  /*outline: 5px solid rgba(150,155,155,0.9);
-  outline-offset: -5px;*/
-  background: rgba(0, 0, 0,.05);
-  width:1200px;
-  height:320px;
-  /* display:grid;
-  grid-template-rows:1fr 1fr 1fr;
-  align-items:center;*/
-}
-
 .main-header-background-logo {
   height:42px;
   background-color: var(--header-background);
   /*display: flex;
   justify-content: space-between;*/
+  /* outline: 5px solid rgba(255,0,0,1);
+  outline-offset: -5px; */
 }
 
 .background-logo-container940 {
   display: grid;
   grid-template-columns: min-content 1fr;
   justify-content: space-between;
-  /*outline: 5px solid rgba(255,0,0,1);
-  outline-offset: -5px;*/
+  /* outline: 5px solid rgba(255,0,0,1);
+  outline-offset: -5px; */
 }
 
 .main-header-item {
-  display: block;
-  /*outline: 5px solid rgba(255,0,0,1);
-  outline-offset: -5px;*/
+  /* display: block; */
+  height: 42px;
+  /* margin-top: -10px; */
+  /* outline: 5px solid rgba(255,0,0,1);
+  outline-offset: -5px; */
 }
 
-.main-header-form {
+/* .main-header-form {
   background-color: transparent;
-}
+} */
 
 .site-navigation {
   display: grid;
@@ -163,7 +193,7 @@ img {
 .site-navigation a:focus,
 .user-navigation a:hover,
 .user-navigation a:focus {
-  background-color: var(--basic-extra-dark);
+  background-color: var(--);
 }*/
 
 .site-navigation-item {
@@ -171,7 +201,7 @@ img {
   padding-right: 58px;
 }
 
-.site-navigation li a {
+.site-navigation a {
   color: var(--white);
 }
 
@@ -205,15 +235,14 @@ img {
 
 .main-header-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr/* min-content min-content */;
   margin: 0;
   padding: 0;
-  justify-content:space-between;
+  justify-content:end;
   margin-top: 10px;
   /*display: flex;
   justify-content: space-between;*/
 }
-
 
 .header-order{
   display: block;
@@ -227,23 +256,13 @@ img {
   color: var(--white);
 }
 
-
-.header-cart-catalog {
-  text-align: center;
-  color: var(--white);
-}
 /*************************************************************************************/
 .main-header-item-order {
   margin-right: 100px;
   margin-left: 0px;
 }
 
-.main-header-item-cart {
-  margin-right: : 0px;
-  margin-left: : 0px;
-}
-
-.main-header-item-cart {
+/* .main-header-item-cart {
   display: block;
   margin:-10px;
   padding-top: 10px;
@@ -251,18 +270,12 @@ img {
   background-color: var(--basic-red);
   width:150px;
   height:32px;
-}
+} */
 
 .main-header-list a {
   color: var(--white);
   margin-left: 30px;
 }
-
-.Ravshan-title{
-  font-size: 21px;
-  line-height: 21px;
-}
-
 
 .site-navigation,
 .header-bookmarks,
@@ -273,18 +286,24 @@ img {
   list-style:none;
   font-size: 18px;
   line-height: 24px;
+  text-align: center;
   color: var(--white);
 }
 
-.main-header-list .main-header-form,
 .main-header-list .header-bookmarks,
-.main-header-list .header-cart {
-position: relative;
-padding-left: 30px;
+.main-header-list .header-cart,
+ .main-header-list .header-cart-catalog{
+  position: relative;
+  padding-left: 30px;
+}
+
+.main-header-list .main-header-form {
+  position: relative;
+  padding-left: 30px;
 }
 
 .main-header-form::before {
-content: "";
+  content: "";
   width: 17px;
   height: 17px;
   position: absolute;
@@ -309,7 +328,7 @@ content: "";
   opacity: 0.9;
 }
 
-.header-cart::before {
+ .header-cart::before {
   content: "";
   width: 15px;
   height: 15px;
@@ -322,20 +341,35 @@ content: "";
   opacity: 0.3;
 }
 
+.header-cart-catalog::before  {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 13px;
+  left: 30px;
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.header-cart-catalog {
+  display: block;
+  background-color: var(--basic-red);
+  width:136px;
+  height:32px;
+  margin-top:-10px;
+  padding-top: 10px;
+  padding-bottom: -10px;
+  margin-left: 20px;
+}
+
 .header-bookmarks:hover::before,
 .header-bookmarks:focus::before,
 .header-bookmarks:active::before {
   opacity: 1;
 }
-
-/*
-.header-cart-catalog {
-  display: block;
-  background-color: var(--basic-red);
-  width:136px;
-  height:42px;
-  color: var(--white);
-}*/
 
 .header-about {
   font-style: italic;
@@ -347,10 +381,11 @@ content: "";
 
 .contacts-phone {
   display: block;
+  position: relative;
   width: 270px;
   height: 45px;
-  background: #F3F7F9;
-  border: 3px solid #FFFFFF;
+  background: var(--text-light-grey);
+  border: 3px solid var(--white);
   box-sizing: border-box;
   font-weight: bold;
   font-size: 21px;
@@ -361,9 +396,22 @@ content: "";
   margin-top: 15px;
 }
 
+.contacts-phone::before  {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  background-image: url("../img/icon-phone.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.9;
+}
 .header-contact-address {
   margin: 0;
   padding: 0;
+  margin-left: -40px;
   font-size: 14px;
   line-height: 24px;
   color:var(--navigation);
@@ -394,7 +442,6 @@ content: "";
   padding: 10px 15px;
   padding-left: 50px;
   margin-right: 10px;
-
 }
 
 .registration-link {
@@ -592,12 +639,10 @@ content: "";
   margin-left: 20px;
   margin-top:  70px;
   text-align: center;
-
 }
 
 /********************** СЛАЙДЕР  END **********/
 /**********************Блок Наша Продукция  END **********/
-
 
 /**********************Блок Популярные товары  START **********/
 .popular-goods {
@@ -743,7 +788,6 @@ content: "";
   box-sizing: border-box;
   color: var(--navigation);
 }
-
 /**********************Блок Популярные товары  END **********/
 
 /********************Блок Популярные Производители  START *************/
@@ -799,9 +843,7 @@ content: "";
   justify-content: center;
   align-items: center;
 }
-
 /********************Блок Популярные Производители  END *************/
-
 
 /**********************Блок СОРТИРОВКА  START **********/
 .page-selection-next,
@@ -828,12 +870,10 @@ li span/* .page-selection-number*/ {
   width: 140px !important;
   height: 38px;
 }
-
 /**********************Блок СОРТИРОВКА  END **********/
 
  /************************Блок СЕРВИСЫ  START ************************** */
 .section-services {
-  width: 1200px;
   height: 522px;
   background-color: var(--basic-backgound);
   /*outline: 5px solid rgba(250,125,125);
@@ -977,7 +1017,6 @@ li span/* .page-selection-number*/ {
 }
 /******************Блок Компания Техномарт-Контакты  END ***********/
 
-
 /************************Блок ПОДВАЛ  START ************************ */
 .page-footer {
   /*display: grid;
@@ -1100,11 +1139,6 @@ li span/* .page-selection-number*/ {
 .footer-feedback {
   display: block;
 }
-
-  /*width: 137px;
-  height: 37px;*/
-
-
 /************************Блок ПОДВАЛ  END ************************ */
 
 /************************Блок Перфораторы-Каталог  START ************************ */
@@ -1160,8 +1194,7 @@ li span/* .page-selection-number*/ {
 .product-cards-modal-InBookmarks-BFG3000-1,
 .product-cards-modal-InBookmarks-BFG3000-2,
 .product-cards-modal-InBookmarks-BFG2000-1,
-.product-cards-modal-InBookmarks-BFG2000-2
- {
+.product-cards-modal-InBookmarks-BFG2000-2 {
   text-transform: uppercase;
 }
 
@@ -1229,5 +1262,4 @@ li span/* .page-selection-number*/ {
   border-right: 7px solid transparent;
   border-top: 13px solid var(--basic-greylight);
 }
-
 /************************Блок Фигуры  END ************************ */
