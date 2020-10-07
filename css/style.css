@@ -135,6 +135,24 @@ img {
   line-height: 18px;
 }
 
+.main-header-personal-area {
+  position: relative;
+  margin-left: 20px;
+}
+
+
+.main-header-personal-area::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  margin-top: 8px;
+  margin-left: -15px;
+  background-color: var(--text-color-black);
+  border-radius: 50%
+}
+
+
 .main-header-background-logo {
   height:42px;
   background-color: var(--header-background);
@@ -1198,9 +1216,9 @@ img {
 
 .catalog-punchers-menu-list {
   display: grid;
-  grid-template-columns:1fr 1fr 1fr 1fr;
-
-  /* position: relative; */
+  grid-template-columns:min-content min-content min-content min-content;
+  justify-content: start;
+  grid-gap: 50px;
 }
 
 .catalog-punchers-menu-link,
