@@ -415,7 +415,7 @@ img {
 .header-contact-address {
   margin: 0;
   padding: 0;
-  margin-left: -40px;
+  margin-left: 15px;
   font-size: 14px;
   line-height: 24px;
   color:var(--navigation);
@@ -873,29 +873,22 @@ img {
   text-align: center;
 }
 
-.page-selection-number {
+.page-selection-number,
+.page-selection-next {
+  padding-top: 7px;
   width: 38px;
   height: 38px;
 }
 .page-selection-list{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: min-content min-content min-content min-content;
   grid-gap: 10px;
-  /* justify-content: start; */
+  justify-items: start;
 }
 
-
-
-/* li span {
-  background-color:var(--basic-red);
-  color: var(--white);
-  border: 0px !important;
+.page-selection-list .page-selection-next {
+  width: 140px;
 }
-
-.page-selection-next {
-  width: 140px !important;
-  height: 38px;
-} */
 
 .filter-sorting {
   display: grid;
@@ -920,6 +913,11 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+}
+
+.sorting-list {
+  /* justify-items:center; */
+  align-items:center;
 }
 
 /**********************Блок СОРТИРОВКА  END **********/
@@ -1194,10 +1192,14 @@ img {
 /************************Блок ПОДВАЛ  END ************************ */
 
 /************************Блок Перфораторы-Каталог  START ************************ */
+.catalog-punchers-menu-item {
+  align-self: center;
+}
+
 .catalog-punchers-menu-list {
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr;
-  justify-content: space-between;
+
   /* position: relative; */
 }
 
@@ -1317,7 +1319,7 @@ img {
   height: 38px;
 }
 
-.page-selection-item p {
+.page-selection-item span {
   background-color: var(--basic-red);
   color: var(--white);
 }
