@@ -89,7 +89,31 @@
         <aside class="filter-block"><!---------  ФИЛЬТР START------>
           <h2 class="catalog-filter">Фильтр</h2>
           <div>
-            <h2 class="catalog-cost-title">ЦЕНА:</h2>
+            <form method="get" action="https://echo.htmlacademy.ru">
+              <fieldset class="filter-item">
+                <legend class="catalog-cost-title">ЦЕНА:</legend>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar" style="width: 30%;margin-left: 20%">
+                      </div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0" style="
+                      left: 20%"></div>
+                    <div class="toggle toggle-max" tabindex="0" style="left: 50%
+                    "></div>
+                  </div>
+                  <div class="price-controls">
+                    <label class="min-price">
+                      <input type="number" name="min-price" value="0">
+                    </label>
+                    <label class="max-price">
+                      - <input type="number" name="max-price" value="30000">
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
           </div>
           <div>
             <h2 class="catalog-manufacturers-title">ПРОИЗВОДИТЕЛИ:</h2>
