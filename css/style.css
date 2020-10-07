@@ -11,6 +11,8 @@
   --header-background: #293449;
   --basic-greylight: #C5C5C5;
   --text-color-grey: #A9A9A9;
+  --icon-color: #C1C6CE;
+  --punchers-block:#F2F6F8;
   --white: #FFF;
   --basic-backgound: #F1F5F7;
   --popular-goods:#F9F5F0;
@@ -297,9 +299,10 @@ img {
   padding-left: 30px;
 }
 
-.main-header-list .main-header-form {
+.main-header-form {
   position: relative;
   padding-left: 30px;
+  width: 20px;
 }
 
 .main-header-form::before {
@@ -393,17 +396,18 @@ img {
   color: var(--basic-red);
   text-align: center;
   margin-left: 25px;
-  margin-top: 15px;
+  margin-top: 18px;
+  padding-top: 5px;
 }
 
 .contacts-phone::before  {
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 19px;
+  height: 19px;
   position: absolute;
   top: 10px;
-  left: 30px;
-  background-image: url("../img/icon-phone.png");
+  left: 25px;
+  background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.9;
@@ -425,11 +429,25 @@ img {
   color: var(--text-color-black);
 }
 
+.login-link::before  {
+  content: "";
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  background-image: url("../img/icon-login-enter.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.9;
+}
+
 .block-header-in {
   /*outline: 5px solid rgba(250,5,15);
   outline-offset: -5px;*/
   display: block;
   grid-template-columns: : min-content min-content;
+  position: relative;
   margin-top: 30px;
 }
 
@@ -708,9 +726,9 @@ img {
   text-transform: uppercase;
 }
 
-.popular-goods-title {
+/* .popular-goods-title {
 
-}
+} */
 
 .popular-goods-all-link {
   color: var(--white);
@@ -859,8 +877,16 @@ img {
   width: 38px;
   height: 38px;
 }
+.page-selection-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  /* justify-content: start; */
+}
 
-li span/* .page-selection-number*/ {
+
+
+/* li span {
   background-color:var(--basic-red);
   color: var(--white);
   border: 0px !important;
@@ -869,7 +895,33 @@ li span/* .page-selection-number*/ {
 .page-selection-next {
   width: 140px !important;
   height: 38px;
+} */
+
+.filter-sorting {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  justify-content: space-between;
+  /* grid-gap: 20px; */
 }
+
+.sorting-cards-block {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+}
+
+.sorting-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+}
+
+.product-cards-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
 /**********************Блок СОРТИРОВКА  END **********/
 
  /************************Блок СЕРВИСЫ  START ************************** */
@@ -1142,6 +1194,13 @@ li span/* .page-selection-number*/ {
 /************************Блок ПОДВАЛ  END ************************ */
 
 /************************Блок Перфораторы-Каталог  START ************************ */
+.catalog-punchers-menu-list {
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  /* position: relative; */
+}
+
 .catalog-punchers-menu-link,
 .catalog-punchers-menu-title,
 .catalog-filter,
@@ -1152,9 +1211,29 @@ li span/* .page-selection-number*/ {
   line-height: 18px;
 }
 
+.catalog-punchers-menu{
+  position: relative;
+}
+
 .catalog-punchers-menu-link {
   color:var(--text-color-black)
 }
+
+/* .catalog-punchers-menu-link,
+.catalog-punchers-menu-title ::before{
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 18px;
+  top: 11px;
+  left: 30px;
+  background-image: url("../img/icon-right.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.9;
+  outline: 5px solid rgba(255,0,0,0.7);
+  outline-offset: -5px;
+} */
 
 .catalog-filter,
 .btn-filter,
@@ -1215,6 +1294,10 @@ li span/* .page-selection-number*/ {
 
 .catalog-punchers-title {
   color: var(--navigation);
+  background-color: var(--punchers-block);
+  height: 60px;
+  padding-left: 29px;
+  padding-top: 29px;
 }
 
 .catalog-cost-title,
@@ -1241,6 +1324,12 @@ li span/* .page-selection-number*/ {
 
 .page-selection-item a {
   color: var(--text-color-black);
+}
+
+.couple-of-words {
+  height: 261px;
+  background-color: var(--basic-backgound);
+  min-width: auto;
 }
 /************************Блок Перфораторы-Каталог  END ************************ */
 
