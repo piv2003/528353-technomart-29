@@ -224,17 +224,31 @@ img {
 }*/
 
 .main-navigation {
-  /* outline: 5px solid rgba(0,0,255,1);
-  outline-offset: -5px; */
   /*margin-left: 130px;*/
 }
 
-/*.site-navigation a:hover,
-.site-navigation a:focus,
+.login-link:hover,
+.registration-link:hover {
+  color: var(--basic-red); /**************************************************************************************************/
+}
+
+.login-link:hover::before {
+  /* path:var(--basic-grey); */
+  fill-color: green;
+}
+
+.login-link:active,
+.registration-link:active {
+  /* path:var(--basic-grey); */
+  color: var(--basic-greylight);
+}
+
+
+/* .site-navigation a:focus,
 .user-navigation a:hover,
-.user-navigation a:focus {
-  background-color: var(--);
-}*/
+.user-navigation a:focus { */
+
+
 
 .site-navigation-item {
   padding-top: 18px;
@@ -289,6 +303,10 @@ img {
   height:32px;
   text-align: center;
   color: var(--white);
+}
+
+.header-order:active {
+  color: rgba(255, 255, 255, 0.5)
 }
 
 /*************************************************************************************/
@@ -351,6 +369,28 @@ img {
   background-position: 0 0;
   opacity: 0.3;
 }
+
+
+
+
+.main-header-logo:active::before {
+/* background-color: var(--error) */
+/* color: var(--error) */
+background-color: green
+}
+
+.img-logo-technomart-head:active::before {
+ background-color: green
+}
+
+.main-header-item:active::before {
+background-color: green
+}
+
+
+
+
+
 
 .header-bookmarks::before {
   content: "";
@@ -626,8 +666,25 @@ opacity: 0.5;
   background-color: var(--special-yellow);
 }
 
+.our-production-materials {
+  background-color: var(--special-yellow);
+}
+
 .our-production-instruments {
   background-color: var(--special-blue);
+  position: relative;
+}
+
+.our-production-instruments::before { /**************************Работаем ЗДЕСЬ************************************/
+  position: absolute;
+  content: "";
+  width: 71px;
+  height: 71px;
+  left: -90px;
+  background-image: url("../img/icon-catalog-new.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.9;
 }
 
 .our-production-technics {
@@ -755,7 +812,7 @@ opacity: 0.5;
 }
 
 .popular-goods-item {
-  margin:0;
+  margin-top:20px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -764,6 +821,8 @@ opacity: 0.5;
   width: 220px;
   height: 318px;
   text-align: center;
+  border: 1px solid var(--lightgray);
+  box-sizing: border-box;
   /* display: grid;
   grid-template-columns: 1fr; */
   /* outline: 5px solid rgba(250,125,225);
