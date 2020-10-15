@@ -37,6 +37,7 @@
   --error: #BA2732;
   --error-shadow: #8D1E26;
   --box-shadow:#B52933;
+  --red_button-hover: #CA2C37;
   --basic-red: #EE3643;
   --text-color-black: #000;
 }
@@ -208,10 +209,11 @@ img {
   vertical-align: middle;
 }
 
-/* .main-header-item {
-  outline: 5px solid rgba(255,0,0,1);
-  outline-offset: -5px;
-} */
+.main-header-item {
+  height:inherit;
+  /* outline: 5px solid rgba(255,0,0,1);
+  outline-offset: -5px; */
+}
 
 .site-navigation {
   margin:0;
@@ -436,6 +438,11 @@ svg.icon-search:active {
   outline-offset: -5px; */
 }
 
+.header-order {
+  color: var(--white);
+}
+
+
 .header-cart:active {
   color: var(--cart-opacity);
 }
@@ -641,12 +648,22 @@ svg.icon-enter {
   width:135px;
   height:38px;
   background-color: rgba(255,255,255,0.3);
-  text-align: center;
   mix-blend-mode: normal;
+  text-align: center;
   margin-top: 14px;
   margin-left: 23px;
   padding: 12px;
   box-sizing: border-box;
+}
+
+.our-production-block:hover {
+  background-color: rgba(197,197,197,0.3);
+  mix-blend-mode: normal;
+}
+
+.our-production-block:active {
+  background-color: rgba(169,169,169,0.3);
+  mix-blend-mode: normal;
 }
 
 .our-production-list {
@@ -726,10 +743,6 @@ svg.icon-enter {
   background-color: var(--special-yellow);
 }
 
-.our-production-materials {
-  background-color: var(--special-yellow);
-}
-
 .our-production-instruments {
   background-color: var(--special-blue);
   position: relative;
@@ -741,10 +754,9 @@ svg.icon-enter {
   width: 71px;
   height: 71px;
   left: -90px;
-  background-image: url("../img/icon-catalog-new.svg");
+  background-image: url("../img/icon-new.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  opacity: 0.9;
 }
 
 .our-production-technics {
@@ -761,30 +773,7 @@ svg.icon-enter {
   order: 3;
 }
 
-.slider-open,
-.popular-goods-all,
-.popular-manufacturers-all,
-.contacts-moredetails,
-.contacts-gotlost {
-  display: block;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  width:192px;
-  height:38px;
-  background-color: var(--basic-red);
-  color: var(--white);
-  margin-top: 18px;
-  padding-top: 10px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-/* .popular-goods-all {
-  margin-top: 25px;
-} */
-
-/********************** СЛАЙДЕР  СТАРТ **********/
+/********************** СЛАЙДЕР  СТАРТ **************************/
 .slider {
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
@@ -816,20 +805,86 @@ svg.icon-enter {
   margin-top: -15px;
 }
 
-.slider-open {
-  position: absolute;
+.slider-open:hover,
+.popular-goods-all:hover,
+.popular-manufacturers-all:hover,
+.contacts-moredetails:hover,
+.contacts-gotlost:hover {
+  background-color: var(--red_button-hover);
+}
+
+.slider-open:active,
+.popular-goods-all:active,
+.popular-manufacturers-all:active,
+.contacts-moredetails:active,
+.contacts-gotlost:active {
+  background-color: var(--error);
+}
+
+.slider-open,
+.popular-goods-all,
+.popular-manufacturers-all,
+.contacts-moredetails,
+.contacts-gotlost {
   display: block;
+  font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
   width:192px;
   height:38px;
+  color: var(--white);
+  margin-top: 18px;
+  padding-top: 10px;
+  text-align: center;
+  box-sizing: border-box;
   background-color: var(--basic-red);
+  /* outline: 5px solid rgba(150,225,25);
+  outline-offset: -5px; */
+}
+
+.slider-open {
+  position: absolute;
   margin-left: 20px;
   margin-top:  70px;
-  text-align: center;
+}
+
+.punchers {
+  position: relative;
+}
+
+.punchers::after {
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 41px;
+  left: 20px;
+  top: 120px;
+  background-image: url("../img/icon-left.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.punchers:hover::after,
+.punchers:hover::before {
+  opacity:0.6;
+}
+
+
+.punchers::before {
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 41px;
+  left: 582px;
+  top: 120px;
+  background-image: url("../img/icon-right.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /********************** СЛАЙДЕР  END **********/
 /**********************Блок Наша Продукция  END **********/
+
 
 /**********************Блок Популярные товары  START **********/
 .popular-goods {
@@ -854,10 +909,6 @@ svg.icon-enter {
   background: var(--popular-goods);
   height: 89px;
   box-sizing: border-box;
-  /* display: grid;
-  grid-template-columns:1fr 1fr; */
-  /* outline: 5px solid rgba(50,125,125);
-  outline-offset: -5px; */
 }
 
 .popular-goods-list {
@@ -866,43 +917,50 @@ svg.icon-enter {
   display: flex;
   justify-content:space-between;
   flex-wrap: wrap;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; */
-  /*outline: 5px solid rgba(250,125,125);
-  outline-offset: -5px;*/
 }
 
 .popular-goods-item {
-  margin-top:20px;
-  padding: 0;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
-  /* align-items:space-center; */
+  justify-content:center;
+  align-items: center;
+  margin:0;
+  margin-top:20px;
+  padding: 0;
   width: 220px;
   height: 318px;
   text-align: center;
   border: 1px solid var(--lightgray);
   box-sizing: border-box;
-  /* display: grid;
-  grid-template-columns: 1fr; */
-  /* outline: 5px solid rgba(250,125,225);
+}
+
+.popular-goods-content {
+  display: flex;
+  margin:0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 179px;
+  height: 179px;
+  /* outline: 5px solid rgba(150,125,225);
   outline-offset: -5px; */
 }
 
-/*
-.our-production-instruments::before **************************Работаем ЗДЕСЬ************************************
+
+.icon-new::before {
   position: absolute;
   content: "";
   width: 71px;
   height: 71px;
-  left: -90px;
-  background-image: url("../img/icon-catalog-new.svg");
+  left: 149px;
+  top: 0px;
+  background-image: url("../img/icon-new.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  opacity: 0.9;
 }
- */
+
 
 .popular-goods-list,
 .popular-manufacturers-list,
@@ -982,7 +1040,7 @@ svg.icon-enter {
   width: 141px;
   height: 38px;
   top: -10px;
-  left: 45px;
+  left: -35px;
   background-image: url("../img/icon-price.svg");
   z-index: -100;
   background-repeat: no-repeat;
@@ -1049,6 +1107,7 @@ svg.icon-enter {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 20px;
   margin-bottom: 70px;
 }
@@ -1253,7 +1312,7 @@ svg.icon-enter {
 }
 
 .contacts-moredetails-link,
-.contacts-gotlost-link {
+.contacts-gotlost {
   display: block;
   font-size: 14px;
   line-height: 18px;
@@ -1263,11 +1322,15 @@ svg.icon-enter {
   height: 38px;
 }
 
-.contacts-moredetails-link {
+
+
+
+
+.contacts-moredetails-link {  /******************************************************************/
   width: 220px;
 }
 
-.contacts-gotlost-link {
+.contacts-gotlost {
   width: 300px;
   padding-top: 10px;
   box-sizing: border-box;
@@ -1305,12 +1368,9 @@ svg.icon-enter {
 
 .page-footer-block {
   height: 193px;
+  /* outline: 5px solid rgba(255,110,01,1);
+  outline-offset: -5px; */
 }
-
-/*.footer-top {
-  outline: 5px solid rgba(255,110,01,1);
-  outline-offset: -5px;
-}*/
 
 .footer-site-navigation {
   display: flex;
@@ -1325,38 +1385,55 @@ svg.icon-enter {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-left: 20px;
-  padding-left: 10px;
-  padding: 0;
-  /* outline: 5px solid rgba(255,110,01,1);
-  outline-offset: -5px; */
-}
-
-.footer-site-navigation-list {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
-  margin-left: -100px;
+  margin-left: 33px;
   margin-top: 37px;
+  padding-left: 0;
 }
 
-.footer-site-navigation-contacts {
+.footer-site-navigation-list li:not(:last-child) {
+  padding-right:59px;
+}
+
+.footer-site-navigation-item {
+  color:var(--basic-backgound);
+  margin-bottom:22px;
+}
+
+.footer-site-navigation-item a {
+  font-size: 18px;
+  line-height: 24px;
+  color:var(--basic-backgound);
+}
+
+.footer-navigation-contacts {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   flex-wrap: wrap;
   /* display: grid;
   grid-template-columns: 1fr 1fr; */
+}
+
+.footer-contacts {
+  /* width: 350px; */
+  /* height: 49px; */
+  margin-left:10px;
 }
 
 .footer-our-production-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 600px;
-  margin-top:20px;
-  /* outline: 5px solid rgba(255,110,01,1);
-  outline-offset: -5px; */
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; */
+  margin:0;
+}
+
+.footer-our-production-item a{
+  font-size: 18px;
+  line-height: 24px;
+  color:var(--special-yellowlight);
+}
+
+.footer-our-production-list li:not(:last-child) {  /******************************************************************/
+  padding-right:59px;
 }
 
 .footer-bottom {
@@ -1370,9 +1447,6 @@ svg.icon-enter {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* display: grid;
-  grid-template-columns: 1fr min-content min-content min-content;
-  justify-content: space-between; */
 }
 
 .footer-social-icons-list {
@@ -1381,8 +1455,6 @@ svg.icon-enter {
   flex-wrap: wrap;
   /* outline: 5px solid rgba(155,20,51);
   outline-offset: -5px; */
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr; */
 }
 
 .page-footer-logo {
@@ -1392,39 +1464,11 @@ svg.icon-enter {
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
-.footer-site-navigation-item {
-  margin-right: 58px;
-  color:var(--basic-backgound);
-}
-
-.footer-site-navigation-item a {
-  font-size: 18px;
-  line-height: 24px;
-  color:var(--basic-backgound);
-}
-
-.footer-contacts {
-  width: 350px;
-  height: 49px;
-  /* outline: 5px solid rgba(155,20,51);
-  outline-offset: -5px; */
-}
-
-/*.footer-license {
- margin-left: 131px;
-}*/
-
 .footer-contacts-address,
 .footer-contacts-phone {
   font-size: 18px;
   line-height: 24px;
   color:var(--text-light-grey)
-}
-
-.footer-our-production-item a {
-  font-size: 18px;
-  line-height: 24px;
-  color:var(--special-yellowlight);
 }
 
 .footer-license-info,
@@ -1473,8 +1517,6 @@ svg.icon-enter {
   background-color: var(--basic-red);
   background-repeat: no-repeat;
   background-position: 0 0;
-/*   outline: 5px solid rgba(255,110,01,1) */;
-  outline-offset: -5px;
 }
 /************************Блок ПОДВАЛ  END ************************ */
 
