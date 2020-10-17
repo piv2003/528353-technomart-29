@@ -81,11 +81,10 @@ img {
 }
 
 .main-header {
-  background: rgba(0, 0, 0,.05);
+  background: var(--text-light-grey);
   height:320px;
   display: flex;
   flex-direction: column;
-  align-items:space-between;
   margin-bottom: 59px;
 }
 
@@ -359,7 +358,7 @@ img {
   display: block;
   box-sizing: inherit;
   /* width: 271px; */
-  /* height: 42; */
+  /* height: 42px; */
 }
 
 /* .color-text {
@@ -547,11 +546,24 @@ svg.icon-search:active {
   text-align: center;
 }
 
+/* ***************************************************************** */
+.block-header-in {
+  position: relative;
+  display: flex;
+  /* justify-content:center; */
+  align-items: center;
+  margin-bottom: 20px;
+  /* display: block;
+  grid-template-columns: : min-content min-content; */
+  /* outline: 5px solid rgba(250,5,15);
+  outline-offset: -5px; */
+}
+
 .login-link {
   /*width: 121px;
   height: 45px;*/
   background-color: var(--white);
-  padding: 10px 15px;
+  padding: 6px 15px 10px;
   padding-left: 50px;
   margin-right: 10px;
 }
@@ -576,32 +588,38 @@ svg.icon-search:active {
 .login-link:hover,
 .registration-link:hover {
   color: var(--basic-red);
+  cursor: pointer;
 }
 
-.login-link:hover::before {
-  fill-color: green;
-}
-
-.login-link:active,
 .registration-link:active {
   color: var(--basic-greylight);
+}
+
+.block-hover:hover >* {
+  color: var(--basic-red);
+  fill: var(--basic-grey);
+  cursor: pointer;
+}
+
+.block-hover:active >* {
+  color: var(--basic-greylight);
+  fill: var(--basic-greylight);
+  cursor: pointer;
 }
 
 svg.icon-enter {
   position: absolute;
   padding-top: 2px;
-  padding-left: 21px;
+  padding-left: 20px;
   fill: var(--basic-greylight);
 }
 
-.block-header-in {
-  /*outline: 5px solid rgba(250,5,15);
-  outline-offset: -5px;*/
-  /* display: block;
-  grid-template-columns: : min-content min-content; */
-  position: relative;
-  margin-top: 30px;
+svg.icon-enter:active {
+  fill: var(--basic-greylight);
+  cursor: pointer;
 }
+
+
 
 /********************Блок ШАПКА  END ******************************/
 /**********************Блок Наша Продукция  START **********/
@@ -829,40 +847,6 @@ svg.icon-enter {
   position: relative;
 }
 
-.punchers::after {
-  position: absolute;
-  content: "";
-  width: 23px;
-  height: 41px;
-  left: 20px;
-  top: 120px;
-  background-image: url("../img/icon-left.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.punchers:hover::after,
-.punchers:hover::before {
-  opacity:0.6;
-}
-
-
-.punchers::before {
-  position: absolute;
-  content: "";
-  width: 23px;
-  height: 41px;
-  left: 582px;
-  top: 120px;
-  background-image: url("../img/icon-right.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.punchers {
-  position: relative;
-}
-
 .icon-left,
 .icon-right {
   position: relative;
@@ -1082,7 +1066,7 @@ svg.icon-right:hover {
 .popular-goods-modal-buy-BFG3000,
 .popular-goods-modal-buy-BFG2000 {
   background: var(--basic-green);
-  box-shadow: inset 0px -3px 0px var(--shadow-box)/*#367315*/;
+  box-shadow: inset 0px -3px 0px var(--shadow-box);
   color: var(--white);
  /* padding-top: 10px;
   padding-bottom: 20px;*/
@@ -1480,7 +1464,7 @@ svg.icon-right:hover {
   width:220px;
   height:68px;
   background: var(--basic-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 5px 0px 0px var(--box-shadow);
 }
 
 .footer-contacts-address,
