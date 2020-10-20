@@ -30,6 +30,7 @@
   --white-opacity-thirty: rgba(255,255,255,0.3);
   --lightgrey-opacity-thirty: rgba(197,197,197,0.3);
   --grey-opacity-thirty:rgba(169,169,169,0.3);
+  --dash-color: #444;
   --basic-backgound: #F1F5F7;
   --popular-goods:#F9F5F0;
   --filter: #F7F3EC;
@@ -94,7 +95,7 @@ img {
   height:320px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 59px;
+  /* margin-bottom: 59px; */
 }
 
 .main-header,
@@ -844,14 +845,39 @@ svg.icon-enter:active {
   outline-offset: -5px; */
 }
 
+.punchers {
+  position: relative;
+}
+
+.punchers-shadow {
+  /* position: relative; */
+}
+
+.slider-block-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 620px;
+  height: 104px;
+  background-color: var(--punchers-shadow);
+}
+
+.our-production-punchers {
+  position: absolute;
+  top: 260px;
+  left: 0px;
+}
+
+.slider-info {
+  position: absolute;
+  top: 80px;
+  left: 0px;
+}
+
 .slider-open {
   position: absolute;
   margin-left: 20px;
-  margin-top:  70px;
-}
-
-.punchers {
-  position: relative;
+  margin-top: -70px;
 }
 
 .icon-left,
@@ -1047,7 +1073,7 @@ svg.icon-right:hover {
   width: 141px;
   height: 38px;
   top: -10px;
-  left: -35px;
+  left: 45px;
   background-image: url("../img/icon-price.svg");
   z-index: -100;
   background-repeat: no-repeat;
@@ -1175,30 +1201,49 @@ svg.icon-right:hover {
   display: grid;
   grid-template-columns: min-content 1fr;
   justify-content: space-between;
-  /* grid-gap: 20px; */
+  grid-gap: 20px;
 }
 
 .sorting-cards-block {
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: min-content min-content min-content;
   justify-content: space-between;
 }
 
-.sorting-list {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+.sorting-block-list {
+  /* position: relative; */
+  display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0;
+  padding: 0 17px;
   height: 38px;
   background-color: var(--filter);
+}
+
+.sorting-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
 }
 
 .product-cards-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.product-cards-item {
+  display: grid;
+  grid-template-rows: min-content min-content min-content min-content;
+  justify-content: center;
+  align-items: center;
 }
 
 /**********************Блок СОРТИРОВКА  END **********/
@@ -1559,6 +1604,8 @@ svg.icon-right:hover {
 
 /************************Блок Перфораторы-Каталог  START ************************ */
 .catalog-punchers-menu-item {
+  margin: 0;
+  padding: 0;
   align-self: center;
 }
 
@@ -1581,6 +1628,8 @@ svg.icon-right:hover {
 .page-selection-next {
   font-size: 13px;
   line-height: 18px;
+  margin: 0;
+  padding: 0;
 }
 
 .arrow-to-right {
@@ -1724,18 +1773,20 @@ svg.icon-right:hover {
   margin: 0;
   padding: 0;
   border: none;
-  width: 260px;
-  margin: 50px auto;
+  width: 220px;
+  margin: 25px auto;
 }
 
-.sorting-item {
+.sorting-item:not(:last-child) {
   margin: 0;
   padding: 0;
+  padding-right: 70px;
 }
 
 .range-filter {
-  width: 260px;
-  margin-top: 49px;
+  position: relative;
+  width: 220px;
+  margin-top: 11px;
 }
 
 .filter-item legend {
@@ -1759,7 +1810,7 @@ svg.icon-right:hover {
 .by-price-link,
 .by-type-link,
 .by-functional-link {
-  color: var(--text-opacity-thirty);
+  color: var(--black-opacity-thirty);
   border-bottom: 1px dotted var(--basic-red);
 }
 
@@ -1767,11 +1818,15 @@ svg.triangle-up-svg,
 svg.triangle-down-svg {
   fill: var(--basic-greylight);
 }
-                                      /************************************************red*************************************/
+
+svg.triangle-up-svg {
+  padding-right: 21px;
+}
+
 .by-price-link:hover,
 .by-type-link:hover,
 .by-functional-link:hover {
-  color: var(--black-opacity-thirty);
+  color: var(--text-color-black);
   border-bottom: 1px solid var(--basic-red);
 }
 
@@ -1799,8 +1854,29 @@ svg.triangle-down-svg:active {
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
-  background-color: var(--basic-backgound);
+  background-color: var(--filter);
   border-radius: 5px;
+}
+
+.min-price {
+  position: relative;
+  width: 95px;
+  height: 38px;
+  background-color: var(--filter);
+}
+
+.dash-price {
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 1px;
+  top: 15px;
+  left: 107px;
+  background-color: var(--dash-color);
+}
+                              /************************************************red*************************************/
+.max-price {
+  background-color: var(--filter);
 }
 
 .range-controls .scale {
@@ -1817,7 +1893,7 @@ svg.triangle-down-svg:active {
 .range-controls .toggle {
   position: absolute;
   top: 31px;
-  left: 0;
+  left: -20px;
   width: 4px;
   height: 4px;
   padding: 0;
@@ -1852,10 +1928,10 @@ svg.triangle-down-svg:active {
   padding: 10px;
   margin-left: 10px;
   text-align: center;
-  color: var(--header-background);
+  color: var(--text-color-black);
   border: none;
   border-radius: 5px;
-  background: var(--basic-backgound);
+  background: var(--filter);
   font-family: inherit;
   font-size: inherit;
 }
