@@ -113,78 +113,86 @@
       </section>
 <!-- ****************************************************************************** -->
       <section class="filter-sorting container">
-        <aside class="filter-block"><!---------  ФИЛЬТР START------>
-          <h2 class="catalog-filter">Фильтр</h2>
-          <div>
-            <form method="get" action="https://echo.htmlacademy.ru">
-              <fieldset class="filter-item">
-                <legend class="catalog-cost-title">ЦЕНА:</legend>
-                <div class="range-filter">
-                  <div class="range-controls">
-                    <div class="scale">
-                      <div class="bar" style="width: 80%;margin-left: 0%">
+        <!------------------------ ФИЛЬТР START---------------------------->
+            <aside class="filter-block">
+              <h2 class="catalog-filter">Фильтр</h2>
+              <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+                <fieldset class="filter-item">
+                  <legend class="catalog-cost-title">ЦЕНА:</legend>
+                  <div class="range-filter">
+                    <div class="range-controls">
+                      <div class="scale">
+                        <div class="bar" style="width: 80%;margin-left: 0%">
+                        </div>
+                      </div>
+                      <div class="toggle toggle-min" tabindex="0" style="
+                        left: 7%">
+                      </div>
+                      <div class="toggle toggle-max" tabindex="0" style="left: 70%
+                      ">
                       </div>
                     </div>
-                    <div class="toggle toggle-min" tabindex="0" style="
-                      left: 7%"></div>
-                    <div class="toggle toggle-max" tabindex="0" style="left: 70%
-                    "></div>
+                    <div class="price-controls">
+                      <label class="min-price">
+                        <input type="number" name="min-price" value="0">
+                        <span class="dash-price"></span>
+                      </label>
+                      <label class="max-price">
+                        <input type="number" name="max-price" value="30000">
+                      </label>
+                    </div>
                   </div>
-                  <div class="price-controls">
-                    <label class="min-price">
-                      <input type="number" name="min-price" value="0">
-                      <span class="dash-price"></span>
-                    </label>
-                    <label class="max-price">
-                      <input type="number" name="max-price" value="30000">
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-            </form>
-          </div>
-          <div class="manufactures-block">
-            <h2 class="catalog-manufacturers-title">ПРОИЗВОДИТЕЛИ:</h2>
-            <ul class="catalog-manufacturers-list">
-              <li class="catalog-manufacturers-item">
-                <input id="bosch" name="bosch" type="checkbox" value="bosch" checked>
-                <label class="catalog-manufacturers-label" for="bosch">BOSCH</label>
-              </li>
-              <li class="catalog-manufacturers-item">
-                <input id="interskol" name="interskol" type="checkbox" value="interskol">
-                <label class="catalog-manufacturers-label" for="interskol">ИНТЕРСКОЛ</label>
-              </li>
-              <li class="catalog-manufacturers-item">
-                <input id="makita" name="makita" type="checkbox" value="makita" checked>
-                <label class="catalog-manufacturers-label" for="makita">MAKITA</label>
-              </li>
-              <li class="catalog-manufacturers-item">
-                <input id="dewalt" name="dewalt" type="checkbox" value="dewalt">
-                <label class="catalog-manufacturers-label" for="dewalt">DEWALT</label>
-              </li>
-              <li class="catalog-manufacturers-item">
-                <input id="hitachi" name="hitachi" type="checkbox" value="hitachi">
-                <label class="catalog-manufacturers-label" for="hitachi">HITACHI</label>
-              </li>
-            </ul>
-          </div>
-          <div class="power-block">
-            <h2 class="catalog-power-title">ПИТАНИЕ:</h2>
-            <ul class="catalog-power-list">
-              <li class="catalog-power-item">
-                <input id="battery" name="battery" type="radio"  value="battery" checked>
-                <label class="catalog-power-label" for="battery">АККУМУЛЯТОРНЫЕ</label>
-              </li>
-              <li class="catalog-power-item">
-                <input id="network" name="network" type="radio"  value="network">
-                <label class="catalog-power-label" for="network">СЕТЕВЫЕ</label>
-              </li>
-            </ul>
-          </div>
-          <button type="submit" action="https://echo.htmlacademy.ru/" class="btn-filter">Показать</button>
-        </aside><!------------------------ ФИЛЬТР END---------------------------->
+                </fieldset>
+              </form>
+              <div class="line-block">
+              </div>
 
-                           <!--------  СОРТИРОВКА START------------->
+              <h2 class="visually-hidden">Фильтр товаров</h2>
+              <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+                <fieldset class="filter-item">
+                  <legend class="catalog-manufacturers-title">Производители:</legend>
+                  <ul class="catalog-manufacturers-list">
+                    <li class="filter-option filter-checkbox">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="Bosh" id="Bosh" checked>
+                      <label for="Bosh">Bosh</label>
+                    </li>
+                    <li class="filter-option filter-checkbox">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interskol" id="interskol">
+                      <label for="interskol">ИНТЕРСКОЛ</label>
+                    </li>
+                    <li class="filter-option filter-checkbox">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita" id="makita" checked>
+                      <label for="makita">MAKITA</label>
+                    </li>
+                    <li class="filter-option filter-checkbox">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="dewalt" id="dewalt">
+                      <label for="dewalt">DEWALT</label>
+                    </li>
+                    <li class="filter-option filter-checkbox">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hitachi" id="hitachi">
+                      <label for="hitachi">HITACHI</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset>
+                  <legend class="catalog-manufacturers-title">Питание:</legend>
+                  <ul>
+                    <li class="filter-option filter-radio">
+                      <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="shaving" id="filter-shave">
+                      <label class="catalog-manufacturers-list" for="filter-shave">Аккумуляторные</label>
+                    </li>
+                    <li class="filter-option filter-radio">
+                      <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="hair-care" id="filter-care" checked>
+                      <label class="catalog-manufacturers-list" for="filter-care">Сетевые</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <button type="submit" class="btn-filter">Показать</button>
+              </form>
+            </aside>
+        <!------------------------ ФИЛЬТР END-------------Слева----------->
+
+        <!-----------------------  СОРТИРОВКА START-------Справа---------->
         <aside class="sorting-cards-block">
           <div class="sorting-block-list">
             <span class="sorting-title">СОРТИРОВКА</span>
@@ -234,7 +242,7 @@
               <p class="price">30 500 Р.</p>
               <p class="discount_price">25 500 Р.</p>
             </li>
-            <li class="product-cards-item">
+            <li class="product-cards-item icon-new">
               <figure class="product-cards-content">
                 <img src="img/BFG6000.png" width="144" height="128" alt="Перфоратор Bosch BFG 6000">
               </figure>
@@ -246,7 +254,7 @@
               <p class="price">30 500 Р.</p>
               <p class="discount_price">25 500 Р.</p>
             </li>
-            <li class="product-cards-item">
+            <li class="product-cards-item icon-new">
               <figure class="product-cards-content">
                 <img src="img/BFG3000.png" width="127" height="112" alt="Перфоратор Bosch BFG 3000">
               </figure>
@@ -270,7 +278,7 @@
               <p class="price">30 500 Р.</p>
               <p class="discount_price">25 500 Р.</p>
             </li>
-            <li class="product-cards-item">
+            <li class="product-cards-item icon-new">
               <figure class="product-cards-content">
                 <img src="img/BFG2000.png" width="127" height="112" alt="Перфоратор Bosch BFG 2000">
               </figure>
@@ -279,9 +287,10 @@
                 <a class="product-cards-modal-InBookmarks-BFG2000-1" href="">В закладки</a>
               </div>
               <a class="punchers-Bosch" href="">Перфоратор BOSCH<br>BFG 2000</a>
+              <p>&nbsp</p>
               <p class="discount_price">12 500 Р.</p>
             </li>
-            <li class="product-cards-item">
+            <li class="product-cards-item icon-new">
               <figure class="product-cards-content">
                 <img src="img/BFG3000.png" width="127" height="112" alt="Перфоратор Bosch BFG 3000">
               </figure>
@@ -305,7 +314,7 @@
               <p class="price">30 500 Р.</p>
               <p class="discount_price">25 500 Р.</p>
             </li>
-            <li class="product-cards-item">
+            <li class="product-cards-item icon-new">
               <figure class="product-cards-content">
                 <img src="img/BFG2000.png" width="127" height="112" alt="Перфоратор Bosch BFG 2000">
               </figure>
@@ -314,6 +323,7 @@
                 <a class="product-cards-modal-InBookmarks-BFG2000-2" href="">В закладки</a>
               </div>
               <a class="punchers-Bosch" href="">Перфоратор BOSCH<br>BFG 2000</a>
+              <p>&nbsp</p>
               <p class="discount_price">12 500 Р.</p>
             </li>
           </ul>

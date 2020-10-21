@@ -24,6 +24,7 @@
   --header-bookmark:#5C6169;
   --search-default: #697180;
   --basic-greylight: #C5C5C5;
+  --line-block: #C4C4C4;
   --icon-color: #C1C6CE;
   --punchers-block:#F2F6F8;
   --white: #FFF;
@@ -981,6 +982,19 @@ svg.icon-right:hover {
   outline-offset: -5px; */
 }
 
+.product-cards-content {
+  display: flex;
+  margin:0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 179px;
+  height: 179px;
+  /* outline: 5px solid rgba(150,125,225);
+  outline-offset: -5px; */
+}
+
 
 .icon-new::before {
   position: absolute;
@@ -1009,6 +1023,19 @@ svg.icon-right:hover {
 .page-selection-list
  {
   list-style: none;
+}
+
+.catalog-manufacturers-list {
+  margin-top: 20px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.catalog-punchers {
+  margin-bottom: 20px;
 }
 
 .popular-goods-title,
@@ -1073,7 +1100,7 @@ svg.icon-right:hover {
   width: 141px;
   height: 38px;
   top: -10px;
-  left: 45px;
+  left: -35px;
   background-image: url("../img/icon-price.svg");
   z-index: -100;
   background-repeat: no-repeat;
@@ -1174,13 +1201,15 @@ svg.icon-right:hover {
 .page-selection-number {
   display: block;
   border: 1px solid var(--border-button);
-  box-sizing: border-box;
   border-radius: 2px;
   text-align: center;
 }
 
 .page-selection-number,
 .page-selection-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 7px;
   width: 38px;
   height: 38px;
@@ -1203,6 +1232,12 @@ svg.icon-right:hover {
   justify-content: space-between;
   grid-gap: 20px;
 }
+
+.filters {
+  width: 220px;
+}
+
+
 
 .sorting-cards-block {
   display: grid;
@@ -1232,19 +1267,31 @@ svg.icon-right:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 18px;
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
+  margin-top: 28px;
   text-align: center;
 }
 
 .product-cards-item {
-  display: grid;
-  grid-template-rows: min-content min-content min-content min-content;
-  justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
   align-items: center;
+  margin:0;
+  padding: 0;
+  width: 220px;
+  height: 318px;
+  text-align: center;
+  border: 1px solid var(--lightgray);
+  box-sizing: border-box;
 }
+
 
 /**********************Блок СОРТИРОВКА  END **********/
 
@@ -1612,8 +1659,10 @@ svg.icon-right:hover {
 .catalog-punchers-menu-list {
   display: flex;
   justify-content: start;
+  align-items: center;
   margin: 0;
   padding: 0;
+  height: 59px;
 }
 
 .catalog-punchers-menu-list li:not(:last-child){
@@ -1635,7 +1684,6 @@ svg.icon-right:hover {
 .arrow-to-right {
   color:var(--icon-color);
   margin: 0;
-  padding-top: 10px;
 }
 
 .catalog-punchers-menu{
@@ -1711,6 +1759,7 @@ svg.icon-right:hover {
   height: 60px;
   padding-left: 29px;
   padding-top: 29px;
+  margin: 0;
 }
 
 .catalog-cost-title,
@@ -1723,9 +1772,19 @@ svg.icon-right:hover {
   text-transform: uppercase;
 }
 
+.catalog-cost-title {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+}
+
 .page-selection-item p,
 .page-selection-item a {
-  display: inline-block;
+  /* display: inline-block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 38px;
   height: 38px;
 }
@@ -1789,12 +1848,12 @@ svg.icon-right:hover {
   margin-top: 11px;
 }
 
-.filter-item legend {
+/* .filter-item legend {
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
   font-weight: 700;
-}
+} */
 
 .catalog-filter {
   display: flex;
@@ -1874,9 +1933,15 @@ svg.triangle-down-svg:active {
   left: 107px;
   background-color: var(--dash-color);
 }
-                              /************************************************red*************************************/
 .max-price {
   background-color: var(--filter);
+}
+
+.line-block {
+  width: 220px;
+  height: 1px;
+  background-color: var(--line-block);
+  margin: 20px 0px;
 }
 
 .range-controls .scale {
@@ -1934,6 +1999,96 @@ svg.triangle-down-svg:active {
   background: var(--filter);
   font-family: inherit;
   font-size: inherit;
+}
+
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.filter fieldset:first-child {
+  margin-bottom: 35px;
+}
+
+.filter legend {
+  margin-bottom: 26px;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.filter ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 18px;
+}
+
+.filter-option {
+  margin-bottom: 19px;
+  padding-left: 45px;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox:hover + label,
+.filter-input-checkbox:focus + label {
+  color: var(--special);
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -38px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/cross.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: -1px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -36px;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.filter-button {
+  padding-right: 30px;
+  padding-left: 30px;
 }
 /************************Блок ФИЛЬТР  END *************************/
 
