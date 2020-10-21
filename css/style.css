@@ -24,6 +24,7 @@
   --header-bookmark:#5C6169;
   --search-default: #697180;
   --basic-greylight: #C5C5C5;
+  --show-box: #E5E5E5;
   --line-block: #C4C4C4;
   --icon-color: #C1C6CE;
   --punchers-block:#F2F6F8;
@@ -65,7 +66,7 @@
   align-content: start;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -1020,14 +1021,14 @@ svg.icon-right:hover {
 .catalog-power-list,
 .sorting-list,
 .product-cards-list,
-.page-selection-list
- {
+.page-selection-list,
+.slider {
   list-style: none;
 }
 
 .catalog-manufacturers-list {
-  margin-top: 20px;
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  /* margin-top: 20px; */
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 19px;
   font-weight: 400;
@@ -1710,6 +1711,7 @@ svg.icon-right:hover {
   background: var(--white);
   border: 1px solid var(--border-button);
   box-sizing: border-box;
+  border: 1px solid var(--show-box);
 }
 
 .catalog-filter,
@@ -1770,6 +1772,10 @@ svg.icon-right:hover {
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.catalog-manufacturers-title {
+  margin-bottom: 20px;
 }
 
 .catalog-cost-title {
@@ -2004,7 +2010,7 @@ svg.triangle-down-svg:active {
 .filter fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   border: none;
 }
 
@@ -2013,7 +2019,7 @@ svg.triangle-down-svg:active {
 }
 
 .filter legend {
-  margin-bottom: 26px;
+  /* margin-bottom: 26px; */
   font-size: 24px;
   line-height: 30px;
 }
@@ -2022,7 +2028,6 @@ svg.triangle-down-svg:active {
   padding: 0;
   margin: 0;
   list-style: none;
-  line-height: 18px;
 }
 
 .filter-option {
@@ -2045,21 +2050,24 @@ svg.triangle-down-svg:active {
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
-  left: -42px;
   top: 0;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #000000;
+  left: -42px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/check-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
 }
 
 .filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: -38px;
-  width: 12px;
-  height: 12px;
-  background-image: url("../img/cross.svg");
+  top: 0px;
+  left: -42px;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/check-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -2071,7 +2079,7 @@ svg.triangle-down-svg:active {
   top: -1px;
   width: 16px;
   height: 16px;
-  border: 2px solid #000000;
+  border: 2px solid var(--basic-greylight);
   border-radius: 50%;
 }
 
@@ -2082,13 +2090,8 @@ svg.triangle-down-svg:active {
   left: -36px;
   width: 8px;
   height: 8px;
-  background-color: #000000;
+  background-color: var(--basic-greylight);
   border-radius: 50%;
-}
-
-.filter-button {
-  padding-right: 30px;
-  padding-left: 30px;
 }
 /************************Блок ФИЛЬТР  END *************************/
 
