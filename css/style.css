@@ -207,6 +207,8 @@ svg.Ravshan-left {
 
 .header-block-contacts {
   display: block;
+  /* margin-bottom: 5px;
+  margin-top: 55px; */
 }
 
 .contacts-phone {
@@ -224,7 +226,7 @@ svg.Ravshan-left {
   line-height: 30px;
   color: var(--basic-red);
   text-align: center;
-  padding-left: 20px;
+  padding-left: 45px;
 }
 
 .contacts-phone::before  {
@@ -233,7 +235,7 @@ svg.Ravshan-left {
   height: 19px;
   position: absolute;
   top: 10px;
-  left: 45px;
+  left: 44px;
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -368,11 +370,11 @@ svg.Ravshan-left {
   justify-content:space-between;
   align-self: center;
   flex-wrap: wrap;
-  padding-top: 40px;
+  padding-top: 45px;
 }
 
 .main-header-user-link {
-  padding: 9px 24px 9px 43px;
+  padding: 9px 26px 9px 41px;
   position: relative;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
@@ -385,8 +387,8 @@ svg.Ravshan-left {
 
 .main-header-user-icon {
   position: absolute;
-  top: 50%;
-  left: 20px;
+  top: 19px;
+  left: 18px;
   transform: translateY(-50%);
   fill: inherit;
   opacity: 0.3;
@@ -452,12 +454,6 @@ svg.cart-color-catalog {
   fill: var(--cart-catalog);
 }
 
-.main-header-input {
-  font-size: 18px;
-  line-height: 24px;
-  text-align: left;
-}
-
 .main-header-list .header-bookmarks,
 .main-header-list .header-cart,
 .main-header-list .header-cart-catalog {
@@ -489,17 +485,20 @@ svg.cart-color-catalog {
 .main-header-input {
   box-sizing: border-box;
   width: 100%;
-  padding: 9px 20px 9px 43px;
+  padding: 9px 22px 9px 41px;
   background-color: transparent;
   border: 0;
   color: var(--white);
   cursor: pointer;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
 }
 
 svg.icon-search {
   position: absolute;
-  top: 50%;
-  left: 17px;
+  top: 19px;
+  left: 15px;
   transform: translateY(-50%);
   fill:var(--search-default);
 }
@@ -567,15 +566,28 @@ label.search:hover .main-header-input::placeholder {
 
 .login-link {
   background-color: var(--white);
-  padding: 6px 15px 10px;
-  padding-left: 50px;
+  /* padding: 6px 15px 10px; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 81px;
+  height: 45px;
+  padding-right: 27px;
+  padding-left: 12px;
   margin-right: 10px;
+
 }
 
 .registration-link {
   background-color: var(--white);
-  padding: 10px 15px;
-  padding-left: 20px;
+  /* padding: 10px 15px; */
+  /* padding-left: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  height: 45px;
 }
 
 .login-link,
@@ -609,8 +621,9 @@ label.search:hover .main-header-input::placeholder {
 
 svg.icon-enter {
   position: absolute;
-  padding-top: 2px;
-  padding-left: 20px;
+  padding-top: 14px;
+  padding-left: 19px;
+  padding-right: 20px;
   fill: var(--basic-greylight);
 }
 
@@ -622,6 +635,7 @@ svg.icon-enter:active {
 /**********************Блок Наша Продукция  START **********/
 .our-production {
   font-family: "Cuprum", "Arial", sans-serif;
+  margin-top: 59px;
 }
 
 .our-production-item a {
@@ -1171,14 +1185,6 @@ svg.icon-right:hover {
 /********************Блок Популярные Производители  END *************/
 
 /**********************Блок СОРТИРОВКА  START **********/
-.page-selection-next,
-.page-selection-number {
-  display: block;
-  border: 1px solid var(--border-button);
-  border-radius: 2px;
-  text-align: center;
-}
-
 .page-selection-number,
 .page-selection-next {
   display: flex;
@@ -1187,6 +1193,18 @@ svg.icon-right:hover {
   padding-top: 7px;
   width: 38px;
   height: 38px;
+  border: 1px solid var(--border-button);
+  border-radius: 2px;
+}
+
+.page-selection-number:hover,
+.page-selection-next:hover {
+  border: 1px solid var(--basic-greylight);
+}
+
+.page-selection-number:active,
+.page-selection-next:active {
+  border: 1px solid var(--basic-red);
 }
 
 .page-selection-list{
@@ -2078,5 +2096,4 @@ filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
     popup.classList.toggle("close")
   });
   </script> */
-
 
