@@ -431,6 +431,11 @@ svg.Ravshan-left {
   color: var(--half-transparency);
 }
 
+
+.main-header-user-link-catalog {
+ background-color: var(--basic-red);
+}
+
 .site-navigation,
 .header-bookmarks,
 .header-cart,
@@ -935,6 +940,14 @@ svg.icon-right:hover {
   box-sizing: border-box;
 }
 
+.popular-goods-item:hover {
+  box-shadow: 0px 4px 20px 0 var(--manufactures-item);
+}
+
+
+
+
+
 .popular-goods-content {
   display: flex;
   margin:0;
@@ -1249,6 +1262,10 @@ svg.icon-right:hover {
   text-align: center;
   border: 1px solid var(--lightgray);
   box-sizing: border-box;
+}
+
+.product-cards-item:hover {
+ box-shadow: 0px 4px 20px 0 var(--manufactures-item);
 }
 /**********************Блок СОРТИРОВКА  END **********/
 
