@@ -84,8 +84,8 @@ img {
   height: auto;
   max-height: 100%;
 }
-/********************Блок ШАПКА  START ******************************/
 
+/********************Блок ШАПКА  START ******************************/
 .container {
   width: 940px;
   margin: 0 auto;
@@ -294,33 +294,19 @@ svg.Ravshan-left {
   width:220px;
   padding: 0 28px;
   height:42px;
-  margin-right:18px;
   background: var(--basic-red);
   box-shadow: 0px 5px 0px 0px var(--box-shadow);
 }
+
 
 .main-header-logo:hover {
   background: var(--error);
   box-shadow: 0px 5px 0px 0px var(--error-shadow);
 }
 
-.main-header-list {
-  width: 100%;
-  margin:0;
-  padding-left: 0;
-  padding-top:10px;
-  padding-bottom: -10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  vertical-align: middle;
-}
-
-.main-header-item {
-  height:inherit;
-  /* outline: 5px solid rgba(255,0,0,1);
-  outline-offset: -5px; */
+.main-header-logo:not([href]):hover {
+  background: var(--basic-red);
+  box-shadow: 0px 5px 0px 0px var(--box-shadow);
 }
 
 .main-navigation {
@@ -338,9 +324,7 @@ svg.Ravshan-left {
   padding-right: 25px;
   background-color: var(--navigation);
   box-shadow: inset 0px -5px 0px var(--header-background);
-  /*outline: 5px solid rgba(0,0,255,1);
-  outline-offset: -5px;*/
-  }
+}
 
 .site-navigation-item {
   padding-top: 15px;
@@ -385,65 +369,66 @@ svg.Ravshan-left {
   align-self: center;
   flex-wrap: wrap;
   padding-top: 40px;
-  /* outline: 5px solid rgba(0,255,0,1);
-  outline-offset: -5px; */
 }
 
-.header-bookmarks,
-.header-cart,.header-order {
-  display: block;
+.main-header-user-link {
+  padding: 9px 24px 9px 43px;
   position: relative;
-  width: 150px;
-  margin-top: -15px;
-  padding: 15px 0px 8px 0px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  color: var(--white);
+  fill: var(--white);
 }
 
-.bookmarks-color,
-.cart-color {
+.main-header-user-icon {
   position: absolute;
-  top: 13px;
-  padding-left:10px;
-  fill: var(--search-default);
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  fill: inherit;
+  opacity: 0.3;
 }
 
-.main-header-list li:nth-child(2):hover>* {
-  color: var(--white);
-  fill: var(--white);
-  cursor: pointer;
+.main-header-user-link span {
+  font: inherit;
+  color: inherit;
 }
 
-.main-header-list li:nth-child(2):active>* {
-  color: var(--bookmarks-active);
-  fill: var(--header-bookmark);
+.main-header-user-link-order {
+  padding: 9px 16px 9px 19px;
+}
+
+.main-header-user-link:hover .main-header-user-icon {
+  opacity: 1;
+}
+
+.main-header-user-link-bookmark:active {
   background-color: var(--pressed-bookmarks);
-  cursor: pointer;
 }
 
-.main-header-list li:nth-child(3):hover>* {
-  color: var(--white);
-  fill: var(--white);
-  cursor: pointer;
+.main-header-user-link:active .main-header-user-icon {
+  opacity: 0.3;
 }
 
-.main-header-list li:nth-child(3):active>* {
-  color: var(--cart-active);
-  fill: var(--search-default);
-  cursor: pointer;
+.main-header-user-link:active span {
+  opacity: 0.5;
 }
 
-.header-order {
-  text-align: center;
-  color: var(--white);
+.main-header-user-link-order {
+  padding: 9px 16px 9px 19px;
   background-color: var(--basic-green);
 }
 
-.header-order:hover {
+.main-header-user-link-order:hover {
   background-color: var(--success);
 }
 
-.header-order:active {
-  color: var(--half-transparency);
+.main-header-user-link-order:active {
   background-color: var(--basic-green);
+  color: var(--half-transparency);
 }
 
 .site-navigation,
@@ -458,16 +443,9 @@ svg.Ravshan-left {
   color: var(--white);
 }
 
- /* ****************** Footer - Каталог ****************START************************* */
 svg.cart-color-catalog {
   fill: var(--cart-catalog);
 }
-
-/* .main-header-list a {
-  color: var(--white);
-} */
-/* ****************** Footer - Каталог ****************END************************* */
-
 
 .main-header-input {
   font-size: 18px;
@@ -477,63 +455,82 @@ svg.cart-color-catalog {
 
 .main-header-list .header-bookmarks,
 .main-header-list .header-cart,
- .main-header-list .header-cart-catalog{
+.main-header-list .header-cart-catalog {
   position: relative;
-/*   padding-left: 30px; */
 }
 
 .main-header-form {
   position: relative;
-  margin-top: -10px;
-  display: block;
+  display: flex;
   box-sizing: inherit;
-  /* width: 271px; */
-  /* height: 42px; */
-}
-/* *****************************************ПРОВЕРКА************************************************************** */
-
-.main-header-form input[type="search"] {
-    height: 42px;
-    box-sizing: border-box;
-    /* width: 100%; */
-    /* padding: 31px -10px 12px 18px; */
-    background-color: var(--header-background);
-    border: 0;
-    color: var(--white);
-    cursor: pointer;
+  width: 271px;
+  height: 42px;
 }
 
-.label-icon {
-fill: var(--white);
+.main-header-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.main-header-item {
+  display: flex;
+  height:inherit;
+}
+
+.main-header-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 9px 20px 9px 43px;
+  background-color: transparent;
+  border: 0;
+  color: var(--white);
+  cursor: pointer;
 }
 
 svg.icon-search {
-  margin-top: 9px;
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  transform: translateY(-50%);
+  fill:var(--search-default);
 }
 
-svg.icon-search {
+.search-label {
+  display: block;
   fill: var(--search-default);
+  width: 100%;
+  position: relative;
+}
+
+.search-label:hover svg.icon-search{
+  fill: var(--white);
+}
+
+input.main-header-input:focus ~ .icon-search{
+  /* background-color: var(--white); */
+  fill: var(--basic-red);
 }
 
 .main-header-input::placeholder {
   color: var(--white);
 }
 
-.main-header-input:hover::placeholder {
-  width:271px;
-  color: var(--text-color-black);
+input.main-header-input:focus {
   background-color: var(--white);
+  outline-color: transparent;
+  color: var(--text-color-black);
 }
 
-svg.icon-search:hover {
-  fill: var(--white);
-  opacity: 1;
+label.search:hover .main-header-input::placeholder {
+  background-color: var(--white);
+  fill: var(--basic-red);
 }
 
-svg.icon-search:active {
-  fill: var(--white);
-  opacity: 1;
-}
+
 
 .header-about {
   font-style: italic;
@@ -556,22 +553,14 @@ svg.icon-search:active {
   text-align: center;
 }
 
-/* ***************************************************************** */
 .block-header-in {
   position: relative;
   display: flex;
-  /* justify-content:center; */
   align-items: center;
   margin-bottom: 20px;
-  /* display: block;
-  grid-template-columns: : min-content min-content; */
-  /* outline: 5px solid rgba(250,5,15);
-  outline-offset: -5px; */
 }
 
 .login-link {
-  /*width: 121px;
-  height: 45px;*/
   background-color: var(--white);
   padding: 6px 15px 10px;
   padding-left: 50px;
@@ -579,13 +568,9 @@ svg.icon-search:active {
 }
 
 .registration-link {
-  /*outline: 5px solid rgba(150,25,125);
-  outline-offset: -5px;*/
   background-color: var(--white);
   padding: 10px 15px;
   padding-left: 20px;
-  /*width: 150px;
-  height: 45px;*/
 }
 
 .login-link,
@@ -627,11 +612,8 @@ svg.icon-enter {
 svg.icon-enter:active {
   fill: var(--basic-greylight);
   cursor: pointer;
-}
+}/********************Блок ШАПКА  END ******************************/
 
-
-
-/********************Блок ШАПКА  END ******************************/
 /**********************Блок Наша Продукция  START **********/
 .our-production {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -644,8 +626,6 @@ svg.icon-enter:active {
   width:135px;
   height:38px;
   color:var(--white);
-  /*outline: 5px solid rgba(150,225,25);
-  outline-offset: -5px;*/
 }
 
 .our-production-block {
@@ -689,14 +669,10 @@ svg.icon-enter:active {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  /*grid-template-rows: min-content min-content min-content;*/
   justify-content: space-between;
   grid-gap: 20px;
- /* outline: 5px solid rgba(150,225,25);
-  outline-offset: -5px;*/
 }
 
-/*.our-production-title  display: none ?;*/
 .visually-hidden,
 .popular-goods-modal {
   position: absolute;
@@ -834,6 +810,7 @@ svg.icon-enter:active {
   display: block;
   font-size: 14px;
   line-height: 18px;
+  font-family: "Cuprum", "Arial", sans-serif;
   text-transform: uppercase;
   width:192px;
   height:38px;
@@ -843,16 +820,10 @@ svg.icon-enter:active {
   text-align: center;
   box-sizing: border-box;
   background-color: var(--basic-red);
-  /* outline: 5px solid rgba(150,225,25);
-  outline-offset: -5px; */
 }
 
 .punchers {
   position: relative;
-}
-
-.punchers-shadow {
-  /* position: relative; */
 }
 
 .slider-block-shadow {
@@ -920,7 +891,6 @@ svg.icon-right:hover {
 /********************** СЛАЙДЕР  END **********/
 /**********************Блок Наша Продукция  END **********/
 
-
 /**********************Блок Популярные товары  START **********/
 .popular-goods {
   display: flex;
@@ -929,11 +899,6 @@ svg.icon-right:hover {
   font-style: normal;
   font-weight: normal;
   margin-top: 59px;
-  /* display: grid;
-  grid-template-rows:1fr;
-  justify-content: space-between; */
- /* outline: 5px solid rgba(150,225,25);
-  outline-offset: -5px;*/
 }
 
 .popular-goods-block {
@@ -979,8 +944,6 @@ svg.icon-right:hover {
   flex-wrap: wrap;
   width: 179px;
   height: 179px;
-  /* outline: 5px solid rgba(150,125,225);
-  outline-offset: -5px; */
 }
 
 .product-cards-content {
@@ -992,8 +955,6 @@ svg.icon-right:hover {
   flex-wrap: wrap;
   width: 179px;
   height: 179px;
-  /* outline: 5px solid rgba(150,125,225);
-  outline-offset: -5px; */
 }
 
 
@@ -1027,7 +988,6 @@ svg.icon-right:hover {
 }
 
 .catalog-manufacturers-list {
-  /* margin-top: 20px; */
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 19px;
@@ -1238,8 +1198,6 @@ svg.icon-right:hover {
   width: 220px;
 }
 
-
-
 .sorting-cards-block {
   display: grid;
   grid-template-rows: min-content min-content min-content;
@@ -1292,8 +1250,6 @@ svg.icon-right:hover {
   border: 1px solid var(--lightgray);
   box-sizing: border-box;
 }
-
-
 /**********************Блок СОРТИРОВКА  END **********/
 
  /************************Блок СЕРВИСЫ  START ************************** */
@@ -1406,10 +1362,6 @@ svg.icon-right:hover {
   font-weight: normal;
   display: flex;
   justify-content: space-between;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
-  /*justify-content: space-between;*/
-  /*margin-bottom: 70px;*/
 }
 
 .contacts-moredetails-link,
@@ -1431,7 +1383,6 @@ svg.icon-right:hover {
   width: 300px;
   padding-top: 10px;
   box-sizing: border-box;
-
 }
 
 .contacts-block2 {
@@ -1448,8 +1399,6 @@ svg.icon-right:hover {
 
 /************************Блок ПОДВАЛ  START ************************ */
 .page-footer {
-  /* display: grid;
-  grid-template-rows: 1fr 1fr; */
   display: flex;
   flex-direction: column;
   align-items:space-between;
@@ -1459,23 +1408,16 @@ svg.icon-right:hover {
   font-weight: normal;
   margin-top:70px;
   background: var(--navigation);
-  /*outline: 5px solid rgba(255,0,0,0.7);
-  outline-offset: -5px;*/
 }
 
 .page-footer-block {
   height: 193px;
-  /* outline: 5px solid rgba(255,110,01,1);
-  outline-offset: -5px; */
 }
 
 .footer-site-navigation {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between; */
 }
 
 .footer-site-navigation-list {
@@ -1512,13 +1454,9 @@ svg.icon-right:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
 }
 
 .footer-contacts {
-  /* width: 350px; */
-  /* height: 49px; */
   margin-left:10px;
 }
 
@@ -1542,8 +1480,6 @@ svg.icon-right:hover {
 .footer-bottom {
   height: 107px;
   background: var(--header-background);
- /* outline: 5px solid rgba(155,20,51);
-  outline-offset: -5px;*/
 }
 
 .footer-bottom-container940 {
@@ -1556,8 +1492,6 @@ svg.icon-right:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* outline: 5px solid rgba(155,20,51);
-  outline-offset: -5px; */
 }
 
 .page-footer-logo {
@@ -1584,11 +1518,6 @@ svg.icon-right:hover {
   color:var(--white)
 }
 
-.footer-license-info {
-  /* outline: 5px solid rgba(155,20,51);
-  outline-offset: -5px; */
-}
-
 .footer-feedback a,
 .footer-developed a {
   color:var(--special-yellowlight);
@@ -1600,8 +1529,6 @@ svg.icon-right:hover {
 
 .footer-feedback {
   display: block;
-  /* outline: 5px solid rgba(155,20,51);
-  outline-offset: -5px; */
 }
 
 .contacts-list {
@@ -1647,7 +1574,6 @@ svg.icon-right:hover {
 .developed-link:active {
   color: var(--basic-red);
 }
-
 /************************Блок ПОДВАЛ  END ************************ */
 
 /************************Блок Перфораторы-Каталог  START ************************ */
@@ -1787,7 +1713,6 @@ svg.icon-right:hover {
 
 .page-selection-item p,
 .page-selection-item a {
-  /* display: inline-block; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1812,27 +1737,6 @@ svg.icon-right:hover {
 }
 /************************Блок Перфораторы-Каталог  END ************************ */
 
-/************************Блок Фигуры  START ************************ */
-/* .triangle-up {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  : var(--basic-red);
-}
-
-.triangle-down {
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 13px solid var(--basic-greylight);
-}  */
-/************************Блок Фигуры  END ************************ */
-
 /************************Блок ФИЛЬТР  START *************************/
 .filter-item {
   margin: 0;
@@ -1853,13 +1757,6 @@ svg.icon-right:hover {
   width: 220px;
   margin-top: 11px;
 }
-
-/* .filter-item legend {
-  font-size: 18px;
-  line-height: 24px;
-  text-transform: uppercase;
-  font-weight: 700;
-} */
 
 .catalog-filter {
   display: flex;
@@ -2057,7 +1954,6 @@ svg.triangle-down-svg:active {
   background-image: url("../img/check-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-
 }
 
 .filter-input-checkbox:checked + label::after {
@@ -2111,7 +2007,6 @@ svg.triangle-down-svg:active {
 .social-button:focus {
   background-color: var(--basic-red);
 }
-
 /************************Блок Социальные КНОПКИ  END *************************/
 
 /************************Карта  START *************************/
@@ -2166,3 +2061,5 @@ filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
     popup.classList.toggle("close")
   });
   </script> */
+
+
