@@ -32,6 +32,7 @@
   --white-opacity-thirty: rgba(255,255,255,0.3);
   --lightgrey-opacity-thirty: rgba(197,197,197,0.3);
   --grey-opacity-thirty:rgba(169,169,169,0.3);
+  --map-shadow:rgba(47, 42, 43, 0.5);
   --dash-color: #444;
   --basic-backgound: #F1F5F7;
   --popular-goods:#F9F5F0;
@@ -51,6 +52,7 @@
   --basic-red: #EE3643;
   --cart-catalog: #F3727B;
   --red_button-hover: #CA2C37;
+  --modal-shadow: rgba(0, 0, 0, 0.15);
   --punchers-shadow: rgba(0,0,0,0.25);
   --black-opacity-thirty: rgba(0,0,0,0.3);
   --text-color-black: #000;
@@ -219,6 +221,7 @@ svg.Ravshan-left {
   width: 270px;
   height: 45px;
   background: var(--text-light-grey);
+  margin-left: 20px;
   border: 3px solid var(--white);
   box-sizing: border-box;
   font-weight: bold;
@@ -226,7 +229,8 @@ svg.Ravshan-left {
   line-height: 30px;
   color: var(--basic-red);
   text-align: center;
-  padding-left: 45px;
+  padding-left: 35px;
+  margin-bottom: 3px;
 }
 
 .contacts-phone::before  {
@@ -235,7 +239,7 @@ svg.Ravshan-left {
   height: 19px;
   position: absolute;
   top: 10px;
-  left: 44px;
+  left: 40px;
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -243,7 +247,8 @@ svg.Ravshan-left {
 }
 .header-contact-address {
   margin: 0;
-  padding: 0;
+  padding-top: 2px;
+  padding-left: 18px;
   font-size: 14px;
   line-height: 24px;
   color:var(--navigation);
@@ -312,7 +317,7 @@ svg.Ravshan-left {
 }
 
 .main-navigation {
-  margin-top: 40px;
+  margin-top: 44px;
 }
 
 .site-navigation {
@@ -361,7 +366,7 @@ svg.Ravshan-left {
 }
 
 .img-logo-technomart-foot{
-  margin-left: 56px;
+  margin-left: 43px;
   padding-top: 21px;
 }
 
@@ -374,7 +379,7 @@ svg.Ravshan-left {
 }
 
 .main-header-user-link {
-  padding: 9px 26px 9px 41px;
+  padding: 9px 27px 9px 41px;
   position: relative;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
@@ -546,16 +551,18 @@ label.search:hover .main-header-input::placeholder {
 
 .header-block-contacts {
   display: block;
+  margin: 0;
+  padding: 0;
 }
 
-.header-contact-address {
+/* .header-contact-address {
   margin: 0;
   padding: 0;
   font-size: 14px;
   line-height: 24px;
   color:var(--navigation);
   text-align: center;
-}
+} */
 
 .block-header-in {
   position: relative;
@@ -574,6 +581,7 @@ label.search:hover .main-header-input::placeholder {
   height: 45px;
   padding-right: 27px;
   padding-left: 12px;
+  margin-top: -4px;
   margin-right: 10px;
 
 }
@@ -588,6 +596,7 @@ label.search:hover .main-header-input::placeholder {
   text-align: center;
   width: 150px;
   height: 45px;
+  margin-top: -4px;
 }
 
 .login-link,
@@ -621,7 +630,7 @@ label.search:hover .main-header-input::placeholder {
 
 svg.icon-enter {
   position: absolute;
-  padding-top: 14px;
+  padding-top: 10px;
   padding-left: 19px;
   padding-right: 20px;
   fill: var(--basic-greylight);
@@ -635,6 +644,8 @@ svg.icon-enter:active {
 /**********************Блок Наша Продукция  START **********/
 .our-production {
   font-family: "Cuprum", "Arial", sans-serif;
+  width: 940px;
+  height: 409px;
   margin-top: 59px;
 }
 
@@ -655,7 +666,7 @@ svg.icon-enter:active {
   mix-blend-mode: normal;
   text-align: center;
   margin-left: 23px;
-  margin-top: 14px;
+  /* margin-top: 14px; */
   padding: 12px;
   box-sizing: border-box; /
 }
@@ -689,7 +700,9 @@ svg.icon-enter:active {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: space-between;
-  grid-gap: 20px;
+  align-items: flex-start;
+  grid-row: 20px;
+  grid-column: 20px;
 }
 
 .visually-hidden,
@@ -710,8 +723,7 @@ svg.icon-enter:active {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
-  margin-top: 20px;
-  margin-left: 23px;
+  margin: 20px 0 15px 23px;
 }
 
 .materials-svg {
@@ -720,7 +732,7 @@ svg.icon-enter:active {
 }
 
 .instrument-svg {
-  margin-left: 45px;
+  margin-left: 41px;
   margin-top: 35px;
 }
 
@@ -786,6 +798,11 @@ svg.icon-enter:active {
   grid-gap: 20px;
 }
 
+.dist {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
 .slider .our-production-punchers {
   font-weight: bold;
   font-size: 36px;
@@ -794,15 +811,15 @@ svg.icon-enter:active {
   text-transform: uppercase;
   color:var(--white);
   margin-top: -240px;
-  margin-left: 20px;
+  margin-left: 32px;
 }
 
 .slider-info {
   font-size: 18px;
   line-height: 24px;
   color:var(--white);
-  margin-left: 20px;
-  margin-top: -15px;
+  margin-left: 23px;
+  margin-top: -18px;
 }
 
 .slider-open:hover,
@@ -826,19 +843,37 @@ svg.icon-enter:active {
 .popular-manufacturers-all,
 .contacts-moredetails,
 .contacts-gotlost {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   line-height: 18px;
   font-family: "Cuprum", "Arial", sans-serif;
   text-transform: uppercase;
-  width:192px;
-  height:38px;
   color: var(--white);
-  margin-top: 18px;
-  padding-top: 10px;
-  text-align: center;
+  /* text-align: center; */
   box-sizing: border-box;
   background-color: var(--basic-red);
+}
+
+.slider-open,
+.popular-goods-all,
+.popular-manufacturers-all,
+.contacts-gotlost {
+  width:192px;
+  height:38px;
+}
+
+.contacts-moredetails {
+  width:220px;
+  height:38px;
+  margin-top: 10px;
+}
+
+.popular-goods-all,
+.popular-manufacturers-all,
+.contacts-gotlost {
+  margin-top: 16px;
 }
 
 .punchers {
@@ -868,8 +903,8 @@ svg.icon-enter:active {
 
 .slider-open {
   position: absolute;
-  margin-left: 20px;
-  margin-top: -70px;
+  margin-left: 23px;
+  margin-top: -73px;
 }
 
 .icon-left,
@@ -958,19 +993,16 @@ svg.icon-right:hover {
   box-shadow: 0px 4px 20px 0 var(--manufactures-item);
 }
 
-
-
-
-
 .popular-goods-content {
   display: flex;
   margin:0;
-  width: 100%;
+  /* width: 100%;
+  height: 100%; */
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 179px;
-  height: 179px;
+  width: 200px;
+  height: 200px;
 }
 
 .product-cards-content {
@@ -1059,12 +1091,15 @@ svg.icon-right:hover {
   font-size: 18px;
   line-height: 20px;
   color:var(--text-color-black);
+  padding-bottom: 10px;
 }
 
 .price {
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
+  margin: 0;
+  padding: 0;
   text-decoration-line: line-through;
   text-transform: uppercase;
   color: var(--text-color-grey);
@@ -1156,7 +1191,8 @@ svg.icon-right:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 20px;
+  row-gap: 20px;
+  column-gap: 20px;
   margin-bottom: 70px;
 }
 
@@ -1291,24 +1327,69 @@ svg.icon-right:hover {
 .section-services {
   height: 522px;
   background-color: var(--basic-backgound);
-  /*outline: 5px solid rgba(250,125,125);
-  outline-offset: -5px;*/
 }
 
 .services {
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   display: grid;
-  grid-template-columns: :1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows:1fr ;
   justify-content: space-between;
-  /*outline: 5px solid rgba(250,125,125);
-  outline-offset: -5px;*/
-  padding-top: 64px;
+  /* margin: 0; */
+  padding: 0;
+  margin-top: -5px;
+}
+
+.services-info,
+.services-info2,
+.contacts-info1,
+.contacts-info2,
+.contacts-info3 {
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+/* .contacts-titles2, */
+.contacts-info1 {
+  padding: 0;
+  margin-bottom: 23px;
+  margin-top: 0;
+}
+
+.contacts-info2 {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+.contacts-info3 {
+  padding: 0;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.services-info2 {
+  padding-top: 5px;
 }
 
 .services-list {
-  margin-left: -30px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-top: 55px;
+}
+
+.services-list::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 230px;
+  width: 10px;
+  height: 279px;
+  background-image: url("../img/effect.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 10;
 }
 
 .services-block {
@@ -1316,17 +1397,19 @@ svg.icon-right:hover {
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  margin-left: 10px;
+  padding-top: 40px;
 }
 
 .delivery-block {
-  margin-left: 80px;
-  margin-top: -12px;
+  /* margin-left: 80px; */
+  margin-top: 31px;
+  margin-left: 5px;
 }
 
 .services-titles,
 .services-delivery,
-.contacts-titles {
+.contacts-titles,
+.contacts-titles2{
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -1395,8 +1478,10 @@ svg.icon-right:hover {
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
-  display: flex;
+  display: grid;
+  grid-template-columns: min-content 1fr;
   justify-content: space-between;
+  margin-top: 47px;
 }
 
 .contacts-moredetails-link,
@@ -1418,17 +1503,25 @@ svg.icon-right:hover {
   width: 300px;
   padding-top: 10px;
   box-sizing: border-box;
+  text-align: center;
 }
 
+.contacts-block1,
 .contacts-block2 {
-  margin-left: 179px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-block1 {
+  width: 483px;
+  margin-right: 159px;
 }
 
 .contacts-item {
   font-size: 18px;
   line-height: 24px;
   color:var(--text-color-black);
+  padding-bottom: 12px;
 }
 /******************Блок Компания Техномарт-Контакты  END ***********/
 
@@ -1436,12 +1529,12 @@ svg.icon-right:hover {
 .page-footer {
   display: flex;
   flex-direction: column;
-  align-items:space-between;
+  /* align-items:space-between; */
   flex-wrap: wrap;
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
-  margin-top:70px;
+  margin-top:67px;
   background: var(--navigation);
 }
 
@@ -1491,8 +1584,9 @@ svg.icon-right:hover {
   flex-wrap: wrap;
 }
 
-.footer-contacts {
-  margin-left:10px;
+ .footer-contacts {
+  margin-left:4px;
+  margin-top:-5px;
 }
 
 .footer-our-production-list {
@@ -1515,18 +1609,23 @@ svg.icon-right:hover {
 .footer-bottom {
   height: 107px;
   background: var(--header-background);
+  /* display: flex;
+  align-items: center; */
 }
 
 .footer-bottom-container940 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 38px;
 }
 
-.footer-social-icons-list {
+ul.footer-social-icons-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-left: 157px;
+  margin-top: -4px;
 }
 
 .page-footer-logo {
@@ -1540,7 +1639,9 @@ svg.icon-right:hover {
 .footer-contacts-phone {
   font-size: 18px;
   line-height: 24px;
-  color:var(--text-light-grey)
+  color:var(--text-light-grey);
+  margin: 0;
+  padding: 0;
 }
 
 .footer-license-info,
@@ -1553,13 +1654,37 @@ svg.icon-right:hover {
   color:var(--white)
 }
 
+.footer-license-info {
+  margin-top: 30px;
+}
+
+.footer-feedback-info,
+.footer-developed-info,
+.footer-social-icons-list,
+.footer-license-info {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-developed-info,
+.developed-link {
+  margin-left: 5px;
+
+}
+
+.footer-feedback-info,
+.feedback-link {
+  margin-left: 113px;
+}
+
 .footer-feedback a,
 .footer-developed a {
   color:var(--special-yellowlight);
 }
 
 .footer-developed {
-  margin-left: 51px;
+  margin-left: 39px;
+  margin-right: 12px;
 }
 
 .footer-feedback {
@@ -2044,56 +2169,101 @@ svg.triangle-down-svg:active {
 }
 /************************Блок Социальные КНОПКИ  END *************************/
 
+/************************          МОДАЛЬНЫЕ ОКНА  START              *************************/
+
 /************************Карта  START *************************/
-/*
- .popup{
-position: absolute;
-width:943px;
-height: 449px;
-margin-left: 13%;
-top: 271%;
-color: var(--white);
-font-size: 60px;
-filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+.modal {
+  position: fixed;
+  z-index: 50;
+  color: var(--text-color-black);
+  background-color: var(--white);
+}
+
+.modal-map {
+  display: none;
+  width: 940px;
+  height: 446px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* .modal-map p {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  z-index: 4;
+} */
+
+.modal-map iframe {
+  position: relative;
+  z-index: 3;
+  width: 940px;
+  height: 446px;
+  box-shadow: 0 0 15px 1px var(--map-shadow);
+  border: none;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.main-contacts-map {
+  margin-top: 21px;
+}
+
+/************************Карта  END *************************/
+
+
+  /************************          МОДАЛЬНЫЕ ОКНА  END              *************************/
+
+.popup{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width:943px;
+  height: 449px;
+  color: var(--white);
+  font-size: 60px;
+  filter: drop-shadow(0px 4px 20px var(--modal-shadow));
+  background: var(--text-color-grey);
 }
 
 .close {
   display: none;
 }
 
+.open {
+  display: block;
+  animation: bounce 0.6s;
+}
+
 .map_bottom{
   border-top: 7px solid var(--basic-red);
   width:943px;
   height: 449px;
+  z-index: 2;
 }
 
-
 .popup_close{
+  width: 21px;
+  height: 21px;
+  border: 0;
+  background: none;
+  background: url(../img/icon-close.svg);
   position: absolute;
-  top: 10px;
   left: 912px;
-} */
+  top: 17px;
+  cursor: pointer;
+}
 
-/************************Карта  END *************************/
-/*   <div class="popup close">
-      <a href="" class="popup_close">
-        <img src="img/icon-close.svg" alt="">
-      </a>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2376.746368112126!2d30.32014142604324!3d59.93882078686455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1603004613884!5m2!1sru!2sua" width="943" height="449" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" class="map_bottom"></iframe>
-    </div>
-  <script>
-  const link = document.querySelector(".map")
-  const popup = document.querySelector(".popup")
-  const iconclose = document.querySelector(".popup_close")
-  link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.toggle("open")
-    popup.classList.remove("close")
-  });
-  iconclose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("open")
-    popup.classList.toggle("close")
-  });
-  </script> */
 
