@@ -3,6 +3,7 @@
 :root {
   --basic-green: #63A63E;
   --success: #5FBB2D;
+  --buy-active: #518534;
   --shadow-box: #367315;
   --special-greenlight: #8ED78F;
   --half-transparency: #B1D29F;
@@ -17,6 +18,7 @@
   --manufactures-item: #d9d9d9;
   --text-color-grey: #A9A9A9;
   --footer-shadow1:#919BA9;
+  --modal-InBookmarks:#98A0AD;
   --cart-active: #9499A4;
   --footer-shadow2:#98896E;
   --bookmarks-active: #8A8E94;
@@ -379,7 +381,7 @@ svg.Ravshan-left {
 }
 
 .main-header-user-link {
-  padding: 9px 27px 9px 41px;
+  padding: 9px 27px 9px 40px;
   position: relative;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
@@ -388,6 +390,10 @@ svg.Ravshan-left {
   font-weight: normal;
   color: var(--white);
   fill: var(--white);
+}
+
+.main-header-user-link-cart span {
+  padding-left: 3px;
 }
 
 .main-header-user-icon {
@@ -705,8 +711,8 @@ svg.icon-enter:active {
   grid-column: 20px;
 }
 
-.visually-hidden,
-.popular-goods-modal {
+.visually-hidden/* ,
+.popular-goods-modal  */{
   position: absolute;
   width: 1px;
   height: 1px;
@@ -760,7 +766,7 @@ svg.icon-enter:active {
   position: relative;
 }
 
-.our-production-instruments::before {
+/* .our-production-instruments::before {
   position: absolute;
   content: "";
   width: 71px;
@@ -769,7 +775,7 @@ svg.icon-enter:active {
   background-image: url("../img/icon-new.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-}
+} */
 
 .our-production-technics {
   background-color: var(--special-lilac);
@@ -1022,11 +1028,12 @@ svg.icon-right:hover {
   content: "";
   width: 71px;
   height: 71px;
-  left: 149px;
+  left: 148px;
   top: 0px;
   background-image: url("../img/icon-new.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  z-index: 2;
 }
 
 
@@ -1151,8 +1158,8 @@ svg.icon-right:hover {
   background: var(--basic-green);
   box-shadow: inset 0px -3px 0px var(--shadow-box);
   color: var(--white);
- /* padding-top: 10px;
-  padding-bottom: 20px;*/
+  margin-bottom: 10px;
+
 }
 
 .popular-goods-modal-InBookmarks-BFG9000,
@@ -1301,21 +1308,6 @@ svg.icon-right:hover {
   padding: 0;
   margin-top: 28px;
   text-align: center;
-}
-
-.product-cards-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
-  margin:0;
-  padding: 0;
-  width: 220px;
-  height: 318px;
-  text-align: center;
-  border: 1px solid var(--lightgray);
-  box-sizing: border-box;
 }
 
 .product-cards-item:hover {
@@ -2265,5 +2257,68 @@ svg.triangle-down-svg:active {
   top: 17px;
   cursor: pointer;
 }
+/* ************************************************************ */
+
+.popular-goods-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: var(--white);
+  padding: 38px 44px 10px 41px;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+.popular-goods-item:hover .popular-goods-modal,
+.product-cards-item:hover .popular-goods-modal {
+  opacity: 1;
+}
+
+.popular-goods-modal-buy-BFG9000,
+.popular-goods-modal-InBookmarks-BFG9000,
+.popular-goods-modal-buy-BFG6000,
+.popular-goods-modal-InBookmarks-BFG6000,
+.popular-goods-modal-buy-BFG3000,
+.popular-goods-modal-InBookmarks-BFG3000,
+.popular-goods-modal-buy-BFG2000,
+.popular-goods-modal-InBookmarks-BFG2000 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.popular-goods-modal-buy-BFG9000:hover,
+.popular-goods-modal-buy-BFG6000:hover,
+.popular-goods-modal-buy-BFG3000:hover,
+.popular-goods-modal-buy-BFG2000:hover {
+  background-color: var(--success);
+}
+
+.popular-goods-modal-InBookmarks-BFG9000:hover,
+.popular-goods-modal-InBookmarks-BFG6000:hover,
+.popular-goods-modal-InBookmarks-BFG3000:hover,
+.popular-goods-modal-InBookmarks-BFG2000:hover {
+  border: 3px solid var(--navigation);
+}
+
+.popular-goods-modal-buy-BFG9000:active,
+.popular-goods-modal-buy-BFG6000:active,
+.popular-goods-modal-buy-BFG3000:active,
+.popular-goods-modal-buy-BFG2000:active {
+  background-color: var(--buy-active);
+}
+
+.popular-goods-modal-InBookmarks-BFG9000:active,
+.popular-goods-modal-InBookmarks-BFG6000:active,
+.popular-goods-modal-InBookmarks-BFG3000:active,
+.popular-goods-modal-InBookmarks-BFG2000:active {
+  color: var(--modal-InBookmarks);
+  border: 3px solid var(--modal-InBookmarks);
+}
+
+
 
 
