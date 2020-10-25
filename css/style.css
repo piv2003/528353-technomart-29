@@ -98,6 +98,7 @@
   --modal-shadow: rgba(0, 0, 0, 0.15);
   --punchers-shadow: rgba(0,0,0,0.25);
   --black-opacity-thirty: rgba(0,0,0,0.3);
+  --modal-write-us: rgba(0, 0, 0, 0.7);
   --text-color-black: #000;
 
 }
@@ -2220,6 +2221,7 @@ margin-right: 1px;
   z-index: 50;
   color: var(--text-color-black);
   background-color: var(--white);
+  display: none
 }
 
 .modal-map {
@@ -2230,14 +2232,6 @@ margin-right: 1px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-/* .modal-map p {
-  position: absolute;
-  margin: 0;
-  top: 0;
-  left: 0;
-  z-index: 4;
-} */
 
 .modal-map iframe {
   position: relative;
@@ -2251,10 +2245,6 @@ margin-right: 1px;
 .modal-show {
   display: block;
   animation: bounce 0.6s;
-}
-
-.modal-error {
-  animation: shake 0.6s;
 }
 
 .main-contacts-map {
@@ -2463,4 +2453,212 @@ margin-right: 1px;
   text-align: center;
   margin: 0 auto;
 }
-/***********************************Окно "Товар добавлен в корзину"  END****************** */
+/***********************************Окно "Товар добавлен в корзину"  END*******************/
+
+ /*********************************Окно - Напишите нам START*****************************/
+.your-name {
+  position: absolute;
+  left: 81px;
+}
+
+.text_letter {
+  position: absolute;
+  left: 80px;
+}
+
+.login-form {
+  display: grid;
+  grid-template-rows: 1fr 1fr 112px;
+}
+
+.email-name {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.text_letter-textarea {
+  font-family: "PT Sans", "Arial", sans-serif;
+  width: 458px;
+  height: 112px;
+  font-size: 13px;
+  border: 2px solid var(--basic-greylight);
+  margin-left: 80px;
+  padding: 0;
+}
+
+.text_letter-textarea::placeholder {
+  padding-top: 6px;
+  padding-left: 12px;
+}
+
+.login-checkbox {
+  position: absolute;
+  top: 46px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+}
+
+.text_letter {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  position: absolute;
+  top: 132px;
+}
+
+.login-icon-user {
+  border: 2px solid var(--basic-greylight);
+  width: 220px;
+  height: 38px;
+  border-radius: 2px;
+  position: absolute;
+  top: 81px;
+  left: 320px;
+}
+
+.login-icon-user::placeholder {
+  padding-left: 12px;
+}
+
+.login-icon-password {
+  border: 2px solid var(--basic-greylight);
+  width: 220px;
+  height: 38px;
+  border-radius: 2px;
+  position: absolute;
+  top: 81px;
+  left: 80px;
+}
+
+.login-icon-password::placeholder {
+  margin-top: 20px;
+  padding-left: 12px;
+}
+
+.button {
+  grid-row: 3;
+  grid-column: 1 / 1;
+  position: absolute;
+  top: 355px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.your-email {
+  position: absolute;
+  left: 321px;
+}
+
+/* .white{
+  background-color:var(--white);
+} */
+
+.dgk-blue{
+  color:var(--navigation);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: var(--basic-black);
+  background-color: var(--white);
+  box-shadow: 0 30px 50px var(--modal-write-us);
+  border-top: 7px solid var(--basic-red);
+  width: 620px;
+  height: 430px;
+}
+
+/* Modal close */
+.modal-close {
+  position: absolute;
+  top: 14px;
+  left: 588px;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  background-image: url(../img/icon-close.svg);
+}
+
+.button{
+  background: var(--basic-red);
+  border: 0;
+  color: var(--white);
+  width: 460px;
+  height: 38px;
+  position: absolute;
+  top: 37px;
+}
+.submitt{
+  position: absolute;
+  width: 100%;
+  height: 112px;
+  background: var(--basic-backgound);
+  margin: 0;
+  top: 311px;
+}
+/* Modal login */
+
+.modal-show{
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+.modal-error{
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
+
+/* Animations */
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+ /*********************************Окно - Напишите нам END*****************************/
+
+
+
