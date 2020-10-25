@@ -1,5 +1,45 @@
-/* Variables */
+/* fonts*/
+/* Cuprum normal */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("../fonts/cuprum.woff2") format('woff2'),
+        url("../fonts/cuprum.woff") format('woff');
+}
 
+/* Cuprum bold */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url("../fonts/cuprumbold.woff2") format('woff2'),
+  url("../fonts/cuprumbold.woff") format('woff');
+}
+
+/* Pt Sans normal */
+@font-face {
+  font-family: 'Pt Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("../fonts/ptsans.woff2") format('woff2'),
+  url("../fonts/ptsans.woff") format('woff');
+}
+
+/* Pt Sans bold */
+@font-face {
+  font-family: 'Pt Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url("../fonts/ptsansbold.woff2") format('woff2'),
+  url("../fonts/ptsansbold.woff") format('woff');
+}
+
+/* Variables */
 :root {
   --basic-green: #63A63E;
   --success: #5FBB2D;
@@ -37,6 +77,7 @@
   --map-shadow:rgba(47, 42, 43, 0.5);
   --dash-color: #444;
   --basic-backgound: #F1F5F7;
+  --two-buttons-background: #F1F1F1;
   --popular-goods:#F9F5F0;
   --filter: #F7F3EC;
   --text-light-grey: #F3F7F9;
@@ -1393,7 +1434,6 @@ svg.icon-right:hover {
 }
 
 .delivery-block {
-  /* margin-left: 80px; */
   margin-top: 31px;
   margin-left: 5px;
 }
@@ -1463,6 +1503,16 @@ svg.icon-right:hover {
   line-height: 30px;
   color: var(--white);
 }
+
+.services-delivery-item:hover .services-delivery-link {
+  background-color:var(--header-background);
+}
+
+.truck {
+  background-image: url("../img/truck.png");
+  background-repeat: no-repeat;
+  background-position: -155px 80px;
+}
 /************************Блок СЕРВИСЫ  END ************************** */
 
 /******************Блок Компания Техномарт-Контакты  START ***********/
@@ -1521,7 +1571,6 @@ svg.icon-right:hover {
 .page-footer {
   display: flex;
   flex-direction: column;
-  /* align-items:space-between; */
   flex-wrap: wrap;
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
@@ -1601,8 +1650,6 @@ svg.icon-right:hover {
 .footer-bottom {
   height: 107px;
   background: var(--header-background);
-  /* display: flex;
-  align-items: center; */
 }
 
 .footer-bottom-container940 {
@@ -1729,12 +1776,6 @@ ul.footer-social-icons-list {
 /************************Блок ПОДВАЛ  END ************************ */
 
 /************************Блок Перфораторы-Каталог  START ************************ */
-.catalog-punchers-menu-item {
-  margin: 0;
-  padding: 0;
-  align-self: center;
-}
-
 .catalog-punchers-menu-list {
   display: flex;
   justify-content: start;
@@ -1742,6 +1783,12 @@ ul.footer-social-icons-list {
   margin: 0;
   padding: 0;
   height: 59px;
+}
+
+.catalog-punchers-menu-item {
+  margin: 0;
+  padding: 0;
+  align-self: center;
 }
 
 .catalog-punchers-menu-list li:not(:last-child){
@@ -2159,6 +2206,10 @@ svg.triangle-down-svg:active {
 .social-button:focus {
   background-color: var(--basic-red);
 }
+
+.footer-social-icon:not(:last-child) li {
+margin-right: 1px;
+}
 /************************Блок Социальные КНОПКИ  END *************************/
 
 /************************          МОДАЛЬНЫЕ ОКНА  START              *************************/
@@ -2259,6 +2310,7 @@ svg.triangle-down-svg:active {
 }
 /* ************************************************************ */
 
+/* **********************************Кнопки "Купить в Закладки"  START****************** */
 .popular-goods-modal {
   position: absolute;
   top: 0;
@@ -2319,6 +2371,96 @@ svg.triangle-down-svg:active {
   border: 3px solid var(--modal-InBookmarks);
 }
 
+/***********************************Кнопки "Купить в Закладки"  END****************** */
 
+/***********************************Окно "Товар добавлен в корзину"  START****************** */
+.item-added-to-basket {
+  position: fixed;
+  width: 620px;
+  height: 275px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-top: 7px solid var(--basic-red);
+  background: var(--white);
+  z-index: 10;
+}
 
+.check-img {
+  content: "";
+  width: 66px;
+  height: 66px;
+  position: absolute;
+  top: 35px;
+  left: 81px;
+  background-image: url("../img/icon-mark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 
+.button-close-basket {
+  position: absolute;
+  top: 11px;
+  left: 588px;
+  background: none;
+  border: 0;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.place-order,
+.continue-shopping {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.place-order {
+  position: absolute;
+  left: 114px;
+  top: 37px;
+  background-color: var(--basic-red);
+  border: 0;
+  width: 192px;
+  height: 38px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.continue-shopping {
+  position: absolute;
+  left: 316px;
+  top: 37px;
+  width: 192px;
+  height: 38px;
+  background-color: var(--white);
+  border: 0;
+  color: var(--text-color-black);
+}
+
+.two-buttons {
+  position: absolute;
+  top: 175px;
+  background-color: var(--two-buttons-background);
+  width: 100%;
+  height: 100px;
+}
+
+.product-added-to-cart {
+  position: absolute;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  top:66px;
+  left: 0;
+  right: 0;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 auto;
+}
+/***********************************Окно "Товар добавлен в корзину"  END****************** */
