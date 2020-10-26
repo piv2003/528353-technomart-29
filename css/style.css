@@ -19,6 +19,16 @@
   url("../fonts/cuprumbold.woff") format('woff');
 }
 
+/* cuprum italic */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
+  src: url("../fonts/cuprumitalic.woff2") format('woff2'),
+  url("../fonts/cuprumitalic.woff") format('woff');
+}
+
 /* Pt Sans normal */
 @font-face {
   font-family: 'Pt Sans';
@@ -264,13 +274,13 @@ svg.Ravshan-left {
   position: relative;
   width: 270px;
   height: 45px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
   background: var(--text-light-grey);
   margin-left: 20px;
   border: 3px solid var(--white);
   box-sizing: border-box;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 30px;
   color: var(--basic-red);
   text-align: center;
   padding-left: 35px;
@@ -454,6 +464,11 @@ svg.Ravshan-left {
 
 .main-header-user-link-order {
   padding: 9px 16px 9px 19px;
+  background-color: var(--basic-green);
+}
+
+.main-header-user-link-catalog {
+ background-color: var(--basic-red);
 }
 
 .main-header-user-link:hover .main-header-user-icon {
@@ -472,11 +487,6 @@ svg.Ravshan-left {
   opacity: 0.5;
 }
 
-.main-header-user-link-order {
-  padding: 9px 16px 9px 19px;
-  background-color: var(--basic-green);
-}
-
 .main-header-user-link-order:hover {
   background-color: var(--success);
 }
@@ -484,11 +494,6 @@ svg.Ravshan-left {
 .main-header-user-link-order:active {
   background-color: var(--basic-green);
   color: var(--half-transparency);
-}
-
-
-.main-header-user-link-catalog {
- background-color: var(--basic-red);
 }
 
 .site-navigation,
@@ -592,6 +597,7 @@ label.search:hover .main-header-input::placeholder {
 .header-about {
   font-style: italic;
   font-size: 16px;
+  font-weight: 400;
   line-height: 23px;
   color: var(--basic-red);
   margin: 0 0 0 30px;
@@ -862,14 +868,6 @@ svg.icon-enter:active {
   margin-left: 32px;
 }
 
-.slider-info {
-  font-size: 18px;
-  line-height: 24px;
-  color:var(--white);
-  margin-left: 23px;
-  margin-top: -18px;
-}
-
 .slider-open:hover,
 .popular-goods-all:hover,
 .popular-manufacturers-all:hover,
@@ -947,6 +945,11 @@ svg.icon-enter:active {
   position: absolute;
   top: 80px;
   left: 0px;
+  font-size: 18px;
+  line-height: 24px;
+  color:var(--white);
+  margin-left: 23px;
+  margin-top: -18px;
 }
 
 .slider-open {
@@ -1111,7 +1114,9 @@ svg.icon-right:hover {
 .popular-manufacturers-title {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
+  font-weight: 400;
   line-height: 30px;
+
   color:var(--navigation);
   text-transform: uppercase;
 }
@@ -1136,7 +1141,7 @@ svg.icon-right:hover {
 }
 
 .punchers-Bosch {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   color:var(--text-color-black);
@@ -1144,7 +1149,7 @@ svg.icon-right:hover {
 }
 
 .price {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 17px;
   line-height: 18px;
   margin: 0;
@@ -1156,14 +1161,12 @@ svg.icon-right:hover {
 
 .discount_price {
   position: relative;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 17px;
   line-height: 18px;
   height: 38px;
   text-transform: uppercase;
   color: var(--white);
- /*  outline: 5px solid rgba(250,125,225);
-  outline-offset: -5px; */
 }
 
   .discount_price::before{
@@ -1171,8 +1174,8 @@ svg.icon-right:hover {
   content: "";
   width: 141px;
   height: 38px;
-  top: -10px;
-  left: -35px;
+  top: -8px;
+  left: -30px;
   background-image: url("../img/icon-price.svg");
   z-index: -100;
   background-repeat: no-repeat;
@@ -1394,6 +1397,7 @@ svg.icon-right:hover {
   padding: 0;
   margin-top: 0;
   margin-bottom: 3px;
+  font-weight: 400;
 }
 
 .contacts-info3 {
@@ -1503,10 +1507,6 @@ svg.icon-right:hover {
   font-size: 21px;
   line-height: 30px;
   color: var(--white);
-}
-
-.services-delivery-item:hover .services-delivery-link {
-  background-color:var(--header-background);
 }
 
 .truck {
@@ -2113,12 +2113,6 @@ svg.triangle-down-svg:active {
 
 .filter fieldset:first-child {
   margin-bottom: 35px;
-}
-
-.filter legend {
-  /* margin-bottom: 26px; */
-  font-size: 24px;
-  line-height: 30px;
 }
 
 .filter ul {
