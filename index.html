@@ -109,14 +109,14 @@
           </li>
          <!-- **********************Slider START ****************************** -->
           <li class="slider">
-             <button class="slider-button slider-prev">
+             <button class="slider-button slider-prev slider-button-1">
               <svg width="23" height="41" viewBox="0 0 23 41" fill="inherit" class="icon-arrow" xmlns="
                 http://www.w3.org/2000/svg"><path d="M20.83 0.965027L22.919 3.06403L5.13 20.947L22.977 38.886L20.887 40.985L0.951996 20.947L20.83 0.965027Z" fill="inherit"/>
               </svg>
             </button>
             <div class="slider-container">
-              <div class="slider-item active"> <!-- Первое изображение -->
-                <div class="slider-block-text">  <!-- Затененный блок -->
+              <div class="slider-item active"> 
+                <div class="slider-block-text">  
                   <h2 class="our-production-punchers">Перфораторы</h2>
                   <p class="slider-info">Настоящие мужские игрушки</p>
                 </div>
@@ -127,20 +127,20 @@
                   <h2 class="our-production-punchers">Дрели</h2>
                   <p class="slider-info">Соседям на радость!</p>
                 </div>
-                <a href="catalog.html" class="slider-open">открыть каталог</a>
+                <a class="slider-open" href="catalog.html">открыть каталог</a>
               </div>
             </div>
-            <button class="slider-button slider-next">
+            <button class="slider-button slider-next slider-button-2">
               <svg width="23" height="41" viewBox="0 0 23 41" fill="inherit" class="icon-arrow" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.16997 40.035L0.0809748 37.936L17.87 20.053L0.0229773 2.11397L2.11298 0.0149709L22.048 20.053L2.16997 40.035Z" fill="inherit"/>
               </svg>
              </button>
             <ul class="slider-dots">
               <li>
-                <button class="slider-dot active" aria-label="slide 1" data-slide="1"></button>
+                <button class="slider-dot active slider-button-1" aria-label="slide 1" data-slide="1"></button>
               </li>
               <li>
-                <button class="slider-dot" aria-label="slide 2" data-slide="2"></button>
+                <button class="slider-dot slider-button-2" aria-label="slide 2" data-slide="2"></button>
               </li>
             </ul>
           </li>
@@ -264,24 +264,47 @@
           <div class="services-block">
             <h2 class="services-titles">Сервисы</h2>
             <p class="services-info">Хороший интернет-магазин отличается от плохого не только ценами!<br>
-            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+            </p>
           </div>
-          <ul class="services-list">
-            <li class="services-delivery-item">
-              <a class="services-delivery-link" href="">Доставка</a>
-            </li>
-            <li class="services-guarantee-item">
-              <a class="services-guarantee-link" href="">Гарантия</a>
-            </li>
-            <li class="services-credit-item">
-              <a class="services-credit-link" href="">Кредит</a>
-            </li>
-          </ul>
-          <div class="delivery-block">
-            <h2 class="services-delivery">Доставка</h2>
-            <p class="services-info2">Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
+          <div class="services-list-block">
+            <ul class="services-list">
+              <li class="services-delivery-item color-white">
+                <a class="services-delivery-link dgk-blue" href="">Доставка</a>
+              </li>
+              <li class="services-guarantee-item">
+                <a class="services-guarantee-link" href="">Гарантия</a>
+              </li>
+              <li class="services-credit-item">
+                <a class="services-credit-link" href="">Кредит</a>
+              </li>
+            </ul>
           </div>
-          <div class="truck">
+          <div class="delivery-block-div">
+            <div class="delivery-block">
+              <h2 class="services-delivery">Доставка</h2>
+              <p class="services-info">Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!
+              </p>
+            </div>            
+            <div class="delivery-block-image">
+            </div>  
+          </div>
+          <div class="guarantee-block-div close">
+            <div class="guarantee-block"> 
+              <h2 class="services-delivery">Гарантия</h2> 
+              <p class="services-info">Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его возгоранием,<br>вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>сгоревший товар на новый.<br>  Дом уж восстановите как-нибудь сами.
+              </p> 
+            </div>            
+          </div>
+          <div class="credit-block-div close">
+            <div class="credit-block">
+              <h2 class="services-delivery">Кредит</h2>
+              <p class="services-info">Залезть в долговую яму стало проще!<br>  Кредитные консультанты придут вам на помощь.
+              </p>
+            </div>
+            <form class="send-application" >
+              <button class="send-application-button">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>            
           </div>
         </div>
       </section>

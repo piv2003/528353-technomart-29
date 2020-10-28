@@ -79,3 +79,113 @@ button.addEventListener("click", function (evt) {
   });
 // ***************************Окно "Напишите нам" END***************************
 
+// ***************************Блок "Сервисы" START*************************** 
+
+ const deliverywhite = document.querySelector(".services-delivery-item")
+  const guaranteewhite = document.querySelector(".services-guarantee-item")
+  const creditwhite = document.querySelector(".services-credit-item")  
+
+
+  // const deliverylink = document.querySelector(".services-delivery-link")
+  const deliverylink = document.querySelector(".services-delivery-item>*")
+  const guaranteelink = document.querySelector(".services-guarantee-link")
+  const creditlink = document.querySelector(".services-credit-link")  
+
+
+  const delivery = document.querySelector(".delivery-block-div")
+  const guarantee = document.querySelector(".guarantee-block-div")
+  const credit = document.querySelector(".credit-block-div")
+
+  deliverylink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    deliverywhite.classList.add("color-white")
+    guaranteewhite.classList.remove("color-white")
+    creditwhite.classList.remove("color-white")
+
+    delivery.classList.remove("close")
+    guarantee.classList.add("close")
+    credit.classList.add("close")
+
+    deliverylink.classList.add("dgk-blue")
+    guaranteelink.classList.remove("dgk-blue")
+    creditlink.classList.remove("dgk-blue")
+ 
+    otprZav.classList.add("close")
+  });
+  guaranteelink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    guaranteewhite.classList.add("color-white")
+    deliverywhite.classList.remove("color-white")
+    creditwhite.classList.remove("color-white")
+
+    guarantee.classList.remove("close")
+    delivery.classList.add("close")
+    credit.classList.add("close")
+
+    guaranteelink.classList.add("dgk-blue")
+    deliverylink.classList.remove("dgk-blue")
+    creditlink.classList.remove("dgk-blue")
+
+    otprZav.classList.add("close")
+  });
+  creditlink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    creditwhite.classList.add("color-white")
+    deliverywhite.classList.remove("color-white")
+    guaranteewhite.classList.remove("color-white")
+
+    credit.classList.remove("close")
+    delivery.classList.add("close")
+    guarantee.classList.add("close")
+
+    creditlink.classList.add("dgk-blue")
+    deliverylink.classList.remove("dgk-blue")
+    guaranteelink.classList.remove("dgk-blue")
+
+    otprZav.classList.remove("close")
+  });
+  // ***************************Блок "Сервисы" END*************************** 
+
+  // ***************************Блок "Слайдер" START*************************** 
+const button1 = document.querySelectorAll(".slider-button-1")
+const button2 = document.querySelectorAll(".slider-button-2")
+const sliderItems = document.querySelectorAll('.slider-item');
+ 
+ for(let i = 0; sliderItems.length < i; i++ ) {
+   sliderItems[i].classList.remove('active');
+ }
+ 
+
+  button1[0].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    sliderItems[0].classList.add('active');
+    sliderItems[1].classList.remove('active');
+
+    button1[1].classList.add('active');
+    button2[1].classList.remove('active');
+  });
+  button2[0].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    sliderItems[1].classList.add('active');
+    sliderItems[0].classList.remove('active');
+
+    button2[1].classList.add('active');
+    button1[1].classList.remove('active');
+ });
+  button1[1].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    sliderItems[0].classList.add('active');
+    sliderItems[1].classList.remove('active');
+
+    button1[1].classList.add('active');
+    button2[1].classList.remove('active');
+  });
+  button2[1].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    sliderItems[1].classList.add('active');
+    sliderItems[0].classList.remove('active');
+
+    button2[1].classList.add('active');
+    button1[1].classList.remove('active');
+ });
+  // ***************************Блок "Слайдер" END*************************** 
