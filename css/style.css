@@ -264,8 +264,6 @@ svg.Ravshan-left {
 
 .header-block-contacts {
   display: block;
-  /* margin-bottom: 5px;
-  margin-top: 55px; */
 }
 
 .contacts-phone,
@@ -280,7 +278,7 @@ svg.Ravshan-left {
   font-size: 21px;
   line-height: 30px;
   background: var(--text-light-grey);
-  margin-left: 20px;
+  margin-left: 26px;
   border: 3px solid var(--white);
   box-sizing: border-box;
   color: var(--basic-red);
@@ -311,7 +309,7 @@ svg.Ravshan-left {
 .header-contact-address-catalog {
   margin: 0;
   padding-top: 2px;
-  padding-left: 18px;
+  padding-left: 27px;
   font-size: 14px;
   line-height: 24px;
   color:var(--navigation);
@@ -601,7 +599,6 @@ svg.icon-search {
 }
 
 input.main-header-input:focus ~ .icon-search{
-  /* background-color: var(--white); */
   fill: var(--basic-red);
 }
 
@@ -918,6 +915,7 @@ svg.icon-enter:active {
 
 .slider-item.active {
   opacity: 1;
+  z-index: 1;
 }
 
 .slider-container {
@@ -962,6 +960,7 @@ svg.icon-enter:active {
   position: absolute;
   bottom: 31px;
   left: 50%;
+  z-index: 5;
 }
 
 .slider-dots li {
@@ -1073,7 +1072,6 @@ svg.icon-enter:active {
 }
 
 .popular-goods-block {
-  /* margin-top: 20px; */
   padding: 7px 14px 0 28px;
   display: flex;
   justify-content:space-between;
@@ -1389,7 +1387,6 @@ svg.icon-enter:active {
 }
 
 .sorting-block-list {
-  /* position: relative; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1399,11 +1396,17 @@ svg.icon-enter:active {
   background-color: var(--filter);
 }
 
-.sorting-list {
+.sorting-list1,
+.sorting-list2 {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 0;
+  list-style: none;
+}
+
+.sorting-list1 {
+  padding-left: 110px;
 }
 
 .product-cards-list {
@@ -1434,7 +1437,7 @@ svg.icon-enter:active {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 250px;
+  grid-template-rows: 1fr 280px;
   justify-content: space-between;
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
@@ -1458,13 +1461,6 @@ svg.icon-enter:active {
   grid-row-start: 2;
   grid-row-end: 3;
 }
-
-/* .image-block-delivery {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
-}  */
 
 .services-info,
 .services-info2,
@@ -1506,7 +1502,6 @@ svg.icon-enter:active {
   margin: 0;
   padding: 0;
   top: -12px;
-  left: : 12px;
 }
 
 .services-list::before {
@@ -1567,7 +1562,7 @@ svg.icon-enter:active {
 .credit-block {
   position: absolute;
   margin-top: 31px;
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 .services-titles,
@@ -1583,15 +1578,11 @@ svg.icon-enter:active {
 
 .services-delivery {
   color:var(--navigation);
-  /* margin-top:25px; */
 }
 
 .services-info {
  margin-top:25px;
 }
-/* .services-delivery p{
-  padding-top:5px;
-} */
 
 .services-delivery-item {
   position: relative;
@@ -1601,6 +1592,7 @@ svg.icon-enter:active {
   box-shadow: 0px 1px 0px var(--white);
   list-style: none;
 }
+
 .services-delivery-link {
   position: absolute;
   font-weight: bold;
@@ -1608,31 +1600,7 @@ svg.icon-enter:active {
   line-height: 30px;
   color:var(--navigation);
   text-decoration: none;
-}
-
-.services-delivery-link,
-.services-guarantee-link,
-.services-credit-link {
-  width: 240px;
-  height: 61px;
-}
-
-.services-delivery-link,
-.services-guarantee-link,
-.services-credit-link {
-  margin-left: 20px;
-  margin-top: 15px;
-  color:var(--white);
-}
-
-.services-guarantee-item,
-.services-credit-item {
-  position: relative;
-  width: 240px;
-  height: 61px;
-  background-color:var(--navigation);
-  box-shadow: 0px 1px 0px var(--header-background), inset 0px 1px 0px var(--credit);
-  list-style: none;
+  box-sizing: border-box;
 }
 
 .services-guarantee-link,
@@ -1643,10 +1611,32 @@ svg.icon-enter:active {
   line-height: 30px;
   color: var(--white);
 }
+
+.services-delivery-link,
+.services-guarantee-link,
+.services-credit-link {
+  width: 240px;
+  height: 61px;
+  padding-left: 20px;
+  padding-top: 15px;
+
+  color:var(--white);
+}
+
+.services-guarantee-item,
+.services-credit-item {
+  position: relative;
+  width: 240px;
+  height: 61px;
+  background-color:var(--navigation);
+  box-shadow: 0px 0px 1px 0px var(--header-background), inset 0px 1px 1px 0px var(--credit);
+  list-style: none;
+}
+
 .services-delivery-item:hover,
 .services-guarantee-item:hover,
 .services-credit-item:hover {
-  background: #293449
+  background: var(--header-background);
 }
 .truck {
   background-image: url("../img/truck.png");
@@ -1992,6 +1982,7 @@ ul.footer-social-icons-list {
   border: 1px solid var(--border-button);
   box-sizing: border-box;
   border: 1px solid var(--show-box);
+  margin-top: 22px;
 }
 
 .catalog-filter,
@@ -2059,7 +2050,7 @@ ul.footer-social-icons-list {
 }
 
 .catalog-manufacturers-title {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .catalog-cost-title {
@@ -2202,11 +2193,21 @@ svg.triangle-down-svg:active {
   background-color: var(--filter);
 }
 
-.line-block {
+.line-block1,
+.line-block2 {
   width: 220px;
   height: 1px;
   background-color: var(--line-block);
-  margin: 17px 0px;
+}
+
+.line-block1 {
+  margin-top: 25px;
+  margin-bottom: 17px;
+}
+
+.line-block2 {
+  margin-top: 10px;
+  margin-bottom: 17px;
 }
 
 .range-controls .scale {
@@ -2273,7 +2274,7 @@ svg.triangle-down-svg:active {
 }
 
 .filter fieldset:first-child {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .filter ul {
@@ -2330,7 +2331,7 @@ svg.triangle-down-svg:active {
   top: -1px;
   width: 16px;
   height: 16px;
-  border: 2px solid var(--basic-greylight);
+  border: 3px solid var(--basic-greylight);
   border-radius: 50%;
 }
 
@@ -2586,6 +2587,7 @@ margin-right: 1px;
   background-color: var(--white);
   border: 0;
   color: var(--text-color-black);
+  cursor: pointer;
 }
 
 .two-buttons {
@@ -2613,12 +2615,12 @@ margin-right: 1px;
  /*********************************Окно - Напишите нам START*****************************/
 .your-name {
   position: absolute;
-  left: 81px;
+  left: 321px;
 }
 
 .your-email {
   position: absolute;
-  left: 321px;
+  left: 81px;
 }
 
 .email-name {
@@ -2707,6 +2709,7 @@ margin-right: 1px;
   background: var(--basic-red);
   border: 0;
   color: var(--white);
+  cursor: pointer;
 }
 
 .modal {

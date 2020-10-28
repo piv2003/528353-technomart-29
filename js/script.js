@@ -79,17 +79,17 @@ button.addEventListener("click", function (evt) {
   });
 // ***************************Окно "Напишите нам" END***************************
 
-// ***************************Блок "Сервисы" START*************************** 
+// ***************************Блок "Сервисы" START***************************
 
  const deliverywhite = document.querySelector(".services-delivery-item")
   const guaranteewhite = document.querySelector(".services-guarantee-item")
-  const creditwhite = document.querySelector(".services-credit-item")  
+  const creditwhite = document.querySelector(".services-credit-item")
 
 
   // const deliverylink = document.querySelector(".services-delivery-link")
   const deliverylink = document.querySelector(".services-delivery-item>*")
   const guaranteelink = document.querySelector(".services-guarantee-link")
-  const creditlink = document.querySelector(".services-credit-link")  
+  const creditlink = document.querySelector(".services-credit-link")
 
 
   const delivery = document.querySelector(".delivery-block-div")
@@ -109,8 +109,6 @@ button.addEventListener("click", function (evt) {
     deliverylink.classList.add("dgk-blue")
     guaranteelink.classList.remove("dgk-blue")
     creditlink.classList.remove("dgk-blue")
- 
-    otprZav.classList.add("close")
   });
   guaranteelink.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -125,8 +123,6 @@ button.addEventListener("click", function (evt) {
     guaranteelink.classList.add("dgk-blue")
     deliverylink.classList.remove("dgk-blue")
     creditlink.classList.remove("dgk-blue")
-
-    otprZav.classList.add("close")
   });
   creditlink.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -141,20 +137,18 @@ button.addEventListener("click", function (evt) {
     creditlink.classList.add("dgk-blue")
     deliverylink.classList.remove("dgk-blue")
     guaranteelink.classList.remove("dgk-blue")
-
-    otprZav.classList.remove("close")
   });
-  // ***************************Блок "Сервисы" END*************************** 
+  // ***************************Блок "Сервисы" END***************************
 
-  // ***************************Блок "Слайдер" START*************************** 
+  // ***************************Блок "Слайдер" START***************************
 const button1 = document.querySelectorAll(".slider-button-1")
 const button2 = document.querySelectorAll(".slider-button-2")
 const sliderItems = document.querySelectorAll('.slider-item');
- 
+
  for(let i = 0; sliderItems.length < i; i++ ) {
    sliderItems[i].classList.remove('active');
  }
- 
+
 
   button1[0].addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -188,4 +182,4 @@ const sliderItems = document.querySelectorAll('.slider-item');
     button2[1].classList.add('active');
     button1[1].classList.remove('active');
  });
-  // ***************************Блок "Слайдер" END*************************** 
+  // ***************************Блок "Слайдер" END***************************
