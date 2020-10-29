@@ -2372,45 +2372,6 @@ margin-right: 1px;
 /************************          МОДАЛЬНЫЕ ОКНА  START              *************************/
 
 /************************Карта  START *************************/
-.modal {
-  position: fixed;
-  z-index: 50;
-  color: var(--text-color-black);
-  background-color: var(--white);
-  display: none
-}
-
-.modal-map {
-  display: none;
-  width: 940px;
-  height: 446px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.modal-map iframe {
-  position: relative;
-  z-index: 3;
-  width: 940px;
-  height: 446px;
-  box-shadow: 0 0 15px 1px var(--map-shadow);
-  border: none;
-}
-
-.modal-show {
-  display: block;
-  animation: bounce 0.6s;
-}
-
-.main-contacts-map {
-  margin-top: 21px;
-}
-/************************Карта  END *************************/
-
-
-  /************************          МОДАЛЬНЫЕ ОКНА  END              *************************/
-
 .popup{
   position: fixed;
   top: 0;
@@ -2428,11 +2389,6 @@ margin-right: 1px;
 
 .close {
   display: none;
-}
-
-.open {
-  display: block;
-  animation: bounce 0.6s;
 }
 
 .map_bottom{
@@ -2453,7 +2409,7 @@ margin-right: 1px;
   top: 17px;
   cursor: pointer;
 }
-/* ************************************************************ */
+/************************Карта  END *************************/
 
 /* **********************************Кнопки "Купить в Закладки"  START****************** */
 .popular-goods-modal {
@@ -2803,5 +2759,5 @@ margin-right: 1px;
 }
  /*********************************Окно - Напишите нам END*****************************/
 
-
+/************************          МОДАЛЬНЫЕ ОКНА  END              *************************/
 
