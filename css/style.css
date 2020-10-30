@@ -732,7 +732,7 @@ svg.icon-enter:active {
   text-align: center;
   margin-left: 23px;
   padding: 12px;
-  box-sizing: border-box; /
+  box-sizing: border-box;
 }
 
 .our-production-materials,
@@ -1983,6 +1983,7 @@ ul.footer-social-icons-list {
   box-sizing: border-box;
   border: 1px solid var(--show-box);
   margin-top: 22px;
+  cursor: pointer;
 }
 
 .catalog-filter,
@@ -2122,20 +2123,40 @@ ul.footer-social-icons-list {
   height: 38px;
 }
 
-.by-price-link,
 .by-type-link,
 .by-functional-link {
   color: var(--black-opacity-thirty);
   border-bottom: 1px dotted var(--basic-red);
 }
 
-svg.triangle-up-svg,
+.by-price-link {
+  color: var(--basic-red);
+}
+
 svg.triangle-down-svg {
   fill: var(--basic-greylight);
 }
 
 svg.triangle-up-svg {
+  fill: var(--basic-red);
   padding-right: 21px;
+}
+
+svg.triangle-up-svg:hover,
+svg.triangle-down-svg:hover {
+  fill: var(--text-color-black);
+}
+
+svg.triangle-up-svg:active {
+  fill: var(--basic-red);
+}
+
+svg.triangle-down-svg:active svg.triangle-up-svg{
+  fill: var(--basic-greylight);
+}
+
+svg.triangle-down-svg:active {
+  fill: var(--basic-red);
 }
 
 .by-price-link:hover,
@@ -2145,21 +2166,11 @@ svg.triangle-up-svg {
   border-bottom: 1px solid var(--basic-red);
 }
 
-svg.triangle-up-svg:hover,
-svg.triangle-down-svg:hover {
-  fill: var(--text-color-black);
-}
-
 .by-price-link:active,
 .by-type-link:active,
 .by-functional-link:active {
   color: var(--basic-red);
   border-bottom:none;
-}
-
-svg.triangle-up-svg:active,
-svg.triangle-down-svg:active {
-  fill: var(--basic-red);
 }
 
 .range-controls {
@@ -2338,8 +2349,8 @@ svg.triangle-down-svg:active {
 .filter-input-radio:checked + label::after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: -36px;
+  top: 6px;
+  left: -35px;
   width: 8px;
   height: 8px;
   background-color: var(--basic-greylight);
@@ -2389,6 +2400,11 @@ margin-right: 1px;
 
 .close {
   display: none;
+}
+
+.open {
+  display: block;
+  animation: bounce 0.6s;
 }
 
 .map_bottom{
