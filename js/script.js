@@ -1,3 +1,53 @@
+// ***************************Блок "Слайдер" START***************************
+  const button1 = document.querySelectorAll(".slider-button-1");
+  if (button1) {
+  const button2 = document.querySelectorAll(".slider-button-2");
+  const sliderItems = document.querySelectorAll('.slider-item');
+   for(let i = 0; sliderItems.length < i; i++ ) {
+     sliderItems[i].classList.remove('active');
+   }
+  if (button1[0]) {
+  button1[0].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    sliderItems[0].classList.add('active');
+    sliderItems[1].classList.remove('active');
+
+    button1[1].classList.add('active');
+    button2[1].classList.remove('active');
+  });
+  }
+  if (button2[0]) {
+  button2[0].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    sliderItems[1].classList.add('active');
+    sliderItems[0].classList.remove('active');
+
+    button2[1].classList.add('active');
+    button1[1].classList.remove('active');
+  });
+  }
+  if (button1[1]) {
+  button1[1].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    sliderItems[0].classList.add('active');
+    sliderItems[1].classList.remove('active');
+
+    button1[1].classList.add('active');
+    button2[1].classList.remove('active');
+  });
+  }
+  if (button2[1]) {
+  button2[1].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    sliderItems[1].classList.add('active');
+    sliderItems[0].classList.remove('active');
+
+    button2[1].classList.add('active');
+    button1[1].classList.remove('active');
+ });
+ }
+ }
+// ***************************Блок "Слайдер" END***************************
 // ***************************Окно "Товар добавлен в корзину" START***************************
   let buy = document.querySelectorAll(".buy");
   if (buy) {
@@ -17,6 +67,14 @@
     ItemAddedToBasket.classList.toggle("close");
   });
   }
+  window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (!ItemAddedToBasket.classList.contains("close")) {
+      evt.preventDefault();
+      ItemAddedToBasket.classList.add("close");
+    }
+  }
+  });
 // ***************************Окно "Товар добавлен в корзину" END********
 
 // *******************************КАРТА START***************************
@@ -188,46 +246,3 @@ if (loginPopup){
   });
   }
 // ***************************МЕНЮ СОРТИРОВКА END***************************
-
-// ***************************Блок "Слайдер" START***************************
-  const button1 = document.querySelectorAll(".slider-button-1");
-  if (button1) {
-  const button2 = document.querySelectorAll(".slider-button-2");
-  const sliderItems = document.querySelectorAll('.slider-item');
-   for(let i = 0; sliderItems.length < i; i++ ) {
-     sliderItems[i].classList.remove('active');
-   }
-  button1[0].addEventListener("click", function (evt) {
-    evt.preventDefault();
-    sliderItems[0].classList.add('active');
-    sliderItems[1].classList.remove('active');
-
-    button1[1].classList.add('active');
-    button2[1].classList.remove('active');
-  });
-  button2[0].addEventListener("click", function (evt) {
-    evt.preventDefault();
-    sliderItems[1].classList.add('active');
-    sliderItems[0].classList.remove('active');
-
-    button2[1].classList.add('active');
-    button1[1].classList.remove('active');
- });
-  button1[1].addEventListener("click", function (evt) {
-    evt.preventDefault();
-    sliderItems[0].classList.add('active');
-    sliderItems[1].classList.remove('active');
-
-    button1[1].classList.add('active');
-    button2[1].classList.remove('active');
-  });
-  button2[1].addEventListener("click", function (evt) {
-    evt.preventDefault();
-    sliderItems[1].classList.add('active');
-    sliderItems[0].classList.remove('active');
-
-    button2[1].classList.add('active');
-    button1[1].classList.remove('active');
- });
- }
-// ***************************Блок "Слайдер" END***************************
