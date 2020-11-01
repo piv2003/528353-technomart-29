@@ -66,6 +66,7 @@
   --navigation-item: #1D2739;
   --pressed-bookmarks: #161D29;
   --manufactures-item: #d9d9d9;
+  --disabled-check: #B5B5B5;
   --text-color-grey: #A9A9A9;
   --footer-shadow1:#919BA9;
   --modal-InBookmarks:#98A0AD;
@@ -158,7 +159,7 @@ img {
 }
 
 .main-header,
-.Ravshan-title,
+.ravshan-title,
 .main-header-my-orders,
 .main-header-personal-area,
 .couple-of-words-title,
@@ -168,7 +169,7 @@ img {
   font-weight: normal;
 }
 
-.Ravshan-title {
+.ravshan-title {
   display:block;
   text-align: center;
   padding-top: 11px;
@@ -181,7 +182,7 @@ img {
   line-height: 21px;
 }
 
-.Ravshan-aside {
+.ravshan-aside {
   position: relative;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -189,7 +190,7 @@ img {
   margin:0;
 }
 
-.Ravshan-aside-icon {
+.ravshan-aside-icon {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -215,13 +216,13 @@ img {
   cursor: pointer;
 }
 
-.Ravshan-title:hover>* {
+.ravshan-title:hover >* {
   color:var(--text-color-black);
   fill:var(--basic-grey);
   cursor: pointer;
 }
 
-.Ravshan-title:active>* {
+.ravshan-title:active >* {
   color:var(--basic-greylight);
   fill:var(--basic-greylight);
   cursor: pointer;
@@ -237,20 +238,20 @@ img {
   color: var(--basic-greylight);
 }
 
-svg.Ravshan-left {
+svg.ravshan-left {
   position: absolute;
   top: 13px;
   left: 20px;
 }
 
-svg.Ravshan-right {
+svg.ravshan-right {
   position: absolute;
   top: 13px;
   left: 13px;
 }
 
-svg.Ravshan-right,
-svg.Ravshan-left {
+svg.ravshan-right,
+svg.ravshan-left {
   fill: var(--basic-greylight);
 }
 
@@ -587,6 +588,10 @@ svg.icon-search {
   fill:var(--search-default);
 }
 
+svg.icon-search:hover {
+  cursor: pointer;
+}
+
 .search-label {
   display: block;
   fill: var(--search-default);
@@ -778,7 +783,7 @@ svg.icon-enter:active {
   padding: 0;
   white-space: nowrap;
   clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
 
@@ -1184,14 +1189,14 @@ svg.icon-enter:active {
   color: var(--white);
 }
 
-.popular-goods-modal-buy-BFG9000,
-.popular-goods-modal-InBookmarks-BFG9000,
-.popular-goods-modal-buy-BFG6000,
-.popular-goods-modal-InBookmarks-BFG6000,
-.popular-goods-modal-buy-BFG3000,
-.popular-goods-modal-InBookmarks-BFG3000,
-.popular-goods-modal-buy-BFG2000,
-.popular-goods-modal-InBookmarks-BFG2000 {
+.popular-goods-modal-buy-bfg9000,
+.popular-goods-modal-inbookmarks-bfg9000,
+.popular-goods-modal-buy-bfg6000,
+.popular-goods-modal-inbookmarks-bfg6000,
+.popular-goods-modal-buy-bfg3000,
+.popular-goods-modal-inbookmarks-bfg3000,
+.popular-goods-modal-buy-bfg2000,
+.popular-goods-modal-inbookmarks-bfg2000 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -1204,7 +1209,8 @@ svg.icon-enter:active {
   font-size: 18px;
   line-height: 20px;
   color:var(--text-color-black);
-  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 14px;
 }
 
 .price {
@@ -1226,7 +1232,6 @@ svg.icon-enter:active {
   height: 38px;
   text-transform: uppercase;
   color: var(--white);
-  margin-bottom: 10px;
 }
 
   .discount_price::before{
@@ -1242,24 +1247,24 @@ svg.icon-enter:active {
   background-position: 0 0;
 }
 
-.popular-goods-modal-buy-BFG9000,
-.popular-goods-modal-InBookmarks-BFG9000,
-.popular-goods-modal-buy-BFG3000,
-.popular-goods-modal-InBookmarks-BFG3000,
-.popular-goods-modal-buy-BFG6000,
-.popular-goods-modal-InBookmarks-BFG6000,
-.popular-goods-modal-buy-BFG2000,
-.popular-goods-modal-InBookmarks-BFG2000 {
+.popular-goods-modal-buy-bfg9000,
+.popular-goods-modal-inbookmarks-bfg9000,
+.popular-goods-modal-buy-bfg3000,
+.popular-goods-modal-inbookmarks-bfg3000,
+.popular-goods-modal-buy-bfg6000,
+.popular-goods-modal-inbookmarks-bfg6000,
+.popular-goods-modal-buy-bfg2000,
+.popular-goods-modal-inbookmarks-bfg2000 {
   display: block;
   width: 135px;
   height: 38px;
   border-radius: 2px;
 }
 
-.popular-goods-modal-buy-BFG9000,
-.popular-goods-modal-buy-BFG6000,
-.popular-goods-modal-buy-BFG3000,
-.popular-goods-modal-buy-BFG2000 {
+.popular-goods-modal-buy-bfg9000,
+.popular-goods-modal-buy-bfg6000,
+.popular-goods-modal-buy-bfg3000,
+.popular-goods-modal-buy-bfg2000 {
   background: var(--basic-green);
   box-shadow: inset 0px -3px 0px var(--shadow-box);
   color: var(--white);
@@ -1267,10 +1272,10 @@ svg.icon-enter:active {
 
 }
 
-.popular-goods-modal-InBookmarks-BFG9000,
-.popular-goods-modal-InBookmarks-BFG6000,
-.popular-goods-modal-InBookmarks-BFG3000,
-.popular-goods-modal-InBookmarks-BFG2000 {
+.popular-goods-modal-inbookmarks-bfg9000,
+.popular-goods-modal-inbookmarks-bfg6000,
+.popular-goods-modal-inbookmarks-bfg3000,
+.popular-goods-modal-inbookmarks-bfg2000 {
   border: 3px solid var(--basic-green);
   box-sizing: border-box;
   color: var(--navigation);
@@ -1818,6 +1823,11 @@ ul.footer-social-icons-list {
   box-shadow: 0px 5px 0px 0px var(--box-shadow);
 }
 
+.page-footer-logo:hover {
+  background: var(--error);
+  box-shadow: 0px 5px 0px 0px var(--error-shadow);
+}
+
 .footer-contacts-address,
 .footer-contacts-phone {
   font-size: 18px;
@@ -1990,24 +2000,24 @@ ul.footer-social-icons-list {
 .catalog-punchers-menu-link,
 .catalog-punchers-menu-title,
 .page-selection-next,
-.product-cards-modal-buy-BFG6000-1,
-.product-cards-modal-buy-BFG6000-2,
-.product-cards-modal-buy-BFG6000-3,
-.product-cards-modal-buy-BFG6000-4,
-.product-cards-modal-buy-BFG6000-5,
-.product-cards-modal-buy-BFG3000-1,
-.product-cards-modal-buy-BFG3000-2,
-.product-cards-modal-buy-BFG2000-1,
-.product-cards-modal-buy-BFG2000-2,
-.product-cards-modal-InBookmarks-BFG6000-1,
-.product-cards-modal-InBookmarks-BFG6000-2,
-.product-cards-modal-InBookmarks-BFG6000-3,
-.product-cards-modal-InBookmarks-BFG6000-4,
-.product-cards-modal-InBookmarks-BFG6000-5,
-.product-cards-modal-InBookmarks-BFG3000-1,
-.product-cards-modal-InBookmarks-BFG3000-2,
-.product-cards-modal-InBookmarks-BFG2000-1,
-.product-cards-modal-InBookmarks-BFG2000-2 {
+.product-cards-modal-buy-bfg6000-1,
+.product-cards-modal-buy-bfg6000-2,
+.product-cards-modal-buy-bfg6000-3,
+.product-cards-modal-buy-bfg6000-4,
+.product-cards-modal-buy-bfg6000-5,
+.product-cards-modal-buy-bfg3000-1,
+.product-cards-modal-buy-bfg3000-2,
+.product-cards-modal-buy-bfg2000-1,
+.product-cards-modal-buy-bfg2000-2,
+.product-cards-modal-inbookmarks-bfg6000-1,
+.product-cards-modal-inbookmarks-bfg6000-2,
+.product-cards-modal-inbookmarks-bfg6000-3,
+.product-cards-modal-inbookmarks-bfg6000-4,
+.product-cards-modal-inbookmarks-bfg6000-5,
+.product-cards-modal-inbookmarks-bfg3000-1,
+.product-cards-modal-inbookmarks-bfg3000-2,
+.product-cards-modal-inbookmarks-bfg2000-1,
+.product-cards-modal-inbookmarks-bfg2000-2 {
   text-transform: uppercase;
 }
 
@@ -2102,6 +2112,8 @@ ul.footer-social-icons-list {
   padding-right: 70px;
 }
 
+
+
 .sorting-title {
   padding-left: 5px;
 }
@@ -2121,23 +2133,28 @@ ul.footer-social-icons-list {
   width: 202px;
   height: 38px;
 }
-
-.by-type-link,
-.by-functional-link {
+.active-sorting>a{
+  color: var(--basic-red);
+  border: 0;
+}
+ /************************************ Меню и Стрелки  START******************************/
+.sorting-link {
   color: var(--black-opacity-thirty);
   border-bottom: 1px dotted var(--basic-red);
 }
 
-.by-price-link {
-  color: var(--basic-red);
+.active-arrow svg.triangle-up-svg{
+  fill: var(--basic-red);
 }
-
+.active-arrow svg.triangle-down-svg{
+  fill: var(--basic-red);
+}
 svg.triangle-down-svg {
   fill: var(--basic-greylight);
 }
 
 svg.triangle-up-svg {
-  fill: var(--basic-red);
+  fill: var(--basic-greylight);
   padding-right: 21px;
 }
 
@@ -2172,6 +2189,7 @@ svg.triangle-down-svg:active {
   border-bottom:none;
 }
 
+/************************************ Меню и Стрелки  END******************************/
 .range-controls {
   position: relative;
   height: 41px;
@@ -2211,8 +2229,8 @@ svg.triangle-down-svg:active {
 }
 
 .line-block1 {
-  margin-top: 25px;
-  margin-bottom: 17px;
+  margin-top: 27px;
+  margin-bottom: 6px;
 }
 
 .line-block2 {
@@ -2310,6 +2328,20 @@ svg.triangle-down-svg:active {
   color: var(--special);
 }
 
+.filter-input-checkbox:disabled + label {
+  fill: var(--disabled-check);
+  color: var(--disabled-check);
+  cursor: default;
+  outline: none;
+}
+
+.filter-input-radio:disabled + label {
+  fill: var(--disabled-check);
+  color: var(--disabled-check);
+  cursor: default;
+  outline: none;
+}
+
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
@@ -2377,11 +2409,11 @@ svg.triangle-down-svg:active {
 .footer-social-icon:not(:last-child) li {
 margin-right: 1px;
 }
-/************************Блок Социальные КНОПКИ  END *************************/
+/************************ Блок Социальные КНОПКИ  END *************************/
 
-/************************          МОДАЛЬНЫЕ ОКНА  START              *************************/
+/************************ МОДАЛЬНЫЕ ОКНА  START *************************/
 
-/************************Карта  START *************************/
+/************************ Карта  START *************************/
 .popup{
   position: fixed;
   top: 0;
@@ -2424,9 +2456,9 @@ margin-right: 1px;
   top: 17px;
   cursor: pointer;
 }
-/************************Карта  END *************************/
+/************************ Карта  END *************************/
 
-/* **********************************Кнопки "Купить в Закладки"  START****************** */
+/* ********************************** Кнопки "Купить в Закладки"  START****************** */
 .popular-goods-modal {
   position: absolute;
   top: 0;
@@ -2444,52 +2476,52 @@ margin-right: 1px;
   opacity: 1;
 }
 
-.popular-goods-modal-buy-BFG9000,
-.popular-goods-modal-InBookmarks-BFG9000,
-.popular-goods-modal-buy-BFG6000,
-.popular-goods-modal-InBookmarks-BFG6000,
-.popular-goods-modal-buy-BFG3000,
-.popular-goods-modal-InBookmarks-BFG3000,
-.popular-goods-modal-buy-BFG2000,
-.popular-goods-modal-InBookmarks-BFG2000 {
+.popular-goods-modal-buy-bfg9000,
+.popular-goods-modal-inbookmarks-bfg9000,
+.popular-goods-modal-buy-bfg6000,
+.popular-goods-modal-inbookmarks-bfg6000,
+.popular-goods-modal-buy-bfg3000,
+.popular-goods-modal-inbookmarks-bfg3000,
+.popular-goods-modal-buy-bfg2000,
+.popular-goods-modal-inbookmarks-bfg2000 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
 }
 
-.popular-goods-modal-buy-BFG9000:hover,
-.popular-goods-modal-buy-BFG6000:hover,
-.popular-goods-modal-buy-BFG3000:hover,
-.popular-goods-modal-buy-BFG2000:hover {
+.popular-goods-modal-buy-bfg9000:hover,
+.popular-goods-modal-buy-bfg6000:hover,
+.popular-goods-modal-buy-bfg3000:hover,
+.popular-goods-modal-buy-bfg2000:hover {
   background-color: var(--success);
 }
 
-.popular-goods-modal-InBookmarks-BFG9000:hover,
-.popular-goods-modal-InBookmarks-BFG6000:hover,
-.popular-goods-modal-InBookmarks-BFG3000:hover,
-.popular-goods-modal-InBookmarks-BFG2000:hover {
+.popular-goods-modal-inbookmarks-bfg9000:hover,
+.popular-goods-modal-inbookmarks-bfg6000:hover,
+.popular-goods-modal-inbookmarks-bfg3000:hover,
+.popular-goods-modal-inbookmarks-bfg2000:hover {
   border: 3px solid var(--navigation);
 }
 
-.popular-goods-modal-buy-BFG9000:active,
-.popular-goods-modal-buy-BFG6000:active,
-.popular-goods-modal-buy-BFG3000:active,
-.popular-goods-modal-buy-BFG2000:active {
+.popular-goods-modal-buy-bfg9000:active,
+.popular-goods-modal-buy-bfg6000:active,
+.popular-goods-modal-buy-bfg3000:active,
+.popular-goods-modal-buy-bfg2000:active {
   background-color: var(--buy-active);
 }
 
-.popular-goods-modal-InBookmarks-BFG9000:active,
-.popular-goods-modal-InBookmarks-BFG6000:active,
-.popular-goods-modal-InBookmarks-BFG3000:active,
-.popular-goods-modal-InBookmarks-BFG2000:active {
+.popular-goods-modal-inbookmarks-bfg9000:active,
+.popular-goods-modal-inbookmarks-bfg6000:active,
+.popular-goods-modal-inbookmarks-bfg3000:active,
+.popular-goods-modal-inbookmarks-bfg2000:active {
   color: var(--modal-InBookmarks);
   border: 3px solid var(--modal-InBookmarks);
 }
 
-/***********************************Кнопки "Купить в Закладки"  END****************** */
+/*********************************** Кнопки "Купить в Закладки"  END****************** */
 
-/***********************************Окно "Товар добавлен в корзину"  START****************** */
+/*********************************** Окно "Товар добавлен в корзину"  START****************** */
 .item-added-to-basket {
   position: fixed;
   width: 620px;
@@ -2581,9 +2613,9 @@ margin-right: 1px;
   text-align: center;
   margin: 0 auto;
 }
-/***********************************Окно "Товар добавлен в корзину"  END*******************/
+/*********************************** Окно "Товар добавлен в корзину"  END*******************/
 
- /*********************************Окно - Напишите нам START*****************************/
+ /********************************* Окно - Напишите нам START*****************************/
 .your-name {
   position: absolute;
   left: 321px;
@@ -2772,7 +2804,6 @@ margin-right: 1px;
     transform: translateX(10px);
   }
 }
- /*********************************Окно - Напишите нам END*****************************/
+ /********************************* Окно - Напишите нам END*****************************/
 
-/************************          МОДАЛЬНЫЕ ОКНА  END              *************************/
-
+/************************    МОДАЛЬНЫЕ ОКНА  END   *************************/
