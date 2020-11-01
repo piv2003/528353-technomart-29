@@ -1518,7 +1518,6 @@ svg.icon-enter:active {
   background-image: url("../img/effect.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  z-index: 10;
 }
 
 .delivery-block-div {
