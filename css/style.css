@@ -312,8 +312,8 @@ svg.ravshan-left {
 }
 
 .contacts-phone::before {
-  top: 10px;
-  left: 37px;
+  top: 11px;
+  left: 35px;
 }
 
 .contacts-phone-catalog::before {
@@ -351,16 +351,16 @@ svg.ravshan-left {
 .main-header-my-orders {
   position: absolute;
   padding-left: 19px;
-  top: 0px;
-  left: 28px;
+  top: -1px;
+  left: 26px;
 }
 
 .main-header-personal-point {
   position: absolute;
   width: 4px;
   height: 4px;
-  top: 8px;
-  left: 135px;
+  top: 7px;
+  left: 134px;
   background-color: var(--navigation);
   border-radius: 50%
 }
@@ -368,8 +368,8 @@ svg.ravshan-left {
 .main-header-personal-area {
   position: absolute;
   margin-left: 19px;
-  top: 0px;
-  left: 133px;
+  top: -1px;
+  left: 132px;
 }
 
 .main-header-my-orders,
@@ -465,8 +465,8 @@ svg.ravshan-left {
 }
 
 .img-logo-technomart-foot {
-  margin-left: 43px;
-  padding-top: 21px;
+  margin-left: 41px;
+  padding-top: 20px;
 }
 
 .header-block {
@@ -1331,7 +1331,7 @@ svg.icon-enter:active {
   width: 141px;
   height: 38px;
   top: -8px;
-  left: -30px;
+  left: -32px;
   background-image: url("../img/icon-price.svg");
   z-index: -100;
   background-repeat: no-repeat;
@@ -1489,8 +1489,8 @@ svg.icon-enter:active {
   background-color: var(--filter);
 }
 
-.sorting-list1,
-.sorting-list2 {
+.sorting-list-first,
+.sorting-list-second {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1498,8 +1498,8 @@ svg.icon-enter:active {
   list-style: none;
 }
 
-.sorting-list1 {
-  padding-left: 103px;
+.sorting-list-first {
+  padding-left: 97px;
 }
 
 .product-cards-list {
@@ -1556,21 +1556,20 @@ svg.icon-enter:active {
 }
 
 .services-info,
-.services-info2,
-.contacts-info1,
-.contacts-info2,
-.contacts-info3 {
+.contacts-info-first,
+.contacts-info-second,
+.contacts-info-third {
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
-.contacts-info1 {
+.contacts-info-first {
   padding: 0;
   margin-bottom: 23px;
   margin-top: 0;
   width: 470px;
 }
 
-.contacts-info2 {
+.contacts-info-second {
   padding: 0;
   margin-top: 2px;
   margin-bottom: 3px;
@@ -1578,7 +1577,7 @@ svg.icon-enter:active {
   width: 400px;
 }
 
-.contacts-info3 {
+.contacts-info-third {
   padding: 0;
   margin-bottom: 32px;
   margin-top: 0;
@@ -1674,7 +1673,7 @@ svg.icon-enter:active {
 .services-titles,
 .services-delivery,
 .contacts-titles,
-.contacts-titles2 {
+.contacts-titles-second {
   font-weight: 400;
   font-size: 30px;
   line-height: 30px;
@@ -1796,15 +1795,15 @@ svg.icon-enter:active {
   text-align: center;
 }
 
-.contacts-block1,
-.contacts-block2 {
+.contacts-block-first,
+.contacts-block-second {
   display: flex;
   flex-direction: column;
 }
 
-.contacts-block1 {
+.contacts-block-first {
   width: 483px;
-  margin-right: 159px;
+  margin-right: 157px;
 }
 
 .contacts-item {
@@ -2117,25 +2116,7 @@ ul.footer-social-icons-list {
 .btn-filter,
 .catalog-punchers-menu-link,
 .catalog-punchers-menu-title,
-.page-selection-next,
-.product-cards-modal-buy-bfg6000-1,
-.product-cards-modal-buy-bfg6000-2,
-.product-cards-modal-buy-bfg6000-3,
-.product-cards-modal-buy-bfg6000-4,
-.product-cards-modal-buy-bfg6000-5,
-.product-cards-modal-buy-bfg3000-1,
-.product-cards-modal-buy-bfg3000-2,
-.product-cards-modal-buy-bfg2000-1,
-.product-cards-modal-buy-bfg2000-2,
-.product-cards-modal-inbookmarks-bfg6000-1,
-.product-cards-modal-inbookmarks-bfg6000-2,
-.product-cards-modal-inbookmarks-bfg6000-3,
-.product-cards-modal-inbookmarks-bfg6000-4,
-.product-cards-modal-inbookmarks-bfg6000-5,
-.product-cards-modal-inbookmarks-bfg3000-1,
-.product-cards-modal-inbookmarks-bfg3000-2,
-.product-cards-modal-inbookmarks-bfg2000-1,
-.product-cards-modal-inbookmarks-bfg2000-2 {
+.page-selection-next {
   text-transform: uppercase;
 }
 
@@ -2298,10 +2279,16 @@ ul.footer-social-icons-list {
   font-size: inherit;
 }
 
-.sorting-item:not(:last-child) {
+.sorting-item:nth-child(1) {
   margin: 0;
   padding: 0;
   padding-right: 70px;
+}
+
+.sorting-item:nth-child(2) {
+  margin: 0;
+  padding: 0;
+  padding-right: 65px;
 }
 
 .sorting-title {
