@@ -1,6 +1,6 @@
 # Личный проект «Техномарт»
 
-* Студент: [Игорь Поляков](https://up.htmlacademy.ru/htmlcss/29/user/528353).
+* Студент: [Ihor Poliakov](https://up.htmlacademy.ru/htmlcss/29/user/528353).
 * Наставник: [Максим Непорада](https://up.htmlacademy.ru/htmlcss/29/user/601999).
 
 ---
