@@ -6,7 +6,7 @@
   font-weight: normal;
   font-display: swap;
   src: url("../fonts/cuprum.woff2") format("woff2"),
-        url("../fonts/cuprum.woff") format("woff");
+    url("../fonts/cuprum.woff") format("woff");
 }
 
 /* Cuprum bold */
@@ -16,7 +16,7 @@
   font-weight: bold;
   font-display: swap;
   src: url("../fonts/cuprumbold.woff2") format("woff2"),
-  url("../fonts/cuprumbold.woff") format("woff");
+    url("../fonts/cuprumbold.woff") format("woff");
 }
 
 /* cuprum italic */
@@ -26,7 +26,7 @@
   font-weight: normal;
   font-display: swap;
   src: url("../fonts/cuprumitalic.woff2") format("woff2"),
-  url("../fonts/cuprumitalic.woff") format("woff");
+    url("../fonts/cuprumitalic.woff") format("woff");
 }
 
 /* Pt Sans normal */
@@ -36,7 +36,7 @@
   font-weight: normal;
   font-display: swap;
   src: url("../fonts/ptsans.woff2") format("woff2"),
-  url("../fonts/ptsans.woff") format("woff");
+    url("../fonts/ptsans.woff") format("woff");
 }
 
 /* Pt Sans bold */
@@ -46,7 +46,7 @@
   font-weight: bold;
   font-display: swap;
   src: url("../fonts/ptsansbold.woff2") format("woff2"),
-  url("../fonts/ptsansbold.woff") format("woff");
+    url("../fonts/ptsansbold.woff") format("woff");
 }
 
 /* Variables */
@@ -68,32 +68,32 @@
   --manufactures-item: #d9d9d9;
   --disabled-check: #B5B5B5;
   --text-color-grey: #A9A9A9;
-  --footer-shadow1:#919BA9;
-  --modal-inbookmarks:#98A0AD;
+  --footer-shadow1: #919BA9;
+  --modal-inbookmarks: #98A0AD;
   --cart-active: #9499A4;
-  --footer-shadow2:#98896E;
+  --footer-shadow2: #98896E;
   --bookmarks-active: #8A8E94;
   --navigation-opacity: #8E939C;
-  --header-bookmark:#5C6169;
+  --header-bookmark: #5C6169;
   --search-default: #697180;
   --basic-greylight: #C5C5C5;
   --show-box: #E5E5E5;
   --line-block: #C4C4C4;
   --icon-color: #C1C6CE;
-  --punchers-block:#F2F6F8;
+  --punchers-block: #F2F6F8;
   --white: #FFF;
-  --white-opacity-thirty: rgba(255,255,255,0.3);
-  --lightgrey-opacity-thirty: rgba(197,197,197,0.3);
-  --grey-opacity-thirty:rgba(169,169,169,0.3);
-  --map-shadow:rgba(47, 42, 43, 0.5);
+  --white-opacity-thirty: rgba(255, 255, 255, 0.3);
+  --lightgrey-opacity-thirty: rgba(197, 197, 197, 0.3);
+  --grey-opacity-thirty: rgba(169, 169, 169, 0.3);
+  --map-shadow: rgba(47, 42, 43, 0.5);
   --dash-color: #444;
   --basic-backgound: #F1F5F7;
   --two-buttons-background: #F1F1F1;
-  --popular-goods:#F9F5F0;
+  --popular-goods: #F9F5F0;
   --filter: #F7F3EC;
   --text-light-grey: #F3F7F9;
   --lightgray: #EAEAEA;
-  --border-button:#E5E5E5;
+  --border-button: #E5E5E5;
   --special-yellowlight: #FFD180;
   --special-yellow: #FFBF47;
   --special-yellowdelivery: #FFC047;
@@ -102,15 +102,15 @@
   --special-lilac: #DC91D8;
   --error: #BA2732;
   --error-shadow: #8D1E26;
-  --box-shadow:#B52933;
+  --box-shadow: #B52933;
   --basic-red: #EE3643;
   --cart-catalog: #F3727B;
   --red-button-hover: #CA2C37;
   --send-application: #FF5357;
   --modal-shadow: rgba(0, 0, 0, 0.15);
   --slider-block-text: rgba(0, 0, 0, 0.2);
-  --punchers-shadow: rgba(0,0,0,0.25);
-  --black-opacity-thirty: rgba(0,0,0,0.3);
+  --punchers-shadow: rgba(0, 0, 0, 0.25);
+  --black-opacity-thirty: rgba(0, 0, 0, 0.3);
   --modal-write-us: rgba(0, 0, 0, 0.7);
   --text-color-black: #000;
 }
@@ -119,7 +119,8 @@
   height: 100%;
 }
 
-.page-body {  /**********BODY***********/
+.page-body {
+  /**********BODY***********/
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
@@ -130,7 +131,7 @@
   line-height: 24px;
   font-weight: 400;
   color: var(--text-color-black);
-  background-color:var(--white);
+  background-color: var(--white);
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -154,7 +155,7 @@ img {
 
 .main-header {
   background: var(--text-light-grey);
-  height:320px;
+  height: 320px;
   display: flex;
   flex-direction: column;
 }
@@ -171,13 +172,13 @@ img {
 }
 
 .ravshan-title {
-  display:block;
+  display: block;
   text-align: center;
   padding-top: 13px;
   padding-bottom: 11px;
   width: 299px;
   height: 23px;
-  background-color:var(--white);
+  background-color: var(--white);
   color: var(--text-color-black);
   font-size: 21px;
   line-height: 21px;
@@ -188,7 +189,7 @@ img {
   display: grid;
   grid-template-rows: 1fr 1fr;
   justify-content: space-between;
-  margin:0;
+  margin: 0;
 }
 
 .ravshan-aside-icon {
@@ -207,25 +208,25 @@ img {
   margin: 0;
 }
 
-.icon-svg-right:hover >* {
-  fill:var(--basic-grey);
+.icon-svg-right:hover>* {
+  fill: var(--basic-grey);
   cursor: pointer;
 }
 
-.icon-svg-right:active >* {
-  fill:var(--basic-greylight);
+.icon-svg-right:active>* {
+  fill: var(--basic-greylight);
   cursor: pointer;
 }
 
-.ravshan-title:hover >* {
-  color:var(--text-color-black);
-  fill:var(--basic-grey);
+.ravshan-title:hover>* {
+  color: var(--text-color-black);
+  fill: var(--basic-grey);
   cursor: pointer;
 }
 
-.ravshan-title:active >* {
-  color:var(--basic-greylight);
-  fill:var(--basic-greylight);
+.ravshan-title:active>* {
+  color: var(--basic-greylight);
+  fill: var(--basic-greylight);
   cursor: pointer;
 }
 
@@ -273,7 +274,7 @@ svg.ravshan-left {
 .contacts-phone-catalog {
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   position: relative;
   width: 270px;
   height: 45px;
@@ -328,7 +329,7 @@ svg.ravshan-left {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  color:var(--navigation);
+  color: var(--navigation);
   text-align: center;
 }
 
@@ -389,12 +390,12 @@ svg.ravshan-left {
 }
 
 .main-header-logo {
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  width:220px;
+  width: 220px;
   padding: 0 28px;
-  height:42px;
+  height: 42px;
   background: var(--basic-red);
   box-shadow: 0px 5px 0px 0px var(--box-shadow);
   box-sizing: border-box;
@@ -420,12 +421,12 @@ svg.ravshan-left {
 }
 
 .site-navigation {
-  margin:0;
+  margin: 0;
   color: var(--white);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  height:60px;
+  height: 60px;
   padding-left: 22px;
   padding-right: 25px;
   background-color: var(--navigation);
@@ -471,7 +472,7 @@ svg.ravshan-left {
 
 .header-block {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-self: center;
   flex-wrap: wrap;
   padding-top: 45px;
@@ -560,7 +561,7 @@ svg.ravshan-left {
 }
 
 .main-header-user-link-catalog {
- background-color: var(--basic-red);
+  background-color: var(--basic-red);
 }
 
 .main-header-user-link:hover .main-header-user-icon {
@@ -606,7 +607,7 @@ svg.ravshan-left {
 .header-cart,
 .header-order,
 .header-cart-catalog {
-  list-style:none;
+  list-style: none;
   font-size: 18px;
   line-height: 24px;
   text-align: center;
@@ -642,7 +643,7 @@ svg.cart-color-catalog {
 
 .main-header-item {
   display: flex;
-  height:inherit;
+  height: inherit;
 }
 
 .main-header-input {
@@ -663,7 +664,7 @@ svg.icon-search {
   top: 20px;
   left: 16px;
   transform: translateY(-50%);
-  fill:var(--search-default);
+  fill: var(--search-default);
 }
 
 svg.icon-search:hover {
@@ -681,7 +682,7 @@ svg.icon-search:hover {
   fill: var(--white);
 }
 
-input.main-header-input:focus ~ .icon-search {
+input.main-header-input:focus~.icon-search {
   fill: var(--basic-red);
 }
 
@@ -763,13 +764,13 @@ label.search:hover .main-header-input::placeholder {
   color: var(--basic-greylight);
 }
 
-.block-hover:hover >* {
+.block-hover:hover>* {
   color: var(--basic-red);
   fill: var(--basic-grey);
   cursor: pointer;
 }
 
-.block-hover:active >* {
+.block-hover:active>* {
   color: var(--basic-greylight);
   fill: var(--basic-greylight);
   cursor: pointer;
@@ -786,7 +787,9 @@ svg.icon-enter {
 svg.icon-enter:active {
   fill: var(--basic-greylight);
   cursor: pointer;
-}/********************Блок ШАПКА  END ******************************/
+}
+
+/********************Блок ШАПКА  END ******************************/
 
 /**********************Блок Наша Продукция  START **********/
 .our-production {
@@ -800,15 +803,15 @@ svg.icon-enter:active {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  width:135px;
-  height:38px;
-  color:var(--white);
+  width: 135px;
+  height: 38px;
+  color: var(--white);
 }
 
 .our-production-block {
   display: block;
-  width:135px;
-  height:38px;
+  width: 135px;
+  height: 38px;
   background-color: var(--white-opacity-thirty);
   mix-blend-mode: normal;
   text-align: center;
@@ -824,8 +827,8 @@ svg.icon-enter:active {
 .our-production-delivery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width:300px;
-  height:123px;
+  width: 300px;
+  height: 123px;
   color: var(--white);
 }
 
@@ -924,7 +927,7 @@ svg.icon-enter:active {
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
-  order:1;
+  order: 1;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -947,7 +950,7 @@ svg.icon-enter:active {
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
-  color:var(--white);
+  color: var(--white);
   margin: 0 0 5px;
 }
 
@@ -1067,7 +1070,7 @@ svg.icon-enter:active {
 
 .slider-open {
   padding: 11px 46px 11px;
-  margin: auto  0 27px 24px;
+  margin: auto 0 27px 24px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1121,13 +1124,13 @@ svg.icon-enter:active {
 .popular-goods-all,
 .popular-manufacturers-all,
 .contacts-got-lost {
-  width:192px;
-  height:38px;
+  width: 192px;
+  height: 38px;
 }
 
 .contacts-more-details {
-  width:220px;
-  height:38px;
+  width: 220px;
+  height: 38px;
   margin-top: 6px;
 }
 
@@ -1149,9 +1152,10 @@ svg.icon-enter:active {
 .slider-info {
   font-size: 18px;
   line-height: 24px;
-  color:var(--white);
+  color: var(--white);
   margin: 0;
 }
+
 /********************** СЛАЙДЕР  END **********/
 /**********************Блок Наша Продукция  END **********/
 
@@ -1167,17 +1171,17 @@ svg.icon-enter:active {
 .popular-goods-block {
   padding: 7px 14px 0 28px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   background: var(--popular-goods);
   height: 89px;
   box-sizing: border-box;
 }
 
 .popular-goods-list {
-  margin:20px 0 0 0;
+  margin: 20px 0 0 0;
   padding: 0;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -1185,9 +1189,9 @@ svg.icon-enter:active {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
-  margin:0;
+  margin: 0;
   padding: 0;
   width: 220px;
   height: 318px;
@@ -1202,7 +1206,7 @@ svg.icon-enter:active {
 
 .popular-goods-content {
   display: flex;
-  margin:0;
+  margin: 0;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -1216,7 +1220,7 @@ svg.icon-enter:active {
 
 .product-cards-content {
   display: flex;
-  margin:0;
+  margin: 0;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -1270,7 +1274,7 @@ svg.icon-enter:active {
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
-  color:var(--navigation);
+  color: var(--navigation);
   text-transform: uppercase;
 }
 
@@ -1298,7 +1302,7 @@ svg.icon-enter:active {
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  color:var(--text-color-black);
+  color: var(--text-color-black);
   top: 180px;
   width: 163px;
 }
@@ -1370,12 +1374,13 @@ svg.icon-enter:active {
   box-sizing: border-box;
   color: var(--navigation);
 }
+
 /**********************Блок Популярные товары  END **********/
 
 /********************Блок Популярные Производители  START *************/
 .popular-manufacturers {
   display: grid;
-  grid-template-rows:1fr;
+  grid-template-rows: 1fr;
   font-style: normal;
   font-weight: normal;
 }
@@ -1384,8 +1389,8 @@ svg.icon-enter:active {
   margin-top: 70px;
   margin-bottom: 20px;
   display: grid;
-  grid-template-columns:1fr min-content;
-  justify-content:space-between;
+  grid-template-columns: 1fr min-content;
+  justify-content: space-between;
   background: var(--popular-goods);
   height: 89px;
   box-sizing: border-box;
@@ -1393,7 +1398,7 @@ svg.icon-enter:active {
 }
 
 .popular-manufacturers-list {
-  margin:0;
+  margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1417,13 +1422,14 @@ svg.icon-enter:active {
 .manufactures-item:hover {
   box-shadow: 0px 4px 20px 0 var(--manufactures-item);
   background: var(--white);
- }
+}
 
 .manufactures-item:active {
   box-shadow: 0px 4px 20px 0 var(--manufactures-item);
   background: var(--white);
   opacity: 0.5;
- }
+}
+
 /********************Блок Популярные Производители  END *************/
 
 /**********************Блок СОРТИРОВКА  START **********/
@@ -1516,11 +1522,12 @@ svg.icon-enter:active {
 }
 
 .product-cards-item:hover {
- box-shadow: 0px 4px 20px 0 var(--manufactures-item);
+  box-shadow: 0px 4px 20px 0 var(--manufactures-item);
 }
+
 /**********************Блок СОРТИРОВКА  END **********/
 
- /************************Блок СЕРВИСЫ  START ************************** */
+/************************Блок СЕРВИСЫ  START ************************** */
 .section-services {
   height: 522px;
   background-color: var(--basic-backgound);
@@ -1678,7 +1685,7 @@ svg.icon-enter:active {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-  color:var(--text-color-black);
+  color: var(--text-color-black);
 }
 
 .contacts-titles {
@@ -1686,7 +1693,7 @@ svg.icon-enter:active {
 }
 
 .services-delivery {
-  color:var(--navigation);
+  color: var(--navigation);
 }
 
 .services-info {
@@ -1709,7 +1716,7 @@ svg.icon-enter:active {
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
-  color:var(--navigation);
+  color: var(--navigation);
   text-decoration: none;
   box-sizing: border-box;
 }
@@ -1730,7 +1737,7 @@ svg.icon-enter:active {
   height: 61px;
   padding-left: 20px;
   padding-top: 13px;
-  color:var(--white);
+  color: var(--white);
 }
 
 .services-guarantee-item,
@@ -1738,7 +1745,7 @@ svg.icon-enter:active {
   position: relative;
   width: 240px;
   height: 61px;
-  background-color:var(--navigation);
+  background-color: var(--navigation);
   box-shadow: 0px 0px 1px 0px var(--header-background), inset 0px 1px 1px 0px var(--credit);
   list-style: none;
 }
@@ -1760,6 +1767,7 @@ svg.icon-enter:active {
 .dgk-blue {
   color: var(--navigation);
 }
+
 /************************Блок СЕРВИСЫ  END ************************** */
 
 /******************Блок Компания Техномарт-Контакты  START ***********/
@@ -1780,7 +1788,7 @@ svg.icon-enter:active {
   line-height: 18px;
   text-transform: uppercase;
   color: var(--white);
-  background-color:var(--basic-red);
+  background-color: var(--basic-red);
   height: 38px;
 }
 
@@ -1809,9 +1817,10 @@ svg.icon-enter:active {
 .contacts-item {
   font-size: 18px;
   line-height: 24px;
-  color:var(--text-color-black);
+  color: var(--text-color-black);
   padding-bottom: 12px;
 }
+
 /******************Блок Компания Техномарт-Контакты  END ***********/
 
 /************************Блок ПОДВАЛ  START ************************ */
@@ -1851,24 +1860,24 @@ svg.icon-enter:active {
 }
 
 .footer-site-menu-list li:not(:last-child) {
-  padding-right:59px;
+  padding-right: 59px;
 }
 
 .footer-site-menu-item {
-  color:var(--basic-backgound);
-  margin-bottom:22px;
+  color: var(--basic-backgound);
+  margin-bottom: 22px;
 }
 
 .footer-site-menu-item a {
   font-size: 18px;
   line-height: 24px;
-  color:var(--basic-backgound);
+  color: var(--basic-backgound);
 }
 
 .footer-site-menu-item a {
   font-size: 18px;
   line-height: 24px;
-  color:var(--basic-backgound);
+  color: var(--basic-backgound);
 }
 
 .footer-menu-contacts {
@@ -1878,25 +1887,25 @@ svg.icon-enter:active {
 }
 
 .footer-contacts {
-  margin-left:4px;
-  margin-top:-5px;
+  margin-left: 4px;
+  margin-top: -5px;
 }
 
 .footer-our-production-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin:0;
+  margin: 0;
 }
 
 .footer-our-production-item a {
   font-size: 18px;
   line-height: 24px;
-  color:var(--special-yellowlight);
+  color: var(--special-yellowlight);
 }
 
 .footer-our-production-list li:not(:last-child) {
-  padding-right:59px;
+  padding-right: 59px;
 }
 
 .footer-bottom {
@@ -1923,8 +1932,8 @@ ul.footer-social-icons-list {
 }
 
 .page-footer-logo {
-  width:220px;
-  height:68px;
+  width: 220px;
+  height: 68px;
   background: var(--basic-red);
   box-shadow: inset 0px -5px 0px 0px var(--box-shadow);
 }
@@ -1938,7 +1947,7 @@ ul.footer-social-icons-list {
 .footer-contacts-phone {
   font-size: 18px;
   line-height: 24px;
-  color:var(--text-light-grey);
+  color: var(--text-light-grey);
   margin: 0;
   padding: 0;
 }
@@ -1950,7 +1959,7 @@ ul.footer-social-icons-list {
 .footer-developed a {
   font-size: 16px;
   line-height: 18px;
-  color:var(--white)
+  color: var(--white)
 }
 
 .footer-license-info {
@@ -1965,7 +1974,7 @@ ul.footer-social-icons-list {
   margin: 0;
 }
 
-.vcontact {
+.twitter {
   margin-left: -4px;
 }
 
@@ -1981,7 +1990,7 @@ ul.footer-social-icons-list {
 
 .footer-feedback a,
 .footer-developed a {
-  color:var(--special-yellowlight);
+  color: var(--special-yellowlight);
 }
 
 .footer-developed {
@@ -1995,12 +2004,12 @@ ul.footer-social-icons-list {
 }
 
 .footer-developed {
- margin-top: -3px;
+  margin-top: -3px;
 }
 
 .contacts-list {
-  margin:0;
-  list-style:none;
+  margin: 0;
+  list-style: none;
   position: relative;
 }
 
@@ -2040,6 +2049,7 @@ ul.footer-social-icons-list {
 .developed-link:active {
   color: var(--basic-red);
 }
+
 /************************Блок ПОДВАЛ  END ************************ */
 
 /************************Блок Перфораторы-Каталог  START ************************ */
@@ -2079,7 +2089,7 @@ ul.footer-social-icons-list {
 }
 
 .arrow-to-right {
-  color:var(--icon-color);
+  color: var(--icon-color);
   margin: 0;
 }
 
@@ -2090,7 +2100,7 @@ ul.footer-social-icons-list {
 }
 
 .catalog-punchers-menu-link {
-  color:var(--text-color-black)
+  color: var(--text-color-black)
 }
 
 .catalog-filter,
@@ -2125,7 +2135,7 @@ ul.footer-social-icons-list {
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
-  color:var(--text-color-black)
+  color: var(--text-color-black)
 }
 
 .couple-of-words-title,
@@ -2163,7 +2173,7 @@ ul.footer-social-icons-list {
 }
 
 .catalog-cost-title {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 55px;
@@ -2194,6 +2204,7 @@ ul.footer-social-icons-list {
   background-color: var(--basic-backgound);
   min-width: auto;
 }
+
 /************************Блок Перфораторы-Каталог  END ************************ */
 
 /************************Блок ФИЛЬТР  START *************************/
@@ -2362,8 +2373,9 @@ svg.triangle-down-svg:active {
 .by-type-link:active,
 .by-functional-link:active {
   color: var(--basic-red);
-  border-bottom:none;
+  border-bottom: none;
 }
+
 /************************************ Меню и Стрелки  END******************************/
 
 .range-controls {
@@ -2447,22 +2459,22 @@ svg.triangle-down-svg:active {
   user-select: none;
 }
 
-.filter-input-checkbox:disabled + label {
+.filter-input-checkbox:disabled+label {
   fill: var(--disabled-check);
   color: var(--disabled-check);
   cursor: default;
   outline: none;
 }
 
-.filter-input-radio:disabled + label {
+.filter-input-radio:disabled+label {
   fill: var(--disabled-check);
   color: var(--disabled-check);
   cursor: default;
   outline: none;
 }
 
-.filter-input-checkbox + label::before,
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox+label::before,
+.filter-input-checkbox:checked+label::after {
   content: "";
   position: absolute;
   top: -3px;
@@ -2473,22 +2485,22 @@ svg.triangle-down-svg:active {
   opacity: 0.7;
 }
 
-.filter-input-checkbox + label::before {
+.filter-input-checkbox+label::before {
   background-image: url("../img/check-off.svg");
   width: 23px;
 }
 
-.filter-input-checkbox + label::after {
+.filter-input-checkbox+label::after {
   background-image: url("../img/check-on.svg");
   width: 27px;
 }
 
-.filter-input-checkbox:hover + label::before,
- .filter-input-checkbox:hover + label::after {
+.filter-input-checkbox:hover+label::before,
+.filter-input-checkbox:hover+label::after {
   opacity: 1;
 }
 
-.filter-input-radio + label::before {
+.filter-input-radio+label::before {
   content: "";
   position: absolute;
   left: -36px;
@@ -2499,11 +2511,11 @@ svg.triangle-down-svg:active {
   border-radius: 50%;
 }
 
-.filter-input-radio:hover + label::before {
+.filter-input-radio:hover+label::before {
   border-color: var(--disabled-check);
 }
 
-.filter-input-radio:checked + label::after {
+.filter-input-radio:checked+label::after {
   content: "";
   position: absolute;
   top: 7px;
@@ -2513,6 +2525,7 @@ svg.triangle-down-svg:active {
   background-color: var(--basic-greylight);
   border-radius: 50%;
 }
+
 /************************Блок ФИЛЬТР  END *************************/
 
 /************************Блок Социальные КНОПКИ  START *************************/
@@ -2533,8 +2546,9 @@ svg.triangle-down-svg:active {
 }
 
 .footer-social-icon:not(:last-child) li {
-margin-right: 1px;
+  margin-right: 1px;
 }
+
 /************************ Блок Социальные КНОПКИ  END *************************/
 
 /************************ МОДАЛЬНЫЕ ОКНА  START *************************/
@@ -2547,7 +2561,7 @@ margin-right: 1px;
   bottom: 0;
   left: 0;
   margin: auto;
-  width:943px;
+  width: 943px;
   height: 449px;
   color: var(--white);
   font-size: 60px;
@@ -2567,7 +2581,7 @@ margin-right: 1px;
 
 .map-bottom {
   border-top: 7px solid var(--basic-red);
-  width:943px;
+  width: 943px;
   height: 449px;
   z-index: 2;
 }
@@ -2583,6 +2597,7 @@ margin-right: 1px;
   top: 17px;
   cursor: pointer;
 }
+
 /************************ Карта  END *************************/
 
 /* ********************************** Кнопки "Купить в Закладки"  START****************** */
@@ -2738,16 +2753,17 @@ margin-right: 1px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 24px;
   font-weight: bold;
-  top:66px;
+  top: 66px;
   left: 0;
   right: 0;
   line-height: 30px;
   text-align: center;
   margin: 0 auto;
 }
+
 /*********************************** Окно "Товар добавлен в корзину"  END*******************/
 
- /********************************* Окно - Напишите нам START*****************************/
+/********************************* Окно - Напишите нам START*****************************/
 .your-name {
   position: absolute;
   left: 321px;
@@ -2921,6 +2937,7 @@ margin-right: 1px;
 }
 
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(0);
@@ -2941,6 +2958,7 @@ margin-right: 1px;
     transform: translateX(10px);
   }
 }
- /********************************* Окно - Напишите нам END*****************************/
+
+/********************************* Окно - Напишите нам END*****************************/
 
 /************************    МОДАЛЬНЫЕ ОКНА  END   *************************/
