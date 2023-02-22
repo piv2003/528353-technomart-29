@@ -1629,23 +1629,15 @@ svg.icon-enter:active {
 .guarantee-block-div {
   background-image: url("../img/garanty.png");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  /* background-position: 0 0; */
+  background-position: 205px 77px;
 }
 
 .credit-block-div {
   background-image: url("../img/credit.png");
   background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.credit-block-div {
-  background-repeat: no-repeat;
+  /* background-position: 0 0; */
   background-position: 160px 77px;
-}
-
-.guarantee-block-div {
-  background-repeat: no-repeat;
-  background-position: 205px 77px;
 }
 
 .send-application-button {
