@@ -507,7 +507,7 @@ svg.ravshan-left {
 }
 
 .main-header-user-order {
-  padding: 9px 23px 9px 43px;
+  padding: 9px 23px 9px 20px;
 }
 
 .main-header-user-catalog-order {
@@ -635,7 +635,8 @@ svg.cart-color-catalog {
 .main-header-list {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  text-align: center;
   width: 100%;
   margin: 0;
   padding: 0;
